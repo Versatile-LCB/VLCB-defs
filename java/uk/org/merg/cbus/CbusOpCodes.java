@@ -12,7 +12,7 @@ package uk.org.merg.cbus;
 public enum CbusOpCodes {
 // 
 // 
-// CBUS opcodes list
+// VLCB opcodes list
 // 
 // Packets with no data bytes
 // 
@@ -89,6 +89,8 @@ public enum CbusOpCodes {
 	OPC_RQNPN(0x73),	//Request read module parameters
 	OPC_NUMEV(0x74),	//Number of events stored response
 	OPC_CANID(0x75),	//Set canid
+	OPC_MODE(0x76),	//Set mode
+	OPC_RQSD(0x78),	//Request service discovery
 	OPC_EXTC2(0x7F),	//Extended opcode with 2 data bytes
 // 
 // Packets with 4 data bytes
@@ -98,6 +100,8 @@ public enum CbusOpCodes {
 	OPC_WCVB(0x83),	//Write CV bit Ops mode by handle
 	OPC_QCVS(0x84),	//Read CV
 	OPC_PCVS(0x85),	//Report CV
+	OPC_RDGN(0x87),	//Request diagnostics
+	OPC_PNVSETRD(0x8E),	//Set NV with Read
 // 
 	OPC_ACON(0x90),	//on event
 	OPC_ACOF(0x91),	//off event
@@ -120,6 +124,9 @@ public enum CbusOpCodes {
 // 
 	OPC_RDCC4(0xA0),	//4 byte DCC packet
 	OPC_WCVS(0xA2),	//Write CV service mode
+	OPC_HEARTB(0xAB),	//Heartbeat
+	OPC_SD(0xAC),	//Service discovery response
+	OPC_GRSP(0xAF),	//General response
 // 
 	OPC_ACON1(0xB0),	//On event with one data byte
 	OPC_ACOF1(0xB1),	//Off event with one data byte
@@ -139,6 +146,7 @@ public enum CbusOpCodes {
 	OPC_RDCC5(0xC0),	//5 byte DCC packet
 	OPC_WCVOA(0xC1),	//Write CV ops mode by address
 	OPC_CABDAT(0xC2),	//Cab data (cab signalling)
+	OPC_DGN(0xC7),	//Diagnostics
 	OPC_FCLK(0xCF),	//Fast clock
 // 
 	OPC_ACON2(0xD0),	//On event with two data bytes
@@ -159,6 +167,9 @@ public enum CbusOpCodes {
 	OPC_PLOC(0xE1),	//Loco session report
 	OPC_NAME(0xE2),	//Module name response
 	OPC_STAT(0xE3),	//Command station status report
+	OPC_ENACK(0xE6),	//Event Acknowledge
+	OPC_ESD(0xE7),	//Extended service discovery
+	OPC_DTXC(0xE9),	//Long message packet
 	OPC_PARAMS(0xEF),	//Node parameters response
 // 
 	OPC_ACON3(0xF0),	//On event with 3 data bytes
@@ -180,8 +191,7 @@ public enum CbusOpCodes {
 // 
 // Opcodes that are proposed and/or agreed but not yet in the current published specification
 // 
-	OPC_VCVS(0xA4),	//Verify CV service mode - used for CV read hints
-	OPC_DTXC(0xE9);	//CBUS long message packet
+	OPC_VCVS(0xA4);	//Verify CV service mode - used for CV read hints
 
 	private final int v;
 

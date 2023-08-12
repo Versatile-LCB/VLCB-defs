@@ -93,20 +93,53 @@ namespace Merg.Cbus
 	/// </summary>
 	public enum CmdErrs
 	{
+		/// <summary>
+		/// Invalid command
+		/// </summary>
 		InvCmd = 1,
+		/// <summary>
+		/// Not in learn mode
+		/// </summary>
 		NotLrn = 2,
+		/// <summary>
+		/// Not in setup mode
+		/// </summary>
 		NotSetup = 3,
+		/// <summary>
+		/// Too many events
+		/// </summary>
 		TooManyEvents = 4,
+		/// <summary>
+		/// No EV
+		/// </summary>
 		NoEv = 5,
+		/// <summary>
+		/// Invalid EV index
+		/// </summary>
 		InvEvIdx = 6,
+		/// <summary>
+		/// Invalid event
+		/// </summary>
 		InvalidEvent = 7,
 		/// <summary>
 		/// now reserved
 		/// </summary>
 		InvEnIdx = 8,
+		/// <summary>
+		/// Invalid param index
+		/// </summary>
 		InvParamIdx = 9,
+		/// <summary>
+		/// Invalid NV index
+		/// </summary>
 		InvNvIdx = 10,
+		/// <summary>
+		/// Invalid EV value
+		/// </summary>
 		InvEvValue = 11,
+		/// <summary>
+		/// Invalid NV value
+		/// </summary>
 		InvNvValue = 12,
 		/// <summary>
 		/// Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
@@ -489,6 +522,10 @@ namespace Merg.Cbus
 		/// </summary>
 		Canbuffer = 79,
 		/// <summary>
+		/// All VLCB modules have the same ID
+		/// </summary>
+		Vlcb = 0xFC,
+		/// <summary>
 		/// Software nodes
 		/// </summary>
 		CanSw = 0xFF,
@@ -546,7 +583,7 @@ namespace Merg.Cbus
 	/// <summary>
 	/// class: CbusOpCodes
 	/// class: CbusOpCodes
-	/// CBUS opcodes list
+	/// VLCB opcodes list
 	/// </summary>
 	public enum OpCodes
 	{
@@ -787,6 +824,14 @@ namespace Merg.Cbus
 		/// </summary>
 		Canid = 0x75,
 		/// <summary>
+		/// Set mode
+		/// </summary>
+		Mode = 0x76,
+		/// <summary>
+		/// Request service discovery
+		/// </summary>
+		Rqsd = 0x78,
+		/// <summary>
 		/// Extended opcode with 2 data bytes
 		/// </summary>
 		Extc2 = 0x7F,
@@ -810,6 +855,14 @@ namespace Merg.Cbus
 		/// Report CV
 		/// </summary>
 		Pcvs = 0x85,
+		/// <summary>
+		/// Request diagnostics
+		/// </summary>
+		Rdgn = 0x87,
+		/// <summary>
+		/// Set NV with Read
+		/// </summary>
+		Pnvsetrd = 0x8E,
 		/// <summary>
 		/// on event
 		/// </summary>
@@ -883,6 +936,18 @@ namespace Merg.Cbus
 		/// </summary>
 		Wcvs = 0xA2,
 		/// <summary>
+		/// Heartbeat
+		/// </summary>
+		Heartb = 0xAB,
+		/// <summary>
+		/// Service discovery response
+		/// </summary>
+		Sd = 0xAC,
+		/// <summary>
+		/// General response
+		/// </summary>
+		Grsp = 0xAF,
+		/// <summary>
 		/// On event with one data byte
 		/// </summary>
 		Acon1 = 0xB0,
@@ -942,6 +1007,10 @@ namespace Merg.Cbus
 		/// Cab data (cab signalling)
 		/// </summary>
 		Cabdat = 0xC2,
+		/// <summary>
+		/// Diagnostics
+		/// </summary>
+		Dgn = 0xC7,
 		/// <summary>
 		/// Fast clock
 		/// </summary>
@@ -1006,6 +1075,18 @@ namespace Merg.Cbus
 		/// Command station status report
 		/// </summary>
 		Stat = 0xE3,
+		/// <summary>
+		/// Event Acknowledge
+		/// </summary>
+		Enack = 0xE6,
+		/// <summary>
+		/// Extended service discovery
+		/// </summary>
+		Esd = 0xE7,
+		/// <summary>
+		/// Long message packet
+		/// </summary>
+		Dtxc = 0xE9,
 		/// <summary>
 		/// Node parameters response
 		/// </summary>
@@ -1078,10 +1159,6 @@ namespace Merg.Cbus
 		/// Verify CV service mode - used for CV read hints
 		/// </summary>
 		Vcvs = 0xA4,
-		/// <summary>
-		/// CBUS long message packet
-		/// </summary>
-		Dtxc = 0xE9,
 	}
 
 	/// <summary>
@@ -1151,6 +1228,10 @@ namespace Merg.Cbus
 	/// </summary>
 	public enum Params
 	{
+		/// <summary>
+		/// Number of parameters
+		/// </summary>
+		Num = 0,
 		/// <summary>
 		/// Manufacturer id
 		/// </summary>
@@ -1357,6 +1438,78 @@ namespace Merg.Cbus
 		/// Motorised point motor driver with current sense
 		/// </summary>
 		Canpmsense = 1,
+	}
+
+	/// <summary>
+	/// class: VlcbGrspCodes
+	/// GRSP codes
+	/// </summary>
+	public enum VlcbGrspCodes
+	{
+		/// <summary>
+		/// Success
+		/// </summary>
+		GrspOk = 0,
+		/// <summary>
+		/// Unknown non volatile memory type
+		/// </summary>
+		GrspUnknownNvmType = 254,
+		/// <summary>
+		/// Invalid diagnostic
+		/// </summary>
+		GrspInvalidDiagnostic = 253,
+		/// <summary>
+		/// Invalid service
+		/// </summary>
+		GrspInvalidService = 252,
+	}
+
+	/// <summary>
+	/// class: VlcbServiceTypes
+	/// VLCB Service Types
+	/// </summary>
+	public enum VlcbServiceTypes
+	{
+		/// <summary>
+		/// The minimum node service. All modules must implement this.
+		/// </summary>
+		ServiceIdMns = 1,
+		/// <summary>
+		/// The NV service.
+		/// </summary>
+		ServiceIdNv = 2,
+		/// <summary>
+		/// CAN service. Deals with CANID enumeration.
+		/// </summary>
+		ServiceIdCan = 3,
+		/// <summary>
+		/// Old (CBUS) event teaching service.
+		/// </summary>
+		ServiceIdTeach = 4,
+		/// <summary>
+		/// Event producer service.
+		/// </summary>
+		ServiceIdProducer = 5,
+		/// <summary>
+		/// Event comsumer service.
+		/// </summary>
+		ServiceIdConsumer = 6,
+		/// <summary>
+		/// New event teaching service.
+		/// </summary>
+		ServiceIdTeach = 7,
+		/// <summary>
+		/// Event acknowledge service. Useful for debugging event configuration.
+		/// </summary>
+		ServiceIdEventack = 9,
+		/// <summary>
+		/// FCU/PIC bootloader service.
+		/// </summary>
+		ServiceIdBoot = 10,
+		/// <summary>
+		/// Streaming (Long Messages) service.
+		/// </summary>
+		ServiceIdStreaming = 17,
 	}
 
 }

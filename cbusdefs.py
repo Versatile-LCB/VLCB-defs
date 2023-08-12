@@ -107,6 +107,7 @@ MTYP_CANSINP = const(76)    # Q series PIC input module (Ian Hart)
 MTYP_CANSOUT = const(77)    # Q series PIC input module (Ian Hart)
 MTYP_CANSBIP = const(78)    # Q series PIC input module (Ian Hart)
 MTYP_CANBUFFER = const(79)    # Message buffer (Phil Silver)
+MTYP_VLCB = const(0xFC)    # All VLCB modules have the same ID
 # 
 # 
 # 
@@ -154,7 +155,7 @@ MTYP_CANPMSense = const(1)    # Motorised point motor driver with current sense
 # 
 # 
 # 
-# CBUS opcodes list
+# VLCB opcodes list
 # 
 # Packets with no data bytes
 # 
@@ -231,6 +232,8 @@ OPC_NENRD = const(0x72)    # Request read stored event by index
 OPC_RQNPN = const(0x73)    # Request read module parameters
 OPC_NUMEV = const(0x74)    # Number of events stored response
 OPC_CANID = const(0x75)    # Set canid
+OPC_MODE = const(0x76)    # Set mode
+OPC_RQSD = const(0x78)    # Request service discovery
 OPC_EXTC2 = const(0x7F)    # Extended opcode with 2 data bytes
 # 
 # Packets with 4 data bytes
@@ -240,6 +243,8 @@ OPC_WCVO = const(0x82)    # Write CV byte Ops mode by handle
 OPC_WCVB = const(0x83)    # Write CV bit Ops mode by handle
 OPC_QCVS = const(0x84)    # Read CV
 OPC_PCVS = const(0x85)    # Report CV
+OPC_RDGN = const(0x87)    # Request diagnostics
+OPC_PNVSETRD = const(0x8E)    # Set NV with Read
 # 
 OPC_ACON = const(0x90)    # on event
 OPC_ACOF = const(0x91)    # off event
@@ -262,6 +267,9 @@ OPC_EXTC3 = const(0x9F)    # Extended opcode with 3 data bytes
 # 
 OPC_RDCC4 = const(0xA0)    # 4 byte DCC packet
 OPC_WCVS = const(0xA2)    # Write CV service mode
+OPC_HEARTB = const(0xAB)    # Heartbeat
+OPC_SD = const(0xAC)    # Service discovery response
+OPC_GRSP = const(0xAF)    # General response
 # 
 OPC_ACON1 = const(0xB0)    # On event with one data byte
 OPC_ACOF1 = const(0xB1)    # Off event with one data byte
@@ -281,6 +289,7 @@ OPC_EXTC4 = const(0xBF)    # Extended opcode with 4 data bytes
 OPC_RDCC5 = const(0xC0)    # 5 byte DCC packet
 OPC_WCVOA = const(0xC1)    # Write CV ops mode by address
 OPC_CABDAT = const(0xC2)    # Cab data (cab signalling)
+OPC_DGN = const(0xC7)    # Diagnostics
 OPC_FCLK = const(0xCF)    # Fast clock
 # 
 OPC_ACON2 = const(0xD0)    # On event with two data bytes
@@ -301,6 +310,9 @@ OPC_RDCC6 = const(0xE0)    # 6 byte DCC packets
 OPC_PLOC = const(0xE1)    # Loco session report
 OPC_NAME = const(0xE2)    # Module name response
 OPC_STAT = const(0xE3)    # Command station status report
+OPC_ENACK = const(0xE6)    # Event Acknowledge
+OPC_ESD = const(0xE7)    # Extended service discovery
+OPC_DTXC = const(0xE9)    # Long message packet
 OPC_PARAMS = const(0xEF)    # Node parameters response
 # 
 OPC_ACON3 = const(0xF0)    # On event with 3 data bytes
@@ -323,7 +335,6 @@ OPC_EXTC6 = const(0xFF)    # Extended opcode with 6 data byes
 # Opcodes that are proposed and/or agreed but not yet in the current published specification
 # 
 OPC_VCVS = const(0xA4)    # Verify CV service mode - used for CV read hints
-OPC_DTXC = const(0xE9)    # CBUS long message packet
 # 
 # 
 # Modes for STMOD
@@ -355,23 +366,30 @@ SSTAT_CV_ERROR = const(5)    #
 # 
 # Error codes for OPC_CMDERR
 # 
-CMDERR_INV_CMD = const(1)    # 
-CMDERR_NOT_LRN = const(2)    # 
-CMDERR_NOT_SETUP = const(3)    # 
-CMDERR_TOO_MANY_EVENTS = const(4)    # 
-CMDERR_NO_EV = const(5)    # 
-CMDERR_INV_EV_IDX = const(6)    # 
-CMDERR_INVALID_EVENT = const(7)    # 
+CMDERR_INV_CMD = const(1)    # Invalid command
+CMDERR_NOT_LRN = const(2)    # Not in learn mode
+CMDERR_NOT_SETUP = const(3)    # Not in setup mode
+CMDERR_TOO_MANY_EVENTS = const(4)    # Too many events
+CMDERR_NO_EV = const(5)    # No EV
+CMDERR_INV_EV_IDX = const(6)    # Invalid EV index
+CMDERR_INVALID_EVENT = const(7)    # Invalid event
 CMDERR_INV_EN_IDX = const(8)    # now reserved
-CMDERR_INV_PARAM_IDX = const(9)    # 
-CMDERR_INV_NV_IDX = const(10)    # 
-CMDERR_INV_EV_VALUE = const(11)    # 
-CMDERR_INV_NV_VALUE = const(12)    # 
+CMDERR_INV_PARAM_IDX = const(9)    # Invalid param index
+CMDERR_INV_NV_IDX = const(10)    # Invalid NV index
+CMDERR_INV_EV_VALUE = const(11)    # Invalid EV value
+CMDERR_INV_NV_VALUE = const(12)    # Invalid NV value
 # 
 # Additional error codes proposed and/or agreed but not yet in the current published specification
 # 
 CMDERR_LRN_OTHER = const(13)    # Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
 # 
+# 
+# GRSP codes
+# 
+GRSP_OK = const(0)    # Success
+GRSP_UNKNOWN_NVM_TYPE = const(254)    # Unknown non volatile memory type
+GRSP_INVALID_DIAGNOSTIC = const(253)    # Invalid diagnostic
+GRSP_INVALID_SERVICE = const(252)    # Invalid service
 # 
 # Sub opcodes for OPC_CABDAT
 # 
@@ -397,11 +415,25 @@ SASP_LUNAR = const(1)    # Set bit 1 for lunar indication
 # 
 # Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 # 
+# VLCB Service Types
+# 
+SERVICE_ID_MNS = const(1)    # The minimum node service. All modules must implement this.
+SERVICE_ID_NV = const(2)    # The NV service.
+SERVICE_ID_CAN = const(3)    # CAN service. Deals with CANID enumeration.
+SERVICE_ID_TEACH = const(4)    # Old (CBUS) event teaching service.
+SERVICE_ID_PRODUCER = const(5)    # Event producer service.
+SERVICE_ID_CONSUMER = const(6)    # Event comsumer service.
+SERVICE_ID_TEACH = const(7)    # New event teaching service.
+SERVICE_ID_EVENTACK = const(9)    # Event acknowledge service. Useful for debugging event configuration.
+SERVICE_ID_BOOT = const(10)    # FCU/PIC bootloader service.
+SERVICE_ID_STREAMING = const(17)    # Streaming (Long Messages) service.
+# 
 # 
 # Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 # Index numbers count from 1, subtract 1 for offset into parameter block
 # Note that RQNPN with index 0 returns the parameter count
 # 
+PAR_NUM = const(0)    # Number of parameters
 PAR_MANU = const(1)    # Manufacturer id
 PAR_MINVER = const(2)    # Minor version letter
 PAR_MTYP = const(3)    # Module type code

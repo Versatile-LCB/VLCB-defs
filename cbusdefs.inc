@@ -104,6 +104,7 @@ MTYP_CANSINP	equ .76	; Q series PIC input module (Ian Hart)
 MTYP_CANSOUT	equ .77	; Q series PIC input module (Ian Hart)
 MTYP_CANSBIP	equ .78	; Q series PIC input module (Ian Hart)
 MTYP_CANBUFFER	equ .79	; Message buffer (Phil Silver)
+MTYP_VLCB	equ 0xFC	; All VLCB modules have the same ID
 ; 
 ; 
 ; 
@@ -151,7 +152,7 @@ MTYP_CANPMSense	equ .1	; Motorised point motor driver with current sense
 ; 
 ; 
 ; 
-; CBUS opcodes list
+; VLCB opcodes list
 ; 
 ; Packets with no data bytes
 ; 
@@ -228,6 +229,8 @@ OPC_NENRD	equ 0x72	; Request read stored event by index
 OPC_RQNPN	equ 0x73	; Request read module parameters
 OPC_NUMEV	equ 0x74	; Number of events stored response
 OPC_CANID	equ 0x75	; Set canid
+OPC_MODE	equ 0x76	; Set mode
+OPC_RQSD	equ 0x78	; Request service discovery
 OPC_EXTC2	equ 0x7F	; Extended opcode with 2 data bytes
 ; 
 ; Packets with 4 data bytes
@@ -237,6 +240,8 @@ OPC_WCVO	equ 0x82	; Write CV byte Ops mode by handle
 OPC_WCVB	equ 0x83	; Write CV bit Ops mode by handle
 OPC_QCVS	equ 0x84	; Read CV
 OPC_PCVS	equ 0x85	; Report CV
+OPC_RDGN	equ 0x87	; Request diagnostics
+OPC_PNVSETRD	equ 0x8E	; Set NV with Read
 ; 
 OPC_ACON	equ 0x90	; on event
 OPC_ACOF	equ 0x91	; off event
@@ -259,6 +264,9 @@ OPC_EXTC3	equ 0x9F	; Extended opcode with 3 data bytes
 ; 
 OPC_RDCC4	equ 0xA0	; 4 byte DCC packet
 OPC_WCVS	equ 0xA2	; Write CV service mode
+OPC_HEARTB	equ 0xAB	; Heartbeat
+OPC_SD	equ 0xAC	; Service discovery response
+OPC_GRSP	equ 0xAF	; General response
 ; 
 OPC_ACON1	equ 0xB0	; On event with one data byte
 OPC_ACOF1	equ 0xB1	; Off event with one data byte
@@ -278,6 +286,7 @@ OPC_EXTC4	equ 0xBF	; Extended opcode with 4 data bytes
 OPC_RDCC5	equ 0xC0	; 5 byte DCC packet
 OPC_WCVOA	equ 0xC1	; Write CV ops mode by address
 OPC_CABDAT	equ 0xC2	; Cab data (cab signalling)
+OPC_DGN	equ 0xC7	; Diagnostics
 OPC_FCLK	equ 0xCF	; Fast clock
 ; 
 OPC_ACON2	equ 0xD0	; On event with two data bytes
@@ -298,6 +307,9 @@ OPC_RDCC6	equ 0xE0	; 6 byte DCC packets
 OPC_PLOC	equ 0xE1	; Loco session report
 OPC_NAME	equ 0xE2	; Module name response
 OPC_STAT	equ 0xE3	; Command station status report
+OPC_ENACK	equ 0xE6	; Event Acknowledge
+OPC_ESD	equ 0xE7	; Extended service discovery
+OPC_DTXC	equ 0xE9	; Long message packet
 OPC_PARAMS	equ 0xEF	; Node parameters response
 ; 
 OPC_ACON3	equ 0xF0	; On event with 3 data bytes
@@ -320,7 +332,6 @@ OPC_EXTC6	equ 0xFF	; Extended opcode with 6 data byes
 ; Opcodes that are proposed and/or agreed but not yet in the current published specification
 ; 
 OPC_VCVS	equ 0xA4	; Verify CV service mode - used for CV read hints
-OPC_DTXC	equ 0xE9	; CBUS long message packet
 ; 
 ; 
 ; Modes for STMOD
@@ -352,23 +363,30 @@ SSTAT_CV_ERROR	equ .5	;
 ; 
 ; Error codes for OPC_CMDERR
 ; 
-CMDERR_INV_CMD	equ .1	; 
-CMDERR_NOT_LRN	equ .2	; 
-CMDERR_NOT_SETUP	equ .3	; 
-CMDERR_TOO_MANY_EVENTS	equ .4	; 
-CMDERR_NO_EV	equ .5	; 
-CMDERR_INV_EV_IDX	equ .6	; 
-CMDERR_INVALID_EVENT	equ .7	; 
+CMDERR_INV_CMD	equ .1	; Invalid command
+CMDERR_NOT_LRN	equ .2	; Not in learn mode
+CMDERR_NOT_SETUP	equ .3	; Not in setup mode
+CMDERR_TOO_MANY_EVENTS	equ .4	; Too many events
+CMDERR_NO_EV	equ .5	; No EV
+CMDERR_INV_EV_IDX	equ .6	; Invalid EV index
+CMDERR_INVALID_EVENT	equ .7	; Invalid event
 CMDERR_INV_EN_IDX	equ .8	; now reserved
-CMDERR_INV_PARAM_IDX	equ .9	; 
-CMDERR_INV_NV_IDX	equ .10	; 
-CMDERR_INV_EV_VALUE	equ .11	; 
-CMDERR_INV_NV_VALUE	equ .12	; 
+CMDERR_INV_PARAM_IDX	equ .9	; Invalid param index
+CMDERR_INV_NV_IDX	equ .10	; Invalid NV index
+CMDERR_INV_EV_VALUE	equ .11	; Invalid EV value
+CMDERR_INV_NV_VALUE	equ .12	; Invalid NV value
 ; 
 ; Additional error codes proposed and/or agreed but not yet in the current published specification
 ; 
 CMDERR_LRN_OTHER	equ .13	; Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
 ; 
+; 
+; GRSP codes
+; 
+GRSP_OK	equ .0	; Success
+GRSP_UNKNOWN_NVM_TYPE	equ .254	; Unknown non volatile memory type
+GRSP_INVALID_DIAGNOSTIC	equ .253	; Invalid diagnostic
+GRSP_INVALID_SERVICE	equ .252	; Invalid service
 ; 
 ; Sub opcodes for OPC_CABDAT
 ; 
@@ -394,11 +412,25 @@ SASP_LUNAR	equ .1	; Set bit 1 for lunar indication
 ; 
 ; Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 ; 
+; VLCB Service Types
+; 
+SERVICE_ID_MNS	equ .1	; The minimum node service. All modules must implement this.
+SERVICE_ID_NV	equ .2	; The NV service.
+SERVICE_ID_CAN	equ .3	; CAN service. Deals with CANID enumeration.
+SERVICE_ID_TEACH	equ .4	; Old (CBUS) event teaching service.
+SERVICE_ID_PRODUCER	equ .5	; Event producer service.
+SERVICE_ID_CONSUMER	equ .6	; Event comsumer service.
+SERVICE_ID_TEACH	equ .7	; New event teaching service.
+SERVICE_ID_EVENTACK	equ .9	; Event acknowledge service. Useful for debugging event configuration.
+SERVICE_ID_BOOT	equ .10	; FCU/PIC bootloader service.
+SERVICE_ID_STREAMING	equ .17	; Streaming (Long Messages) service.
+; 
 ; 
 ; Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 ; Index numbers count from 1, subtract 1 for offset into parameter block
 ; Note that RQNPN with index 0 returns the parameter count
 ; 
+PAR_NUM	equ .0	; Number of parameters
 PAR_MANU	equ .1	; Manufacturer id
 PAR_MINVER	equ .2	; Minor version letter
 PAR_MTYP	equ .3	; Module type code

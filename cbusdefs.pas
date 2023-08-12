@@ -110,6 +110,7 @@ const
  MTYP_CANSOUT	=  77;	// Q series PIC input module (Ian Hart)
  MTYP_CANSBIP	=  78;	// Q series PIC input module (Ian Hart)
  MTYP_CANBUFFER	=  79;	// Message buffer (Phil Silver)
+ MTYP_VLCB	=  0xFC;	// All VLCB modules have the same ID
 // 
 // 
 // 
@@ -157,7 +158,7 @@ const
 // 
 // 
 // 
-// CBUS opcodes list
+// VLCB opcodes list
 // 
 // Packets with no data bytes
 // 
@@ -234,6 +235,8 @@ const
  OPC_RQNPN	=  0x73;	// Request read module parameters
  OPC_NUMEV	=  0x74;	// Number of events stored response
  OPC_CANID	=  0x75;	// Set canid
+ OPC_MODE	=  0x76;	// Set mode
+ OPC_RQSD	=  0x78;	// Request service discovery
  OPC_EXTC2	=  0x7F;	// Extended opcode with 2 data bytes
 // 
 // Packets with 4 data bytes
@@ -243,6 +246,8 @@ const
  OPC_WCVB	=  0x83;	// Write CV bit Ops mode by handle
  OPC_QCVS	=  0x84;	// Read CV
  OPC_PCVS	=  0x85;	// Report CV
+ OPC_RDGN	=  0x87;	// Request diagnostics
+ OPC_PNVSETRD	=  0x8E;	// Set NV with Read
 // 
  OPC_ACON	=  0x90;	// on event
  OPC_ACOF	=  0x91;	// off event
@@ -265,6 +270,9 @@ const
 // 
  OPC_RDCC4	=  0xA0;	// 4 byte DCC packet
  OPC_WCVS	=  0xA2;	// Write CV service mode
+ OPC_HEARTB	=  0xAB;	// Heartbeat
+ OPC_SD	=  0xAC;	// Service discovery response
+ OPC_GRSP	=  0xAF;	// General response
 // 
  OPC_ACON1	=  0xB0;	// On event with one data byte
  OPC_ACOF1	=  0xB1;	// Off event with one data byte
@@ -284,6 +292,7 @@ const
  OPC_RDCC5	=  0xC0;	// 5 byte DCC packet
  OPC_WCVOA	=  0xC1;	// Write CV ops mode by address
  OPC_CABDAT	=  0xC2;	// Cab data (cab signalling)
+ OPC_DGN	=  0xC7;	// Diagnostics
  OPC_FCLK	=  0xCF;	// Fast clock
 // 
  OPC_ACON2	=  0xD0;	// On event with two data bytes
@@ -304,6 +313,9 @@ const
  OPC_PLOC	=  0xE1;	// Loco session report
  OPC_NAME	=  0xE2;	// Module name response
  OPC_STAT	=  0xE3;	// Command station status report
+ OPC_ENACK	=  0xE6;	// Event Acknowledge
+ OPC_ESD	=  0xE7;	// Extended service discovery
+ OPC_DTXC	=  0xE9;	// Long message packet
  OPC_PARAMS	=  0xEF;	// Node parameters response
 // 
  OPC_ACON3	=  0xF0;	// On event with 3 data bytes
@@ -326,7 +338,6 @@ const
 // Opcodes that are proposed and/or agreed but not yet in the current published specification
 // 
  OPC_VCVS	=  0xA4;	// Verify CV service mode - used for CV read hints
- OPC_DTXC	=  0xE9;	// CBUS long message packet
 // 
 // 
 // Modes for STMOD
@@ -358,23 +369,30 @@ const
 // 
 // Error codes for OPC_CMDERR
 // 
- CMDERR_INV_CMD	=  1;	// 
- CMDERR_NOT_LRN	=  2;	// 
- CMDERR_NOT_SETUP	=  3;	// 
- CMDERR_TOO_MANY_EVENTS	=  4;	// 
- CMDERR_NO_EV	=  5;	// 
- CMDERR_INV_EV_IDX	=  6;	// 
- CMDERR_INVALID_EVENT	=  7;	// 
+ CMDERR_INV_CMD	=  1;	// Invalid command
+ CMDERR_NOT_LRN	=  2;	// Not in learn mode
+ CMDERR_NOT_SETUP	=  3;	// Not in setup mode
+ CMDERR_TOO_MANY_EVENTS	=  4;	// Too many events
+ CMDERR_NO_EV	=  5;	// No EV
+ CMDERR_INV_EV_IDX	=  6;	// Invalid EV index
+ CMDERR_INVALID_EVENT	=  7;	// Invalid event
  CMDERR_INV_EN_IDX	=  8;	// now reserved
- CMDERR_INV_PARAM_IDX	=  9;	// 
- CMDERR_INV_NV_IDX	=  10;	// 
- CMDERR_INV_EV_VALUE	=  11;	// 
- CMDERR_INV_NV_VALUE	=  12;	// 
+ CMDERR_INV_PARAM_IDX	=  9;	// Invalid param index
+ CMDERR_INV_NV_IDX	=  10;	// Invalid NV index
+ CMDERR_INV_EV_VALUE	=  11;	// Invalid EV value
+ CMDERR_INV_NV_VALUE	=  12;	// Invalid NV value
 // 
 // Additional error codes proposed and/or agreed but not yet in the current published specification
 // 
  CMDERR_LRN_OTHER	=  13;	// Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
 // 
+// 
+// GRSP codes
+// 
+ GRSP_OK	=  0;	// Success
+ GRSP_UNKNOWN_NVM_TYPE	=  254;	// Unknown non volatile memory type
+ GRSP_INVALID_DIAGNOSTIC	=  253;	// Invalid diagnostic
+ GRSP_INVALID_SERVICE	=  252;	// Invalid service
 // 
 // Sub opcodes for OPC_CABDAT
 // 
@@ -400,11 +418,25 @@ const
 // 
 // Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 // 
+// VLCB Service Types
+// 
+ SERVICE_ID_MNS	=  1;	// The minimum node service. All modules must implement this.
+ SERVICE_ID_NV	=  2;	// The NV service.
+ SERVICE_ID_CAN	=  3;	// CAN service. Deals with CANID enumeration.
+ SERVICE_ID_TEACH	=  4;	// Old (CBUS) event teaching service.
+ SERVICE_ID_PRODUCER	=  5;	// Event producer service.
+ SERVICE_ID_CONSUMER	=  6;	// Event comsumer service.
+ SERVICE_ID_TEACH	=  7;	// New event teaching service.
+ SERVICE_ID_EVENTACK	=  9;	// Event acknowledge service. Useful for debugging event configuration.
+ SERVICE_ID_BOOT	=  10;	// FCU/PIC bootloader service.
+ SERVICE_ID_STREAMING	=  17;	// Streaming (Long Messages) service.
+// 
 // 
 // Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 // Index numbers count from 1, subtract 1 for offset into parameter block
 // Note that RQNPN with index 0 returns the parameter count
 // 
+ PAR_NUM	=  0;	// Number of parameters
  PAR_MANU	=  1;	// Manufacturer id
  PAR_MINVER	=  2;	// Minor version letter
  PAR_MTYP	=  3;	// Module type code

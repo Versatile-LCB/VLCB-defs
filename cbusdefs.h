@@ -111,6 +111,7 @@ extern "C" {
 #define MTYP_CANSOUT	77	// Q series PIC input module (Ian Hart)
 #define MTYP_CANSBIP	78	// Q series PIC input module (Ian Hart)
 #define MTYP_CANBUFFER	79	// Message buffer (Phil Silver)
+#define MTYP_VLCB	0xFC	// All VLCB modules have the same ID
 // 
 // 
 // 
@@ -158,7 +159,7 @@ extern "C" {
 // 
 // 
 // 
-// CBUS opcodes list
+// VLCB opcodes list
 // 
 // Packets with no data bytes
 // 
@@ -235,6 +236,8 @@ extern "C" {
 #define OPC_RQNPN	0x73	// Request read module parameters
 #define OPC_NUMEV	0x74	// Number of events stored response
 #define OPC_CANID	0x75	// Set canid
+#define OPC_MODE	0x76	// Set mode
+#define OPC_RQSD	0x78	// Request service discovery
 #define OPC_EXTC2	0x7F	// Extended opcode with 2 data bytes
 // 
 // Packets with 4 data bytes
@@ -244,6 +247,8 @@ extern "C" {
 #define OPC_WCVB	0x83	// Write CV bit Ops mode by handle
 #define OPC_QCVS	0x84	// Read CV
 #define OPC_PCVS	0x85	// Report CV
+#define OPC_RDGN	0x87	// Request diagnostics
+#define OPC_PNVSETRD	0x8E	// Set NV with Read
 // 
 #define OPC_ACON	0x90	// on event
 #define OPC_ACOF	0x91	// off event
@@ -266,6 +271,9 @@ extern "C" {
 // 
 #define OPC_RDCC4	0xA0	// 4 byte DCC packet
 #define OPC_WCVS	0xA2	// Write CV service mode
+#define OPC_HEARTB	0xAB	// Heartbeat
+#define OPC_SD	0xAC	// Service discovery response
+#define OPC_GRSP	0xAF	// General response
 // 
 #define OPC_ACON1	0xB0	// On event with one data byte
 #define OPC_ACOF1	0xB1	// Off event with one data byte
@@ -285,6 +293,7 @@ extern "C" {
 #define OPC_RDCC5	0xC0	// 5 byte DCC packet
 #define OPC_WCVOA	0xC1	// Write CV ops mode by address
 #define OPC_CABDAT	0xC2	// Cab data (cab signalling)
+#define OPC_DGN	0xC7	// Diagnostics
 #define OPC_FCLK	0xCF	// Fast clock
 // 
 #define OPC_ACON2	0xD0	// On event with two data bytes
@@ -305,6 +314,9 @@ extern "C" {
 #define OPC_PLOC	0xE1	// Loco session report
 #define OPC_NAME	0xE2	// Module name response
 #define OPC_STAT	0xE3	// Command station status report
+#define OPC_ENACK	0xE6	// Event Acknowledge
+#define OPC_ESD	0xE7	// Extended service discovery
+#define OPC_DTXC	0xE9	// Long message packet
 #define OPC_PARAMS	0xEF	// Node parameters response
 // 
 #define OPC_ACON3	0xF0	// On event with 3 data bytes
@@ -327,7 +339,6 @@ extern "C" {
 // Opcodes that are proposed and/or agreed but not yet in the current published specification
 // 
 #define OPC_VCVS	0xA4	// Verify CV service mode - used for CV read hints
-#define OPC_DTXC	0xE9	// CBUS long message packet
 // 
 // 
 // Modes for STMOD
@@ -359,23 +370,30 @@ extern "C" {
 // 
 // Error codes for OPC_CMDERR
 // 
-#define CMDERR_INV_CMD	1	// 
-#define CMDERR_NOT_LRN	2	// 
-#define CMDERR_NOT_SETUP	3	// 
-#define CMDERR_TOO_MANY_EVENTS	4	// 
-#define CMDERR_NO_EV	5	// 
-#define CMDERR_INV_EV_IDX	6	// 
-#define CMDERR_INVALID_EVENT	7	// 
+#define CMDERR_INV_CMD	1	// Invalid command
+#define CMDERR_NOT_LRN	2	// Not in learn mode
+#define CMDERR_NOT_SETUP	3	// Not in setup mode
+#define CMDERR_TOO_MANY_EVENTS	4	// Too many events
+#define CMDERR_NO_EV	5	// No EV
+#define CMDERR_INV_EV_IDX	6	// Invalid EV index
+#define CMDERR_INVALID_EVENT	7	// Invalid event
 #define CMDERR_INV_EN_IDX	8	// now reserved
-#define CMDERR_INV_PARAM_IDX	9	// 
-#define CMDERR_INV_NV_IDX	10	// 
-#define CMDERR_INV_EV_VALUE	11	// 
-#define CMDERR_INV_NV_VALUE	12	// 
+#define CMDERR_INV_PARAM_IDX	9	// Invalid param index
+#define CMDERR_INV_NV_IDX	10	// Invalid NV index
+#define CMDERR_INV_EV_VALUE	11	// Invalid EV value
+#define CMDERR_INV_NV_VALUE	12	// Invalid NV value
 // 
 // Additional error codes proposed and/or agreed but not yet in the current published specification
 // 
 #define CMDERR_LRN_OTHER	13	// Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
 // 
+// 
+// GRSP codes
+// 
+#define GRSP_OK	0	// Success
+#define GRSP_UNKNOWN_NVM_TYPE	254	// Unknown non volatile memory type
+#define GRSP_INVALID_DIAGNOSTIC	253	// Invalid diagnostic
+#define GRSP_INVALID_SERVICE	252	// Invalid service
 // 
 // Sub opcodes for OPC_CABDAT
 // 
@@ -401,11 +419,25 @@ extern "C" {
 // 
 // Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 // 
+// VLCB Service Types
+// 
+#define SERVICE_ID_MNS	1	// The minimum node service. All modules must implement this.
+#define SERVICE_ID_NV	2	// The NV service.
+#define SERVICE_ID_CAN	3	// CAN service. Deals with CANID enumeration.
+#define SERVICE_ID_TEACH	4	// Old (CBUS) event teaching service.
+#define SERVICE_ID_PRODUCER	5	// Event producer service.
+#define SERVICE_ID_CONSUMER	6	// Event comsumer service.
+#define SERVICE_ID_TEACH	7	// New event teaching service.
+#define SERVICE_ID_EVENTACK	9	// Event acknowledge service. Useful for debugging event configuration.
+#define SERVICE_ID_BOOT	10	// FCU/PIC bootloader service.
+#define SERVICE_ID_STREAMING	17	// Streaming (Long Messages) service.
+// 
 // 
 // Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 // Index numbers count from 1, subtract 1 for offset into parameter block
 // Note that RQNPN with index 0 returns the parameter count
 // 
+#define PAR_NUM	0	// Number of parameters
 #define PAR_MANU	1	// Manufacturer id
 #define PAR_MINVER	2	// Minor version letter
 #define PAR_MTYP	3	// Module type code

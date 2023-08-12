@@ -74,18 +74,18 @@ namespace merg.cbus
 			// 
 			// Error codes for OPC_CMDERR
 			// 
-			public const int CMDERR_INV_CMD	=  1;	// 
-			public const int CMDERR_NOT_LRN	=  2;	// 
-			public const int CMDERR_NOT_SETUP	=  3;	// 
-			public const int CMDERR_TOO_MANY_EVENTS	=  4;	// 
-			public const int CMDERR_NO_EV	=  5;	// 
-			public const int CMDERR_INV_EV_IDX	=  6;	// 
-			public const int CMDERR_INVALID_EVENT	=  7;	// 
+			public const int CMDERR_INV_CMD	=  1;	// Invalid command
+			public const int CMDERR_NOT_LRN	=  2;	// Not in learn mode
+			public const int CMDERR_NOT_SETUP	=  3;	// Not in setup mode
+			public const int CMDERR_TOO_MANY_EVENTS	=  4;	// Too many events
+			public const int CMDERR_NO_EV	=  5;	// No EV
+			public const int CMDERR_INV_EV_IDX	=  6;	// Invalid EV index
+			public const int CMDERR_INVALID_EVENT	=  7;	// Invalid event
 			public const int CMDERR_INV_EN_IDX	=  8;	// now reserved
-			public const int CMDERR_INV_PARAM_IDX	=  9;	// 
-			public const int CMDERR_INV_NV_IDX	=  10;	// 
-			public const int CMDERR_INV_EV_VALUE	=  11;	// 
-			public const int CMDERR_INV_NV_VALUE	=  12;	// 
+			public const int CMDERR_INV_PARAM_IDX	=  9;	// Invalid param index
+			public const int CMDERR_INV_NV_IDX	=  10;	// Invalid NV index
+			public const int CMDERR_INV_EV_VALUE	=  11;	// Invalid EV value
+			public const int CMDERR_INV_NV_VALUE	=  12;	// Invalid NV value
 			// 
 			// Additional error codes proposed and/or agreed but not yet in the current published specification
 			// 
@@ -211,6 +211,7 @@ namespace merg.cbus
 			public const int MTYP_CANSOUT	=  77;	// Q series PIC input module (Ian Hart)
 			public const int MTYP_CANSBIP	=  78;	// Q series PIC input module (Ian Hart)
 			public const int MTYP_CANBUFFER	=  79;	// Message buffer (Phil Silver)
+			public const int MTYP_VLCB	=  0xFC;	// All VLCB modules have the same ID
 			// 
 			// At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 			// Please liaise with Pete before adding new module types, 
@@ -267,7 +268,7 @@ namespace merg.cbus
 		{
 			// 
 			// 
-			// CBUS opcodes list
+			// VLCB opcodes list
 			// 
 			// Packets with no data bytes
 			// 
@@ -344,6 +345,8 @@ namespace merg.cbus
 			public const int OPC_RQNPN	=  0x73;	// Request read module parameters
 			public const int OPC_NUMEV	=  0x74;	// Number of events stored response
 			public const int OPC_CANID	=  0x75;	// Set canid
+			public const int OPC_MODE	=  0x76;	// Set mode
+			public const int OPC_RQSD	=  0x78;	// Request service discovery
 			public const int OPC_EXTC2	=  0x7F;	// Extended opcode with 2 data bytes
 			// 
 			// Packets with 4 data bytes
@@ -353,6 +356,8 @@ namespace merg.cbus
 			public const int OPC_WCVB	=  0x83;	// Write CV bit Ops mode by handle
 			public const int OPC_QCVS	=  0x84;	// Read CV
 			public const int OPC_PCVS	=  0x85;	// Report CV
+			public const int OPC_RDGN	=  0x87;	// Request diagnostics
+			public const int OPC_PNVSETRD	=  0x8E;	// Set NV with Read
 			// 
 			public const int OPC_ACON	=  0x90;	// on event
 			public const int OPC_ACOF	=  0x91;	// off event
@@ -375,6 +380,9 @@ namespace merg.cbus
 			// 
 			public const int OPC_RDCC4	=  0xA0;	// 4 byte DCC packet
 			public const int OPC_WCVS	=  0xA2;	// Write CV service mode
+			public const int OPC_HEARTB	=  0xAB;	// Heartbeat
+			public const int OPC_SD	=  0xAC;	// Service discovery response
+			public const int OPC_GRSP	=  0xAF;	// General response
 			// 
 			public const int OPC_ACON1	=  0xB0;	// On event with one data byte
 			public const int OPC_ACOF1	=  0xB1;	// Off event with one data byte
@@ -394,6 +402,7 @@ namespace merg.cbus
 			public const int OPC_RDCC5	=  0xC0;	// 5 byte DCC packet
 			public const int OPC_WCVOA	=  0xC1;	// Write CV ops mode by address
 			public const int OPC_CABDAT	=  0xC2;	// Cab data (cab signalling)
+			public const int OPC_DGN	=  0xC7;	// Diagnostics
 			public const int OPC_FCLK	=  0xCF;	// Fast clock
 			// 
 			public const int OPC_ACON2	=  0xD0;	// On event with two data bytes
@@ -414,6 +423,9 @@ namespace merg.cbus
 			public const int OPC_PLOC	=  0xE1;	// Loco session report
 			public const int OPC_NAME	=  0xE2;	// Module name response
 			public const int OPC_STAT	=  0xE3;	// Command station status report
+			public const int OPC_ENACK	=  0xE6;	// Event Acknowledge
+			public const int OPC_ESD	=  0xE7;	// Extended service discovery
+			public const int OPC_DTXC	=  0xE9;	// Long message packet
 			public const int OPC_PARAMS	=  0xEF;	// Node parameters response
 			// 
 			public const int OPC_ACON3	=  0xF0;	// On event with 3 data bytes
@@ -436,7 +448,6 @@ namespace merg.cbus
 			// Opcodes that are proposed and/or agreed but not yet in the current published specification
 			// 
 			public const int OPC_VCVS	=  0xA4;	// Verify CV service mode - used for CV read hints
-			public const int OPC_DTXC	=  0xE9;	// CBUS long message packet
 		}
 
 		public static class CbusParamFlags
@@ -474,6 +485,7 @@ namespace merg.cbus
 			// Index numbers count from 1, subtract 1 for offset into parameter block
 			// Note that RQNPN with index 0 returns the parameter count
 			// 
+			public const int PAR_NUM	=  0;	// Number of parameters
 			public const int PAR_MANU	=  1;	// Manufacturer id
 			public const int PAR_MINVER	=  2;	// Minor version letter
 			public const int PAR_MTYP	=  3;	// Module type code
@@ -571,6 +583,34 @@ namespace merg.cbus
 			// SysPixie Module types (Konrad Orlowski)
 			// 
 			public const int MTYP_CANPMSense	=  1;	// Motorised point motor driver with current sense
+		}
+
+		public static class VlcbGrspCodes
+		{
+			// 
+			// GRSP codes
+			// 
+			public const int GRSP_OK	=  0;	// Success
+			public const int GRSP_UNKNOWN_NVM_TYPE	=  254;	// Unknown non volatile memory type
+			public const int GRSP_INVALID_DIAGNOSTIC	=  253;	// Invalid diagnostic
+			public const int GRSP_INVALID_SERVICE	=  252;	// Invalid service
+		}
+
+		public static class VlcbServiceTypes
+		{
+			// 
+			// VLCB Service Types
+			// 
+			public const int SERVICE_ID_MNS	=  1;	// The minimum node service. All modules must implement this.
+			public const int SERVICE_ID_NV	=  2;	// The NV service.
+			public const int SERVICE_ID_CAN	=  3;	// CAN service. Deals with CANID enumeration.
+			public const int SERVICE_ID_TEACH	=  4;	// Old (CBUS) event teaching service.
+			public const int SERVICE_ID_PRODUCER	=  5;	// Event producer service.
+			public const int SERVICE_ID_CONSUMER	=  6;	// Event comsumer service.
+			public const int SERVICE_ID_TEACH	=  7;	// New event teaching service.
+			public const int SERVICE_ID_EVENTACK	=  9;	// Event acknowledge service. Useful for debugging event configuration.
+			public const int SERVICE_ID_BOOT	=  10;	// FCU/PIC bootloader service.
+			public const int SERVICE_ID_STREAMING	=  17;	// Streaming (Long Messages) service.
 		}
 
 	}

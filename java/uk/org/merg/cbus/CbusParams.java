@@ -16,6 +16,7 @@ public enum CbusParams {
 // Index numbers count from 1, subtract 1 for offset into parameter block
 // Note that RQNPN with index 0 returns the parameter count
 // 
+	PAR_NUM(0),	//Number of parameters
 	PAR_MANU(1),	//Manufacturer id
 	PAR_MINVER(2),	//Minor version letter
 	PAR_MTYP(3),	//Module type code

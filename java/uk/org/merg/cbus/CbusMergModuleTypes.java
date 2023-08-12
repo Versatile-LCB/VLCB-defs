@@ -97,6 +97,7 @@ public enum CbusMergModuleTypes {
 	MTYP_CANSOUT(77),	//Q series PIC input module (Ian Hart)
 	MTYP_CANSBIP(78),	//Q series PIC input module (Ian Hart)
 	MTYP_CANBUFFER(79),	//Message buffer (Phil Silver)
+	MTYP_VLCB(0xFC),	//All VLCB modules have the same ID
 // 
 // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 // Please liaise with Pete before adding new module types, 
