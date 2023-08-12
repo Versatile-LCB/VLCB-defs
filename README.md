@@ -6,6 +6,14 @@ This code is a fork from https://github.com/MERG-DEV/cbusdefs that contains the 
 definition files for CBUS. 
 This repo builds on CBUSDEFS and adds the definitions used by VLCB.
 
+# Credits
+* cbusdefs repository: Copyright (C) Pete Brownlow software@upsys.co.uk
+* Originally derived from opcodes.h (c) Andrew Crosland.
+* CSV version by Ian Hogg inspired by David W Radcliffe.
+* Adapted for VLCB by Sven Rosvall.
+
+# Contents
+
 Do NOT edit any of the language specific VLCB-defs files, edit only vlcb-defs.csv and generate the language files from that.
 
 _generate.sh_ is a Bash script  that can be executed using "Git Bash" which is part of the git download (https://git-scm.com/downloads) or by 
@@ -23,7 +31,7 @@ The current _generate.sh_ script produces the following output files from the vl
 # New versions of VLCB-defs
 VLCB-defs will be updated from time to time, in line with changes to the VLCB spec or addition of new module types and/or manufacturer codes.
 
-TODO: Once VLCB-defs is stable and proven useful, generated zip for each new release shall also be uploaded to the MERG knowledgebase
+**TODO**: Once VLCB-defs is stable and proven useful, generated zip for each new release shall also be uploaded to the MERG knowledgebase
 (https://www.merg.org.uk/merg_wiki/doku.php?id=vlcb:vlcb-headers). Note: You must be a MERG member to access this page.
 
 # Process to update VLCB-defs
