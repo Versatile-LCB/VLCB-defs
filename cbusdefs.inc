@@ -417,7 +417,7 @@ SASP_LUNAR	equ .1	; Set bit 1 for lunar indication
 SERVICE_ID_MNS	equ .1	; The minimum node service. All modules must implement this.
 SERVICE_ID_NV	equ .2	; The NV service.
 SERVICE_ID_CAN	equ .3	; CAN service. Deals with CANID enumeration.
-SERVICE_ID_TEACH	equ .4	; Old (CBUS) event teaching service.
+SERVICE_ID_OLD_TEACH	equ .4	; Old (CBUS) event teaching service.
 SERVICE_ID_PRODUCER	equ .5	; Event producer service.
 SERVICE_ID_CONSUMER	equ .6	; Event comsumer service.
 SERVICE_ID_TEACH	equ .7	; New event teaching service.

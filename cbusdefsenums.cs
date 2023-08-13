@@ -1485,7 +1485,7 @@ namespace Merg.Cbus
 		/// <summary>
 		/// Old (CBUS) event teaching service.
 		/// </summary>
-		ServiceIdTeach = 4,
+		ServiceIdOldTeach = 4,
 		/// <summary>
 		/// Event producer service.
 		/// </summary>

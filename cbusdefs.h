@@ -424,7 +424,7 @@ extern "C" {
 #define SERVICE_ID_MNS	1	// The minimum node service. All modules must implement this.
 #define SERVICE_ID_NV	2	// The NV service.
 #define SERVICE_ID_CAN	3	// CAN service. Deals with CANID enumeration.
-#define SERVICE_ID_TEACH	4	// Old (CBUS) event teaching service.
+#define SERVICE_ID_OLD_TEACH	4	// Old (CBUS) event teaching service.
 #define SERVICE_ID_PRODUCER	5	// Event producer service.
 #define SERVICE_ID_CONSUMER	6	// Event comsumer service.
 #define SERVICE_ID_TEACH	7	// New event teaching service.
