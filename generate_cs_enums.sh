@@ -28,7 +28,7 @@ EOF
 
 	while IFS="," read type	name value comment 
 	do
-		if [ $type = $class ]; then
+		if [ "$type" = $class ]; then
 			if [ "X$name" = "X" ]; then
 				if [ "X$comment" != "X" ]; then
 					echo -e "\t/// $value$comment" 
@@ -50,7 +50,7 @@ EOF
 	# now output the actual contents
 	while IFS="," read type	name value comment 
 	do
-		if [ $type = $class ]; then
+		if [ "$type" = $class ]; then
 #			if [ "X$name" = "X" ]; then
 #				if [ "X$comment" != "X" ]; then
 #					echo -e "\t\t// $value$comment" 

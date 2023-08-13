@@ -23,7 +23,7 @@ EOF
 # now output the actual contents
 while IFS="," read type	name value comment 
 do
-	if [ $type = "comment" ]; then
+	if [ "$type" = "comment" ]; then
 		echo -e "; $name\t$value\t$comment" 
 	else
 		if [ "X$name" = "X" ]; then
@@ -64,7 +64,7 @@ EOF
 # now output the actual contents
 while IFS="," read type	name value comment 
 do
-	if [ $type = "comment" ]; then
+	if [ "$type" = "comment" ]; then
 		echo -e "// $name\t$value\t$comment" 
 	else
 		if [ "X$name" = "X" ]; then
@@ -107,7 +107,7 @@ EOF
 # now output the actual contents
 while IFS="," read type	name value comment 
 do
-	if [ $type = "comment" ]; then
+	if [ "$type" = "comment" ]; then
 		echo -e "{ $name\t$value\t$comment }" 
 	else
 		if [ "X$name" = "X" ]; then
@@ -156,7 +156,7 @@ EOF
 	# capture the name and values into a variable
 	BODY=`while IFS="," read type	name value comment 
 	do
-		if [ $type = "$class" ]; then
+		if [ "$type" = "$class" ]; then
 			if [ "X$name" = "X" ]; then
 				echo -e "// $value$comment" 
 			else
@@ -217,7 +217,7 @@ EOF
 # now output the actual contents
 while IFS="," read type	name value comment 
 do
-	if [ $type = "comment" ]; then
+	if [ "$type" = "comment" ]; then
 		echo -e "# $name    $value    $comment" 
 	else
 		if [ "X$name" = "X" ]; then
