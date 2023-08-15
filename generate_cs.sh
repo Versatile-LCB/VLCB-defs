@@ -1,7 +1,7 @@
 #!/bin/bash
 #set -x
 
-OUTPUT=cbusdefs.cs
+OUTPUT=vlcbdefs.cs
 echo "Generating $OUTPUT"
 # first output the header stuff
 cat << EOF > $OUTPUT
@@ -19,14 +19,14 @@ grep '^comment' vlcb-defs.csv | cut -f2- -d , | sed 's!^!    // !' |sed 's!,!!' 
 
 cat << EOF >> $OUTPUT
 
-	public static class CbusDefs
+	public static class VlcbDefs
 	{
 EOF
 
 # Each type is a static nested class.
 for class in $(cat vlcb-defs.csv|cut -f1 -d ,|grep -v comment|sort|uniq)
 do
-	echo "           CbusDefs.$class"
+	echo "           VlcbDefs.$class"
 
 	cat << EOF >> $OUTPUT
 		public static class $class

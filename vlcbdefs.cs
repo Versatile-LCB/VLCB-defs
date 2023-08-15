@@ -10,7 +10,7 @@ namespace merg.cbus
     // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
     // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-	public static class CbusDefs
+	public static class VlcbDefs
 	{
 		public static class CbusArmProcessors
 		{
