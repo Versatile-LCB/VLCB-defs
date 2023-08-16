@@ -189,6 +189,10 @@ namespace Merg.Vlcb
 		/// </summary>
 		Spectrum = 80,
 		/// <summary>
+		/// VLCB range of modules
+		/// </summary>
+		Vlcb = 250,
+		/// <summary>
 		/// Konrad Orlowski
 		/// </summary>
 		Syspixie = 249,
@@ -1412,6 +1416,33 @@ namespace Merg.Vlcb
 		/// 8-channel (4-pairs) Solenoid I/O module
 		/// </summary>
 		Cansolio = 9,
+	}
+
+	/// <summary>
+	///
+	/// </summary>
+	public enum SStats
+	{
+		/// <summary>
+		///
+		/// </summary>
+		NoAck = 1,
+		/// <summary>
+		///
+		/// </summary>
+		Ovld = 2,
+		/// <summary>
+		///
+		/// </summary>
+		WrAck = 3,
+		/// <summary>
+		///
+		/// </summary>
+		Busy = 4,
+		/// <summary>
+		///
+		/// </summary>
+		CvError = 5,
 	}
 
 	/// <summary>

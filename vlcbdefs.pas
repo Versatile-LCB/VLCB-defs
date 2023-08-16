@@ -11,6 +11,8 @@ const
 { 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino }
 { 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. }
 { 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/ }
+{ 		Ian Hogg,14/08/2023, Ver 8x  Add manufacturer code for VLCB. This is a way to allocate a block of module Id to VLCB even though VLCB group is not a manufacturer per se. The VLCB module IDs will be defined in the VLCB repo
+ }
 // 
 // Manufacturer definitions
 // Where the manufacturer already has an NMRA code, this is used
@@ -20,6 +22,7 @@ const
  MANU_SPROG	=  44;	// https://www.sprog-dcc.co.uk/
  MANU_ROCRAIL	=  70;	// http://www.rocrail.net
  MANU_SPECTRUM	=  80;	// http://animatedmodeler.com  (Spectrum Engineering)
+ MANU_VLCB	=  250;	// VLCB range of modules
  MANU_SYSPIXIE	=  249;	// Konrad Orlowski
  MANU_RME	=  248;	// http://rmeuk.com  (Railway Modelling Experts Limited)
 // 
@@ -111,7 +114,7 @@ const
  MTYP_CANSBIP	=  78;	// Q series PIC input module (Ian Hart)
  MTYP_CANBUFFER	=  79;	// Message buffer (Phil Silver)
  MTYP_VLCB	=  0xFC;	// All VLCB modules have the same ID
-// 
+//
 // 
 // 
 // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
@@ -248,7 +251,7 @@ const
  OPC_PCVS	=  0x85;	// Report CV
  OPC_RDGN	=  0x87;	// Request diagnostics
  OPC_PNVSETRD	=  0x8E;	// Set NV with Read
-// 
+//
  OPC_ACON	=  0x90;	// on event
  OPC_ACOF	=  0x91;	// off event
  OPC_AREQ	=  0x92;	// Accessory Request event
@@ -273,7 +276,7 @@ const
  OPC_HEARTB	=  0xAB;	// Heartbeat
  OPC_SD	=  0xAC;	// Service discovery response
  OPC_GRSP	=  0xAF;	// General response
-// 
+//
  OPC_ACON1	=  0xB0;	// On event with one data byte
  OPC_ACOF1	=  0xB1;	// Off event with one data byte
  OPC_REQEV	=  0xB2;	// Read event variable in learn mode
@@ -388,12 +391,12 @@ const
 // 
 // 
 // GRSP codes
-// 
+//
  GRSP_OK	=  0;	// Success
  GRSP_UNKNOWN_NVM_TYPE	=  254;	// Unknown non volatile memory type
  GRSP_INVALID_DIAGNOSTIC	=  253;	// Invalid diagnostic
  GRSP_INVALID_SERVICE	=  252;	// Invalid service
-// 
+//
 // Sub opcodes for OPC_CABDAT
 // 
  CDAT_CABSIG	=  1;	// 
@@ -419,7 +422,7 @@ const
 // Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 // 
 // VLCB Service Types
-// 
+//
  SERVICE_ID_MNS	=  1;	// The minimum node service. All modules must implement this.
  SERVICE_ID_NV	=  2;	// The NV service.
  SERVICE_ID_CAN	=  3;	// CAN service. Deals with CANID enumeration.
@@ -430,8 +433,8 @@ const
  SERVICE_ID_EVENTACK	=  9;	// Event acknowledge service. Useful for debugging event configuration.
  SERVICE_ID_BOOT	=  10;	// FCU/PIC bootloader service.
  SERVICE_ID_STREAMING	=  17;	// Streaming (Long Messages) service.
-// 
-// 
+//
+//
 // Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 // Index numbers count from 1, subtract 1 for offset into parameter block
 // Note that RQNPN with index 0 returns the parameter count

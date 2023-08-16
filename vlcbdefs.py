@@ -8,7 +8,7 @@ from micropython import const
 #         This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 #         Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 #         The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-# 
+#
 # Manufacturer definitions
 # Where the manufacturer already has an NMRA code, this is used
 # 
@@ -17,6 +17,7 @@ MANU_MERG = const(165)    # https://www.merg.co.uk
 MANU_SPROG = const(44)    # https://www.sprog-dcc.co.uk/
 MANU_ROCRAIL = const(70)    # http://www.rocrail.net
 MANU_SPECTRUM = const(80)    # http://animatedmodeler.com  (Spectrum Engineering)
+MANU_VLCB = const(250)    # VLCB range of modules
 MANU_SYSPIXIE = const(249)    # Konrad Orlowski
 MANU_RME = const(248)    # http://rmeuk.com  (Railway Modelling Experts Limited)
 # 
@@ -108,7 +109,7 @@ MTYP_CANSOUT = const(77)    # Q series PIC input module (Ian Hart)
 MTYP_CANSBIP = const(78)    # Q series PIC input module (Ian Hart)
 MTYP_CANBUFFER = const(79)    # Message buffer (Phil Silver)
 MTYP_VLCB = const(0xFC)    # All VLCB modules have the same ID
-# 
+#
 # 
 # 
 # At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
@@ -245,7 +246,7 @@ OPC_QCVS = const(0x84)    # Read CV
 OPC_PCVS = const(0x85)    # Report CV
 OPC_RDGN = const(0x87)    # Request diagnostics
 OPC_PNVSETRD = const(0x8E)    # Set NV with Read
-# 
+#
 OPC_ACON = const(0x90)    # on event
 OPC_ACOF = const(0x91)    # off event
 OPC_AREQ = const(0x92)    # Accessory Request event
@@ -270,7 +271,7 @@ OPC_WCVS = const(0xA2)    # Write CV service mode
 OPC_HEARTB = const(0xAB)    # Heartbeat
 OPC_SD = const(0xAC)    # Service discovery response
 OPC_GRSP = const(0xAF)    # General response
-# 
+#
 OPC_ACON1 = const(0xB0)    # On event with one data byte
 OPC_ACOF1 = const(0xB1)    # Off event with one data byte
 OPC_REQEV = const(0xB2)    # Read event variable in learn mode
@@ -385,12 +386,12 @@ CMDERR_LRN_OTHER = const(13)    # Sent when module in learn mode sees NNLRN for 
 # 
 # 
 # GRSP codes
-# 
+#
 GRSP_OK = const(0)    # Success
 GRSP_UNKNOWN_NVM_TYPE = const(254)    # Unknown non volatile memory type
 GRSP_INVALID_DIAGNOSTIC = const(253)    # Invalid diagnostic
 GRSP_INVALID_SERVICE = const(252)    # Invalid service
-# 
+#
 # Sub opcodes for OPC_CABDAT
 # 
 CDAT_CABSIG = const(1)    # 
@@ -416,7 +417,7 @@ SASP_LUNAR = const(1)    # Set bit 1 for lunar indication
 # Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 # 
 # VLCB Service Types
-# 
+#
 SERVICE_ID_MNS = const(1)    # The minimum node service. All modules must implement this.
 SERVICE_ID_NV = const(2)    # The NV service.
 SERVICE_ID_CAN = const(3)    # CAN service. Deals with CANID enumeration.
@@ -427,8 +428,8 @@ SERVICE_ID_TEACH = const(7)    # New event teaching service.
 SERVICE_ID_EVENTACK = const(9)    # Event acknowledge service. Useful for debugging event configuration.
 SERVICE_ID_BOOT = const(10)    # FCU/PIC bootloader service.
 SERVICE_ID_STREAMING = const(17)    # Streaming (Long Messages) service.
-# 
-# 
+#
+#
 # Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 # Index numbers count from 1, subtract 1 for offset into parameter block
 # Note that RQNPN with index 0 returns the parameter count

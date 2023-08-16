@@ -12,7 +12,7 @@ extern "C" {
 // 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 // 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-// 
+//
 // Manufacturer definitions
 // Where the manufacturer already has an NMRA code, this is used
 // 
@@ -21,6 +21,7 @@ extern "C" {
 #define MANU_SPROG	44	// https://www.sprog-dcc.co.uk/
 #define MANU_ROCRAIL	70	// http://www.rocrail.net
 #define MANU_SPECTRUM	80	// http://animatedmodeler.com  (Spectrum Engineering)
+#define MANU_VLCB	250	// VLCB range of modules
 #define MANU_SYSPIXIE	249	// Konrad Orlowski
 #define MANU_RME	248	// http://rmeuk.com  (Railway Modelling Experts Limited)
 // 
@@ -112,7 +113,7 @@ extern "C" {
 #define MTYP_CANSBIP	78	// Q series PIC input module (Ian Hart)
 #define MTYP_CANBUFFER	79	// Message buffer (Phil Silver)
 #define MTYP_VLCB	0xFC	// All VLCB modules have the same ID
-// 
+//
 // 
 // 
 // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
@@ -249,7 +250,7 @@ extern "C" {
 #define OPC_PCVS	0x85	// Report CV
 #define OPC_RDGN	0x87	// Request diagnostics
 #define OPC_PNVSETRD	0x8E	// Set NV with Read
-// 
+//
 #define OPC_ACON	0x90	// on event
 #define OPC_ACOF	0x91	// off event
 #define OPC_AREQ	0x92	// Accessory Request event
@@ -274,7 +275,7 @@ extern "C" {
 #define OPC_HEARTB	0xAB	// Heartbeat
 #define OPC_SD	0xAC	// Service discovery response
 #define OPC_GRSP	0xAF	// General response
-// 
+//
 #define OPC_ACON1	0xB0	// On event with one data byte
 #define OPC_ACOF1	0xB1	// Off event with one data byte
 #define OPC_REQEV	0xB2	// Read event variable in learn mode
@@ -389,12 +390,12 @@ extern "C" {
 // 
 // 
 // GRSP codes
-// 
+//
 #define GRSP_OK	0	// Success
 #define GRSP_UNKNOWN_NVM_TYPE	254	// Unknown non volatile memory type
 #define GRSP_INVALID_DIAGNOSTIC	253	// Invalid diagnostic
 #define GRSP_INVALID_SERVICE	252	// Invalid service
-// 
+//
 // Sub opcodes for OPC_CABDAT
 // 
 #define CDAT_CABSIG	1	// 
@@ -420,7 +421,7 @@ extern "C" {
 // Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 // 
 // VLCB Service Types
-// 
+//
 #define SERVICE_ID_MNS	1	// The minimum node service. All modules must implement this.
 #define SERVICE_ID_NV	2	// The NV service.
 #define SERVICE_ID_CAN	3	// CAN service. Deals with CANID enumeration.
@@ -431,8 +432,8 @@ extern "C" {
 #define SERVICE_ID_EVENTACK	9	// Event acknowledge service. Useful for debugging event configuration.
 #define SERVICE_ID_BOOT	10	// FCU/PIC bootloader service.
 #define SERVICE_ID_STREAMING	17	// Streaming (Long Messages) service.
-// 
-// 
+//
+//
 // Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 // Index numbers count from 1, subtract 1 for offset into parameter block
 // Note that RQNPN with index 0 returns the parameter count

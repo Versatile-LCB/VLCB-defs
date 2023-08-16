@@ -5,7 +5,7 @@
 ; 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 ; 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 ; 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-; 
+;
 ; Manufacturer definitions
 ; Where the manufacturer already has an NMRA code, this is used
 ; 
@@ -14,6 +14,7 @@ MANU_MERG	equ .165	; https://www.merg.co.uk
 MANU_SPROG	equ .44	; https://www.sprog-dcc.co.uk/
 MANU_ROCRAIL	equ .70	; http://www.rocrail.net
 MANU_SPECTRUM	equ .80	; http://animatedmodeler.com  (Spectrum Engineering)
+MANU_VLCB	equ .250	; VLCB range of modules
 MANU_SYSPIXIE	equ .249	; Konrad Orlowski
 MANU_RME	equ .248	; http://rmeuk.com  (Railway Modelling Experts Limited)
 ; 
@@ -105,7 +106,7 @@ MTYP_CANSOUT	equ .77	; Q series PIC input module (Ian Hart)
 MTYP_CANSBIP	equ .78	; Q series PIC input module (Ian Hart)
 MTYP_CANBUFFER	equ .79	; Message buffer (Phil Silver)
 MTYP_VLCB	equ 0xFC	; All VLCB modules have the same ID
-; 
+;
 ; 
 ; 
 ; At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
@@ -242,7 +243,7 @@ OPC_QCVS	equ 0x84	; Read CV
 OPC_PCVS	equ 0x85	; Report CV
 OPC_RDGN	equ 0x87	; Request diagnostics
 OPC_PNVSETRD	equ 0x8E	; Set NV with Read
-; 
+;
 OPC_ACON	equ 0x90	; on event
 OPC_ACOF	equ 0x91	; off event
 OPC_AREQ	equ 0x92	; Accessory Request event
@@ -267,7 +268,7 @@ OPC_WCVS	equ 0xA2	; Write CV service mode
 OPC_HEARTB	equ 0xAB	; Heartbeat
 OPC_SD	equ 0xAC	; Service discovery response
 OPC_GRSP	equ 0xAF	; General response
-; 
+;
 OPC_ACON1	equ 0xB0	; On event with one data byte
 OPC_ACOF1	equ 0xB1	; Off event with one data byte
 OPC_REQEV	equ 0xB2	; Read event variable in learn mode
@@ -382,12 +383,12 @@ CMDERR_LRN_OTHER	equ .13	; Sent when module in learn mode sees NNLRN for differe
 ; 
 ; 
 ; GRSP codes
-; 
+;
 GRSP_OK	equ .0	; Success
 GRSP_UNKNOWN_NVM_TYPE	equ .254	; Unknown non volatile memory type
 GRSP_INVALID_DIAGNOSTIC	equ .253	; Invalid diagnostic
 GRSP_INVALID_SERVICE	equ .252	; Invalid service
-; 
+;
 ; Sub opcodes for OPC_CABDAT
 ; 
 CDAT_CABSIG	equ .1	; 
@@ -413,7 +414,7 @@ SASP_LUNAR	equ .1	; Set bit 1 for lunar indication
 ; Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 ; 
 ; VLCB Service Types
-; 
+;
 SERVICE_ID_MNS	equ .1	; The minimum node service. All modules must implement this.
 SERVICE_ID_NV	equ .2	; The NV service.
 SERVICE_ID_CAN	equ .3	; CAN service. Deals with CANID enumeration.
@@ -424,8 +425,8 @@ SERVICE_ID_TEACH	equ .7	; New event teaching service.
 SERVICE_ID_EVENTACK	equ .9	; Event acknowledge service. Useful for debugging event configuration.
 SERVICE_ID_BOOT	equ .10	; FCU/PIC bootloader service.
 SERVICE_ID_STREAMING	equ .17	; Streaming (Long Messages) service.
-; 
-; 
+;
+;
 ; Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 ; Index numbers count from 1, subtract 1 for offset into parameter block
 ; Note that RQNPN with index 0 returns the parameter count
