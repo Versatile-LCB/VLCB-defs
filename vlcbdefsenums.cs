@@ -1419,33 +1419,6 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	///
-	/// </summary>
-	public enum SStats
-	{
-		/// <summary>
-		///
-		/// </summary>
-		NoAck = 1,
-		/// <summary>
-		///
-		/// </summary>
-		Ovld = 2,
-		/// <summary>
-		///
-		/// </summary>
-		WrAck = 3,
-		/// <summary>
-		///
-		/// </summary>
-		Busy = 4,
-		/// <summary>
-		///
-		/// </summary>
-		CvError = 5,
-	}
-
-	/// <summary>
 	/// class: CbusStmodModes
 	/// class: CbusStmodModes
 	/// Modes for STMOD

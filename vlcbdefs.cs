@@ -528,6 +528,18 @@ namespace merg.cbus
 			public const int MTYP_CANGC1e	=  11;	// CAN<->Ethernet interface
 		}
 
+		public static class CbusSStats
+		{
+			// 
+			// Status codes for OPC_SSTAT
+			// 
+			public const int SSTAT_NO_ACK	=  1;	// 
+			public const int SSTAT_OVLD	=  2;	// 
+			public const int SSTAT_WR_ACK	=  3;	// 
+			public const int SSTAT_BUSY	=  4;	// 
+			public const int SSTAT_CV_ERROR	=  5;	// 
+		}
+
 		public static class CbusSpectrumModuleTypes
 		{
 			// 
@@ -551,18 +563,6 @@ namespace merg.cbus
 			public const int MTYP_CANIO	=  7;	// 8-channel I/O module
 			public const int MTYP_CANSERVOIO	=  8;	// 8-channel Servo I/O module
 			public const int MTYP_CANSOLIO	=  9;	// 8-channel (4-pairs) Solenoid I/O module
-		}
-
-		public static class CbusSStats
-		{
-			//
-			// Status codes for OPC_SSTAT
-			//
-			public const int SSTAT_NO_ACK	=  1;	//
-			public const int SSTAT_OVLD	=  2;	//
-			public const int SSTAT_WR_ACK	=  3;	//
-			public const int SSTAT_BUSY	=  4;	//
-			public const int SSTAT_CV_ERROR	=  5;	//
 		}
 
 		public static class CbusStmodModes
