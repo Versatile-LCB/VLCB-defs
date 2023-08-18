@@ -213,7 +213,7 @@ namespace merg.cbus
 			public const int MTYP_CANSBIP	=  78;	// Q series PIC input module (Ian Hart)
 			public const int MTYP_CANBUFFER	=  79;	// Message buffer (Phil Silver)
 			public const int MTYP_VLCB	=  0xFC;	// All VLCB modules have the same ID
-			//
+			// 
 			// At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 			// Please liaise with Pete before adding new module types, 
 			// and/or create your own GitHub branch, add your proposed new module type(s) and then create a Pull Request
@@ -359,7 +359,7 @@ namespace merg.cbus
 			public const int OPC_PCVS	=  0x85;	// Report CV
 			public const int OPC_RDGN	=  0x87;	// Request diagnostics
 			public const int OPC_PNVSETRD	=  0x8E;	// Set NV with Read
-			//
+			// 
 			public const int OPC_ACON	=  0x90;	// on event
 			public const int OPC_ACOF	=  0x91;	// off event
 			public const int OPC_AREQ	=  0x92;	// Accessory Request event
@@ -384,7 +384,7 @@ namespace merg.cbus
 			public const int OPC_HEARTB	=  0xAB;	// Heartbeat
 			public const int OPC_SD	=  0xAC;	// Service discovery response
 			public const int OPC_GRSP	=  0xAF;	// General response
-			//
+			// 
 			public const int OPC_ACON1	=  0xB0;	// On event with one data byte
 			public const int OPC_ACOF1	=  0xB1;	// Off event with one data byte
 			public const int OPC_REQEV	=  0xB2;	// Read event variable in learn mode
@@ -588,9 +588,9 @@ namespace merg.cbus
 
 		public static class VlcbGrspCodes
 		{
-			//
+			// 
 			// GRSP codes
-			//
+			// 
 			public const int GRSP_OK	=  0;	// Success
 			public const int GRSP_UNKNOWN_NVM_TYPE	=  254;	// Unknown non volatile memory type
 			public const int GRSP_INVALID_DIAGNOSTIC	=  253;	// Invalid diagnostic
@@ -599,9 +599,9 @@ namespace merg.cbus
 
 		public static class VlcbServiceTypes
 		{
-			//
+			// 
 			// VLCB Service Types
-			//
+			// 
 			public const int SERVICE_ID_MNS	=  1;	// The minimum node service. All modules must implement this.
 			public const int SERVICE_ID_NV	=  2;	// The NV service.
 			public const int SERVICE_ID_CAN	=  3;	// CAN service. Deals with CANID enumeration.
