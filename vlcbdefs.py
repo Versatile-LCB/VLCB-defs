@@ -245,7 +245,7 @@ OPC_WCVB = const(0x83)    # Write CV bit Ops mode by handle
 OPC_QCVS = const(0x84)    # Read CV
 OPC_PCVS = const(0x85)    # Report CV
 OPC_RDGN = const(0x87)    # Request diagnostics
-OPC_PNVSETRD = const(0x8E)    # Set NV with Read
+OPC_NVSETRD = const(0x8E)    # Set NV with Read
 # 
 OPC_ACON = const(0x90)    # on event
 OPC_ACOF = const(0x91)    # off event

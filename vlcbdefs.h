@@ -249,7 +249,7 @@ extern "C" {
 #define OPC_QCVS	0x84	// Read CV
 #define OPC_PCVS	0x85	// Report CV
 #define OPC_RDGN	0x87	// Request diagnostics
-#define OPC_PNVSETRD	0x8E	// Set NV with Read
+#define OPC_NVSETRD	0x8E	// Set NV with Read
 // 
 #define OPC_ACON	0x90	// on event
 #define OPC_ACOF	0x91	// off event

@@ -358,7 +358,7 @@ namespace merg.cbus
 			public const int OPC_QCVS	=  0x84;	// Read CV
 			public const int OPC_PCVS	=  0x85;	// Report CV
 			public const int OPC_RDGN	=  0x87;	// Request diagnostics
-			public const int OPC_PNVSETRD	=  0x8E;	// Set NV with Read
+			public const int OPC_NVSETRD	=  0x8E;	// Set NV with Read
 			// 
 			public const int OPC_ACON	=  0x90;	// on event
 			public const int OPC_ACOF	=  0x91;	// off event

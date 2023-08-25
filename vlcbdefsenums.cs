@@ -866,7 +866,7 @@ namespace Merg.Vlcb
 		/// <summary>
 		/// Set NV with Read
 		/// </summary>
-		Pnvsetrd = 0x8E,
+		Nvsetrd = 0x8E,
 		/// <summary>
 		/// on event
 		/// </summary>

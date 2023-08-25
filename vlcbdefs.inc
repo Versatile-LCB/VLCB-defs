@@ -242,7 +242,7 @@ OPC_WCVB	equ 0x83	; Write CV bit Ops mode by handle
 OPC_QCVS	equ 0x84	; Read CV
 OPC_PCVS	equ 0x85	; Report CV
 OPC_RDGN	equ 0x87	; Request diagnostics
-OPC_PNVSETRD	equ 0x8E	; Set NV with Read
+OPC_NVSETRD	equ 0x8E	; Set NV with Read
 ; 
 OPC_ACON	equ 0x90	; on event
 OPC_ACOF	equ 0x91	; off event
