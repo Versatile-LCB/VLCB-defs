@@ -7,7 +7,7 @@ definition files for CBUS.
 This repo builds on CBUSDEFS and adds the definitions used by VLCB.
 
 # Credits
-* cbusdefs repository: Copyright (C) Pete Brownlow software@upsys.co.uk
+* [cbusdefs](https://github.com/MERG-DEV/cbusdefs) repository: Copyright (C) Pete Brownlow software@upsys.co.uk
 * Originally derived from opcodes.h (c) Andrew Crosland.
 * CSV version by Ian Hogg inspired by David W Radcliffe.
 * Adapted for VLCB by Sven Rosvall.
@@ -16,17 +16,21 @@ This repo builds on CBUSDEFS and adds the definitions used by VLCB.
 
 Do NOT edit any of the language specific VLCB-defs files, edit only vlcb-defs.csv and generate the language files from that.
 
-_generate.sh_ is a Bash script  that can be executed using "Git Bash" which is part of the git download (https://git-scm.com/downloads) or by 
+There are a number of generator scripts for each supported programming language.
+These generator scripts are Bash scripts that can be executed using "Git Bash" which is part of the git download (https://git-scm.com/downloads) or by 
 any other suitable Bash shell.
+_generate.sh_ is a "master" script that runs all the generator scripts.
+The language specific scripts can be run individually to only generate file(s) for that language.
 
-The current _generate.sh_ script produces the following output files from the vlcb-defs.csv:
-1.	cbusdefs.h   - C
-2.	cbusdefs.inc - Assembler
-3.	cbusdefs.pas - Object Pascal (Delphi)
-4.  CbusDefs.cs	 - C#.NET 5.0 (Core) solution that contains T4 templates to generate files for C#.
+The current generator script produces the following output files from the vlcb-defs.csv:
+1.	vlcbdefs.h   - C and C++
+1.	vlcbdefs.hpp - C++ using enum constants
+2.	vlcbdefs.inc - Assembler
+3.	vlcbdefs.pas - Object Pascal (Delphi)
+4.  vlcbDefs.cs	 - C#.NET 5.0 (Core) solution that contains T4 templates to generate files for C#.
 					The generated files should be suitable for .NET Framework projects.
 5.	java/\*      - Java
-6.  cbusdefs.py  - Python
+6.  vlcbdefs.py  - Python
 
 # New versions of VLCB-defs
 VLCB-defs will be updated from time to time, in line with changes to the VLCB spec or addition of new module types and/or manufacturer codes.
