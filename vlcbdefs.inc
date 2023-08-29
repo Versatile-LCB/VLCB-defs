@@ -388,6 +388,8 @@ GRSP_OK	equ .0	; Success
 GRSP_UNKNOWN_NVM_TYPE	equ .254	; Unknown non volatile memory type
 GRSP_INVALID_DIAGNOSTIC	equ .253	; Invalid diagnostic
 GRSP_INVALID_SERVICE	equ .252	; Invalid service
+GRSP_INVALID_COMMAND_PARAMETER	equ .251	; Invalid parameter in command
+GRSP_INVALID_MODE	equ .250	; Invalid Mode
 ; 
 ; Sub opcodes for OPC_CABDAT
 ; 

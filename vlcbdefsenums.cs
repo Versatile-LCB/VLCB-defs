@@ -1466,6 +1466,14 @@ namespace Merg.Vlcb
 		/// Invalid service
 		/// </summary>
 		GrspInvalidService = 252,
+		/// <summary>
+		/// Invalid parameter in command
+		/// </summary>
+		GrspInvalidCommandParameter = 251,
+		/// <summary>
+		/// Invalid Mode
+		/// </summary>
+		GrspInvalidMode = 250,
 	}
 
 	/// <summary>

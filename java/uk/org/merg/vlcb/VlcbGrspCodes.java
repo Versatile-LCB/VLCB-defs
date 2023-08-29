@@ -16,7 +16,9 @@ public enum VlcbGrspCodes {
 	GRSP_OK(0),	//Success
 	GRSP_UNKNOWN_NVM_TYPE(254),	//Unknown non volatile memory type
 	GRSP_INVALID_DIAGNOSTIC(253),	//Invalid diagnostic
-	GRSP_INVALID_SERVICE(252);	//Invalid service
+	GRSP_INVALID_SERVICE(252),	//Invalid service
+	GRSP_INVALID_COMMAND_PARAMETER(251),	//Invalid parameter in command
+	GRSP_INVALID_MODE(250);	//Invalid Mode
 
 	private final int v;
 

@@ -391,6 +391,8 @@ GRSP_OK = const(0)    # Success
 GRSP_UNKNOWN_NVM_TYPE = const(254)    # Unknown non volatile memory type
 GRSP_INVALID_DIAGNOSTIC = const(253)    # Invalid diagnostic
 GRSP_INVALID_SERVICE = const(252)    # Invalid service
+GRSP_INVALID_COMMAND_PARAMETER = const(251)    # Invalid parameter in command
+GRSP_INVALID_MODE = const(250)    # Invalid Mode
 # 
 # Sub opcodes for OPC_CABDAT
 # 

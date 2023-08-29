@@ -385,6 +385,8 @@ VlcbGrspCodes,GRSP_OK,0,Success
 VlcbGrspCodes,GRSP_UNKNOWN_NVM_TYPE,254,Unknown non volatile memory type
 VlcbGrspCodes,GRSP_INVALID_DIAGNOSTIC,253,Invalid diagnostic
 VlcbGrspCodes,GRSP_INVALID_SERVICE,252,Invalid service
+VlcbGrspCodes,GRSP_INVALID_COMMAND_PARAMETER,251,Invalid parameter in command
+VlcbGrspCodes,GRSP_INVALID_MODE,250,Invalid Mode
 CbusCabSigAspect0,,,
 CbusCabSigAspect0,,,Sub opcodes for OPC_CABDAT
 CbusCabSigAspect0,,,

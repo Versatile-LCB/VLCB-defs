@@ -395,6 +395,8 @@ extern "C" {
 #define GRSP_UNKNOWN_NVM_TYPE	254	// Unknown non volatile memory type
 #define GRSP_INVALID_DIAGNOSTIC	253	// Invalid diagnostic
 #define GRSP_INVALID_SERVICE	252	// Invalid service
+#define GRSP_INVALID_COMMAND_PARAMETER	251	// Invalid parameter in command
+#define GRSP_INVALID_MODE	250	// Invalid Mode
 // 
 // Sub opcodes for OPC_CABDAT
 // 

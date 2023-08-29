@@ -595,6 +595,8 @@ namespace merg.cbus
 			public const int GRSP_UNKNOWN_NVM_TYPE	=  254;	// Unknown non volatile memory type
 			public const int GRSP_INVALID_DIAGNOSTIC	=  253;	// Invalid diagnostic
 			public const int GRSP_INVALID_SERVICE	=  252;	// Invalid service
+			public const int GRSP_INVALID_COMMAND_PARAMETER	=  251;	// Invalid parameter in command
+			public const int GRSP_INVALID_MODE	=  250;	// Invalid Mode
 		}
 
 		public static class VlcbServiceTypes
