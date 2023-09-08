@@ -1188,9 +1188,13 @@ namespace Merg.Vlcb
 		/// </summary>
 		Combi = 3,
 		/// <summary>
-		/// Module is in FLiM
+		/// Module is in FLiM (CBUS)
 		/// </summary>
 		Flim = 4,
+		/// <summary>
+		/// Module is in Normal mode (VLCB)
+		/// </summary>
+		Normal = 4,
 		/// <summary>
 		/// Module supports the FCU bootloader protocol
 		/// </summary>

@@ -460,7 +460,8 @@ namespace merg.cbus
 			public const int PF_CONSUMER	=  1;	// Module is a consumer of events
 			public const int PF_PRODUCER	=  2;	// Module is a producer of events
 			public const int PF_COMBI	=  3;	// Module is both a consumer and producer of events
-			public const int PF_FLiM	=  4;	// Module is in FLiM
+			public const int PF_FLiM	=  4;	// Module is in FLiM (CBUS)
+			public const int PF_NORMAL	=  4;	// Module is in Normal mode (VLCB)
 			public const int PF_BOOT	=  8;	// Module supports the FCU bootloader protocol
 			public const int PF_COE	=  16;	// Module can consume its own events
 			public const int PF_LRN	=  32;	// Module is in learn mode

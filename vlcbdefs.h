@@ -470,7 +470,8 @@ extern "C" {
 #define PF_CONSUMER	1	// Module is a consumer of events
 #define PF_PRODUCER	2	// Module is a producer of events
 #define PF_COMBI	3	// Module is both a consumer and producer of events
-#define PF_FLiM	4	// Module is in FLiM
+#define PF_FLiM	4	// Module is in FLiM (CBUS)
+#define PF_NORMAL	4	// Module is in Normal mode (VLCB)
 #define PF_BOOT	8	// Module supports the FCU bootloader protocol
 #define PF_COE	16	// Module can consume its own events
 #define PF_LRN	32	// Module is in learn mode

@@ -463,7 +463,8 @@ PF_NOEVENTS	equ .0	; Module doesn't support events
 PF_CONSUMER	equ .1	; Module is a consumer of events
 PF_PRODUCER	equ .2	; Module is a producer of events
 PF_COMBI	equ .3	; Module is both a consumer and producer of events
-PF_FLiM	equ .4	; Module is in FLiM
+PF_FLiM	equ .4	; Module is in FLiM (CBUS)
+PF_NORMAL	equ .4	; Module is in Normal mode (VLCB)
 PF_BOOT	equ .8	; Module supports the FCU bootloader protocol
 PF_COE	equ .16	; Module can consume its own events
 PF_LRN	equ .32	; Module is in learn mode

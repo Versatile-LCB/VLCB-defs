@@ -460,7 +460,8 @@ CbusParamFlags,PF_NOEVENTS,0,Module doesn't support events
 CbusParamFlags,PF_CONSUMER,1,Module is a consumer of events
 CbusParamFlags,PF_PRODUCER,2,Module is a producer of events
 CbusParamFlags,PF_COMBI,3,Module is both a consumer and producer of events
-CbusParamFlags,PF_FLiM,4,Module is in FLiM
+CbusParamFlags,PF_FLiM,4,Module is in FLiM (CBUS)
+CbusParamFlags,PF_NORMAL,4,Module is in Normal mode (VLCB)
 CbusParamFlags,PF_BOOT,8,Module supports the FCU bootloader protocol
 CbusParamFlags,PF_COE,16,Module can consume its own events
 CbusParamFlags,PF_LRN,32,Module is in learn mode
