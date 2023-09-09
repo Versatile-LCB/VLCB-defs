@@ -471,6 +471,7 @@ PF_NORMAL = const(4)    # Module is in Normal mode (VLCB)
 PF_BOOT = const(8)    # Module supports the FCU bootloader protocol
 PF_COE = const(16)    # Module can consume its own events
 PF_LRN = const(32)    # Module is in learn mode
+PF_SD = const(64)    # Module supports Service Discovery
 # 
 # BUS type that module is connected to
 # 

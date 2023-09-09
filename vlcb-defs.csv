@@ -465,6 +465,7 @@ CbusParamFlags,PF_NORMAL,4,Module is in Normal mode (VLCB)
 CbusParamFlags,PF_BOOT,8,Module supports the FCU bootloader protocol
 CbusParamFlags,PF_COE,16,Module can consume its own events
 CbusParamFlags,PF_LRN,32,Module is in learn mode
+CbusParamFlags,PF_SD,64,Module supports Service Discovery
 CbusBusTypes,,,
 CbusBusTypes,,,BUS type that module is connected to
 CbusBusTypes,,,

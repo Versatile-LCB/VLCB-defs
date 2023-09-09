@@ -475,6 +475,7 @@ extern "C" {
 #define PF_BOOT	8	// Module supports the FCU bootloader protocol
 #define PF_COE	16	// Module can consume its own events
 #define PF_LRN	32	// Module is in learn mode
+#define PF_SD	64	// Module supports Service Discovery
 // 
 // BUS type that module is connected to
 // 

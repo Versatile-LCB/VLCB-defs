@@ -1207,6 +1207,10 @@ namespace Merg.Vlcb
 		/// Module is in learn mode
 		/// </summary>
 		Lrn = 32,
+		/// <summary>
+		/// Module supports Service Discovery
+		/// </summary>
+		Sd = 64,
 	}
 
 	/// <summary>

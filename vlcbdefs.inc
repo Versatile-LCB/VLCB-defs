@@ -468,6 +468,7 @@ PF_NORMAL	equ .4	; Module is in Normal mode (VLCB)
 PF_BOOT	equ .8	; Module supports the FCU bootloader protocol
 PF_COE	equ .16	; Module can consume its own events
 PF_LRN	equ .32	; Module is in learn mode
+PF_SD	equ .64	; Module supports Service Discovery
 ; 
 ; BUS type that module is connected to
 ; 

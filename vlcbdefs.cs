@@ -465,6 +465,7 @@ namespace merg.cbus
 			public const int PF_BOOT	=  8;	// Module supports the FCU bootloader protocol
 			public const int PF_COE	=  16;	// Module can consume its own events
 			public const int PF_LRN	=  32;	// Module is in learn mode
+			public const int PF_SD	=  64;	// Module supports Service Discovery
 		}
 
 		public static class CbusParamOffsetsPic
