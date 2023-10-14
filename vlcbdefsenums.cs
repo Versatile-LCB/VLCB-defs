@@ -585,6 +585,54 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
+	/// class: CbusModeParams
+	/// Parameters to the MODE op-code
+	/// </summary>
+	public enum ModeParams
+	{
+		/// <summary>
+		/// Uninitialised / factory settings
+		/// </summary>
+		ModeUninitialised = 0xFF,
+		/// <summary>
+		/// Set up mode
+		/// </summary>
+		ModeSetup = 0,
+		/// <summary>
+		/// Normal operation mode
+		/// </summary>
+		ModeNormal = 1,
+		/// <summary>
+		/// Turn on learn mode
+		/// </summary>
+		ModeLearnOn = 0x08,
+		/// <summary>
+		/// Turn off learn mode
+		/// </summary>
+		ModeLearnOff = 0x09,
+		/// <summary>
+		/// Turn on event acknowledgements
+		/// </summary>
+		ModeEventAckOn = 0x0A,
+		/// <summary>
+		/// Turn off event acknowledgements
+		/// </summary>
+		ModeEventAckOff = 0x0B,
+		/// <summary>
+		/// Turn on heartbeat
+		/// </summary>
+		ModeHeartbeatOn = 0x0C,
+		/// <summary>
+		/// Turn off heartbeat
+		/// </summary>
+		ModeHeartbeatOff = 0x0D,
+		/// <summary>
+		/// PIC Boot loader mode
+		/// </summary>
+		ModeBoot = 0x0E,
+	}
+
+	/// <summary>
 	/// class: CbusOpCodes
 	/// class: CbusOpCodes
 	/// VLCB opcodes list

@@ -466,6 +466,24 @@ CbusParamFlags,PF_BOOT,8,Module supports the FCU bootloader protocol
 CbusParamFlags,PF_COE,16,Module can consume its own events
 CbusParamFlags,PF_LRN,32,Module is in learn mode
 CbusParamFlags,PF_SD,64,Module supports Service Discovery
+CbusModeParams,,,
+CbusModeParams,,,Parameters to the MODE op-code
+CbusModeParams,,,
+CbusModeParams,,,Exclusive modes
+CbusModeParams,MODE_UNINITIALISED,0xFF,Uninitialised / factory settings
+CbusModeParams,MODE_SETUP,0,Set up mode
+CbusModeParams,MODE_NORMAL,1,Normal operation mode
+CbusModeParams,,,Event Teaching Service modes
+CbusModeParams,MODE_LEARN_ON,0x08,Turn on learn mode
+CbusModeParams,MODE_LEARN_OFF,0x09,Turn off learn mode
+CbusModeParams,,,Event Acknowledgment Service modes
+CbusModeParams,MODE_EVENT_ACK_ON,0x0A,Turn on event acknowledgements
+CbusModeParams,MODE_EVENT_ACK_OFF,0x0B,Turn off event acknowledgements
+CbusModeParams,,,Minimum Node Service modes
+CbusModeParams,MODE_HEARTBEAT_ON,0x0C,Turn on heartbeat
+CbusModeParams,MODE_HEARTBEAT_OFF,0x0D,Turn off heartbeat
+CbusModeParams,,,Boot modes
+CbusModeParams,MODE_BOOT,0x0E,PIC Boot loader mode
 CbusBusTypes,,,
 CbusBusTypes,,,BUS type that module is connected to
 CbusBusTypes,,,

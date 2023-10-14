@@ -477,6 +477,24 @@ extern "C" {
 #define PF_LRN	32	// Module is in learn mode
 #define PF_SD	64	// Module supports Service Discovery
 // 
+// Parameters to the MODE op-code
+// 
+// Exclusive modes
+#define MODE_UNINITIALISED	0xFF	// Uninitialised / factory settings
+#define MODE_SETUP	0	// Set up mode
+#define MODE_NORMAL	1	// Normal operation mode
+// Event Teaching Service modes
+#define MODE_LEARN_ON	0x08	// Turn on learn mode
+#define MODE_LEARN_OFF	0x09	// Turn off learn mode
+// Event Acknowledgment Service modes
+#define MODE_EVENT_ACK_ON	0x0A	// Turn on event acknowledgements
+#define MODE_EVENT_ACK_OFF	0x0B	// Turn off event acknowledgements
+// Minimum Node Service modes
+#define MODE_HEARTBEAT_ON	0x0C	// Turn on heartbeat
+#define MODE_HEARTBEAT_OFF	0x0D	// Turn off heartbeat
+// Boot modes
+#define MODE_BOOT	0x0E	// PIC Boot loader mode
+// 
 // BUS type that module is connected to
 // 
 #define PB_CAN	1	// 

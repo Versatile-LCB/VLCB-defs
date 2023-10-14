@@ -265,6 +265,28 @@ namespace merg.cbus
 			public const int P32MX795F512	=  38;	// 
 		}
 
+		public static class CbusModeParams
+		{
+			// 
+			// Parameters to the MODE op-code
+			// 
+			// Exclusive modes
+			public const int MODE_UNINITIALISED	=  0xFF;	// Uninitialised / factory settings
+			public const int MODE_SETUP	=  0;	// Set up mode
+			public const int MODE_NORMAL	=  1;	// Normal operation mode
+			// Event Teaching Service modes
+			public const int MODE_LEARN_ON	=  0x08;	// Turn on learn mode
+			public const int MODE_LEARN_OFF	=  0x09;	// Turn off learn mode
+			// Event Acknowledgment Service modes
+			public const int MODE_EVENT_ACK_ON	=  0x0A;	// Turn on event acknowledgements
+			public const int MODE_EVENT_ACK_OFF	=  0x0B;	// Turn off event acknowledgements
+			// Minimum Node Service modes
+			public const int MODE_HEARTBEAT_ON	=  0x0C;	// Turn on heartbeat
+			public const int MODE_HEARTBEAT_OFF	=  0x0D;	// Turn off heartbeat
+			// Boot modes
+			public const int MODE_BOOT	=  0x0E;	// PIC Boot loader mode
+		}
+
 		public static class CbusOpCodes
 		{
 			// 

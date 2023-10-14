@@ -473,6 +473,24 @@ PF_COE = const(16)    # Module can consume its own events
 PF_LRN = const(32)    # Module is in learn mode
 PF_SD = const(64)    # Module supports Service Discovery
 # 
+# Parameters to the MODE op-code
+# 
+# Exclusive modes
+MODE_UNINITIALISED = const(0xFF)    # Uninitialised / factory settings
+MODE_SETUP = const(0)    # Set up mode
+MODE_NORMAL = const(1)    # Normal operation mode
+# Event Teaching Service modes
+MODE_LEARN_ON = const(0x08)    # Turn on learn mode
+MODE_LEARN_OFF = const(0x09)    # Turn off learn mode
+# Event Acknowledgment Service modes
+MODE_EVENT_ACK_ON = const(0x0A)    # Turn on event acknowledgements
+MODE_EVENT_ACK_OFF = const(0x0B)    # Turn off event acknowledgements
+# Minimum Node Service modes
+MODE_HEARTBEAT_ON = const(0x0C)    # Turn on heartbeat
+MODE_HEARTBEAT_OFF = const(0x0D)    # Turn off heartbeat
+# Boot modes
+MODE_BOOT = const(0x0E)    # PIC Boot loader mode
+# 
 # BUS type that module is connected to
 # 
 PB_CAN = const(1)    # 
