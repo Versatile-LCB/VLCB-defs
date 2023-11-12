@@ -108,6 +108,7 @@ MTYP_CANSINP = const(76)    # Q series PIC input module (Ian Hart)
 MTYP_CANSOUT = const(77)    # Q series PIC input module (Ian Hart)
 MTYP_CANSBIP = const(78)    # Q series PIC input module (Ian Hart)
 MTYP_CANBUFFER = const(79)    # Message buffer (Phil Silver)
+MTYP_CANLEVER = const(80)    # Lever frame module (Tim Coombs)
 MTYP_VLCB = const(0xFC)    # All VLCB modules have the same ID
 # 
 # 
@@ -127,10 +128,10 @@ MTYP_CANSPROG3P = const(2)    # SPROG 3 Plus programmer/command station
 MTYP_CANSPROG = const(3)    # CAN SPROG programmer/command station
 MTYP_CANSBOOST = const(4)    # System Booster
 MTYP_CANPiSPRGP = const(5)    # Pi-SPROG 3 Plus programmer/command station
-MTYP_CANISB = const(6)    # CAN ISB Isolated CAN USB Interface
-MTYP_CANIO = const(7)    # 8-channel I/O module
-MTYP_CANSERVOIO = const(8)    # 8-channel Servo I/O module
-MTYP_CANSOLIO = const(9)    # 8-channel (4-pairs) Solenoid I/O module
+MTYP_CANSOLNOID  = const(8)    # 8-channel (4-pairs) Solenoid I/O module
+MTYP_CANSERVOIO = const(50)    # 8-channel Servo I/O module
+MTYP_CANISB = const(100)    # CAN ISB Isolated CAN USB Interface
+MTYP_CANSOLIO  = const(101)    # 8-channel (4-pairs) Solenoid I/O module
 # 
 # 
 # Rocrail Module types

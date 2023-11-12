@@ -526,6 +526,10 @@ namespace Merg.Vlcb
 		/// </summary>
 		Canbuffer = 79,
 		/// <summary>
+		/// Lever frame module (Tim Coombs)
+		/// </summary>
+		Canlever = 80,
+		/// <summary>
 		/// All VLCB modules have the same ID
 		/// </summary>
 		Vlcb = 0xFC,
@@ -1409,21 +1413,21 @@ namespace Merg.Vlcb
 		/// </summary>
 		Canpisprgp = 5,
 		/// <summary>
-		/// CAN ISB Isolated CAN USB Interface
+		/// 8-channel (4-pairs) Solenoid I/O module
 		/// </summary>
-		Canisb = 6,
-		/// <summary>
-		/// 8-channel I/O module
-		/// </summary>
-		Canio = 7,
+		Cansolnoid  = 8,
 		/// <summary>
 		/// 8-channel Servo I/O module
 		/// </summary>
-		Canservoio = 8,
+		Canservoio = 50,
+		/// <summary>
+		/// CAN ISB Isolated CAN USB Interface
+		/// </summary>
+		Canisb = 100,
 		/// <summary>
 		/// 8-channel (4-pairs) Solenoid I/O module
 		/// </summary>
-		Cansolio = 9,
+		Cansolio  = 101,
 	}
 
 	/// <summary>

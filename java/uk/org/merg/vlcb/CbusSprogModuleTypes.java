@@ -18,10 +18,10 @@ public enum CbusSprogModuleTypes {
 	MTYP_CANSPROG(3),	//CAN SPROG programmer/command station
 	MTYP_CANSBOOST(4),	//System Booster
 	MTYP_CANPiSPRGP(5),	//Pi-SPROG 3 Plus programmer/command station
-	MTYP_CANISB(6),	//CAN ISB Isolated CAN USB Interface
-	MTYP_CANIO(7),	//8-channel I/O module
-	MTYP_CANSERVOIO(8),	//8-channel Servo I/O module
-	MTYP_CANSOLIO(9);	//8-channel (4-pairs) Solenoid I/O module
+	MTYP_CANSOLNOID (8),	//8-channel (4-pairs) Solenoid I/O module
+	MTYP_CANSERVOIO(50),	//8-channel Servo I/O module
+	MTYP_CANISB(100),	//CAN ISB Isolated CAN USB Interface
+	MTYP_CANSOLIO (101);	//8-channel (4-pairs) Solenoid I/O module
 
 	private final int v;
 

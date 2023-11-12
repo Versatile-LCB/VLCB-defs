@@ -105,6 +105,7 @@ MTYP_CANSINP	equ .76	; Q series PIC input module (Ian Hart)
 MTYP_CANSOUT	equ .77	; Q series PIC input module (Ian Hart)
 MTYP_CANSBIP	equ .78	; Q series PIC input module (Ian Hart)
 MTYP_CANBUFFER	equ .79	; Message buffer (Phil Silver)
+MTYP_CANLEVER	equ .80	; Lever frame module (Tim Coombs)
 MTYP_VLCB	equ 0xFC	; All VLCB modules have the same ID
 ; 
 ; 
@@ -124,10 +125,10 @@ MTYP_CANSPROG3P	equ .2	; SPROG 3 Plus programmer/command station
 MTYP_CANSPROG	equ .3	; CAN SPROG programmer/command station
 MTYP_CANSBOOST	equ .4	; System Booster
 MTYP_CANPiSPRGP	equ .5	; Pi-SPROG 3 Plus programmer/command station
-MTYP_CANISB	equ .6	; CAN ISB Isolated CAN USB Interface
-MTYP_CANIO	equ .7	; 8-channel I/O module
-MTYP_CANSERVOIO	equ .8	; 8-channel Servo I/O module
-MTYP_CANSOLIO	equ .9	; 8-channel (4-pairs) Solenoid I/O module
+MTYP_CANSOLNOID 	equ .8	; 8-channel (4-pairs) Solenoid I/O module
+MTYP_CANSERVOIO	equ .50	; 8-channel Servo I/O module
+MTYP_CANISB	equ .100	; CAN ISB Isolated CAN USB Interface
+MTYP_CANSOLIO 	equ .101	; 8-channel (4-pairs) Solenoid I/O module
 ; 
 ; 
 ; Rocrail Module types

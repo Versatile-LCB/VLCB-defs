@@ -212,6 +212,7 @@ namespace merg.cbus
 			public const int MTYP_CANSOUT	=  77;	// Q series PIC input module (Ian Hart)
 			public const int MTYP_CANSBIP	=  78;	// Q series PIC input module (Ian Hart)
 			public const int MTYP_CANBUFFER	=  79;	// Message buffer (Phil Silver)
+			public const int MTYP_CANLEVER	=  80;	// Lever frame module (Tim Coombs)
 			public const int MTYP_VLCB	=  0xFC;	// All VLCB modules have the same ID
 			// 
 			// At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
@@ -561,10 +562,10 @@ namespace merg.cbus
 			public const int MTYP_CANSPROG	=  3;	// CAN SPROG programmer/command station
 			public const int MTYP_CANSBOOST	=  4;	// System Booster
 			public const int MTYP_CANPiSPRGP	=  5;	// Pi-SPROG 3 Plus programmer/command station
-			public const int MTYP_CANISB	=  6;	// CAN ISB Isolated CAN USB Interface
-			public const int MTYP_CANIO	=  7;	// 8-channel I/O module
-			public const int MTYP_CANSERVOIO	=  8;	// 8-channel Servo I/O module
-			public const int MTYP_CANSOLIO	=  9;	// 8-channel (4-pairs) Solenoid I/O module
+			public const int MTYP_CANSOLNOID 	=  8;	// 8-channel (4-pairs) Solenoid I/O module
+			public const int MTYP_CANSERVOIO	=  50;	// 8-channel Servo I/O module
+			public const int MTYP_CANISB	=  100;	// CAN ISB Isolated CAN USB Interface
+			public const int MTYP_CANSOLIO 	=  101;	// 8-channel (4-pairs) Solenoid I/O module
 		}
 
 		public static class CbusStmodModes
