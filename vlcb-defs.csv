@@ -102,6 +102,7 @@ CbusMergModuleTypes,MTYP_CANSINP,76,Q series PIC input module (Ian Hart)
 CbusMergModuleTypes,MTYP_CANSOUT,77,Q series PIC input module (Ian Hart)
 CbusMergModuleTypes,MTYP_CANSBIP,78,Q series PIC input module (Ian Hart)
 CbusMergModuleTypes,MTYP_CANBUFFER,79,Message buffer (Phil Silver)
+CbusMergModuleTypes,MTYP_CANLEVER,80,Lever frame module (Tim Coombs)
 CbusMergModuleTypes,MTYP_VLCB,0xFC,All VLCB modules have the same ID
 
 
@@ -121,10 +122,10 @@ CbusSprogModuleTypes,MTYP_CANSPROG3P,2,SPROG 3 Plus programmer/command station
 CbusSprogModuleTypes,MTYP_CANSPROG,3,CAN SPROG programmer/command station
 CbusSprogModuleTypes,MTYP_CANSBOOST,4,System Booster
 CbusSprogModuleTypes,MTYP_CANPiSPRGP,5,Pi-SPROG 3 Plus programmer/command station
-CbusSprogModuleTypes,MTYP_CANISB,6,CAN ISB Isolated CAN USB Interface
-CbusSprogModuleTypes,MTYP_CANIO,7,8-channel I/O module
-CbusSprogModuleTypes,MTYP_CANSERVOIO,8,8-channel Servo I/O module
-CbusSprogModuleTypes,MTYP_CANSOLIO,9,8-channel (4-pairs) Solenoid I/O module
+CbusSprogModuleTypes,MTYP_CANSOLNOID ,8,8-channel (4-pairs) Solenoid I/O module
+CbusSprogModuleTypes,MTYP_CANSERVOIO,50,8-channel Servo I/O module
+CbusSprogModuleTypes,MTYP_CANISB,100,CAN ISB Isolated CAN USB Interface
+CbusSprogModuleTypes,MTYP_CANSOLIO ,101,8-channel (4-pairs) Solenoid I/O module
 
 CbusRocRailModuleTypes,,,
 CbusRocRailModuleTypes,,,Rocrail Module types

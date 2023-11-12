@@ -57,3 +57,5 @@ For WIP working towards a new version, a branch can be created for that developm
 
 Co-ordination of changes to VLCB-defs is currently being managed by Sven Rosvall, sven@rosvall.ie
 
+Version 8x released 12/11/23  Added some module type ids and manufacturer id
+
