@@ -432,6 +432,7 @@ extern "C" {
 #define SERVICE_ID_PRODUCER	5	// Event producer service.
 #define SERVICE_ID_CONSUMER	6	// Event comsumer service.
 #define SERVICE_ID_TEACH	7	// New event teaching service.
+#define SERVICE_ID_CONSUME_OWN_EVENTS	8	// Consume own events service.
 #define SERVICE_ID_EVENTACK	9	// Event acknowledge service. Useful for debugging event configuration.
 #define SERVICE_ID_BOOT	10	// FCU/PIC bootloader service.
 #define SERVICE_ID_STREAMING	17	// Streaming (Long Messages) service.

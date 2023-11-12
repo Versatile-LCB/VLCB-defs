@@ -428,6 +428,7 @@ SERVICE_ID_OLD_TEACH = const(4)    # Old (CBUS) event teaching service.
 SERVICE_ID_PRODUCER = const(5)    # Event producer service.
 SERVICE_ID_CONSUMER = const(6)    # Event comsumer service.
 SERVICE_ID_TEACH = const(7)    # New event teaching service.
+SERVICE_ID_CONSUME_OWN_EVENTS = const(8)    # Consume own events service.
 SERVICE_ID_EVENTACK = const(9)    # Event acknowledge service. Useful for debugging event configuration.
 SERVICE_ID_BOOT = const(10)    # FCU/PIC bootloader service.
 SERVICE_ID_STREAMING = const(17)    # Streaming (Long Messages) service.

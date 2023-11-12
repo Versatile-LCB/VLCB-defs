@@ -425,6 +425,7 @@ SERVICE_ID_OLD_TEACH	equ .4	; Old (CBUS) event teaching service.
 SERVICE_ID_PRODUCER	equ .5	; Event producer service.
 SERVICE_ID_CONSUMER	equ .6	; Event comsumer service.
 SERVICE_ID_TEACH	equ .7	; New event teaching service.
+SERVICE_ID_CONSUME_OWN_EVENTS	equ .8	; Consume own events service.
 SERVICE_ID_EVENTACK	equ .9	; Event acknowledge service. Useful for debugging event configuration.
 SERVICE_ID_BOOT	equ .10	; FCU/PIC bootloader service.
 SERVICE_ID_STREAMING	equ .17	; Streaming (Long Messages) service.

@@ -1571,6 +1571,10 @@ namespace Merg.Vlcb
 		/// </summary>
 		ServiceIdTeach = 7,
 		/// <summary>
+		/// Consume own events service.
+		/// </summary>
+		ServiceIdConsumeOwnEvents = 8,
+		/// <summary>
 		/// Event acknowledge service. Useful for debugging event configuration.
 		/// </summary>
 		ServiceIdEventack = 9,
