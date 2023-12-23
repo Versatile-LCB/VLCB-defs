@@ -34,7 +34,7 @@ do
                 echo "};"
                 echo ""
             fi
-            echo "enum $type"
+            echo "enum $type : unsigned char"
             echo "{"
             prevType=$type
         fi
