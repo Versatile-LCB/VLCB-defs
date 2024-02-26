@@ -48,3 +48,8 @@ sh ./generate_cs_enums.sh
 # vlcbdefs.py
 ############################
 sh ./generate_py.sh
+
+############################
+# vlcbdefs.js
+############################
+sh ./generate_js.sh
