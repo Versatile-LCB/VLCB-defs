@@ -189,9 +189,9 @@ namespace Merg.Vlcb
 		/// </summary>
 		Spectrum = 80,
 		/// <summary>
-		/// VLCB range of modules
+		/// range of MERG VLCB modules
 		/// </summary>
-		Vlcb = 250,
+		MergVlcb = 250,
 		/// <summary>
 		/// Konrad Orlowski
 		/// </summary>
@@ -464,7 +464,7 @@ namespace Merg.Vlcb
 		/// <summary>
 		/// Extended CANMIO (24 I/O ports) (Pete Brownlow)
 		/// </summary>
-		Canemio = 64,
+		Canxio = 64,
 		/// <summary>
 		/// DC cab
 		/// </summary>
@@ -530,6 +530,30 @@ namespace Merg.Vlcb
 		/// </summary>
 		Canlever = 80,
 		/// <summary>
+		/// Kit 110 Arduino shield test firmware
+		/// </summary>
+		Canshield = 81,
+		/// <summary>
+		/// 4 inputs 4 outputs (Arduino module)
+		/// </summary>
+		Can4in4out = 82,
+		/// <summary>
+		/// CANCMD with built in booster (Simon West)
+		/// </summary>
+		Cancmdb = 83,
+		/// <summary>
+		/// neopixel driver (Jon Denham)
+		/// </summary>
+		Canpixel = 84,
+		/// <summary>
+		/// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
+		/// </summary>
+		Cancabpe = 85,
+		/// <summary>
+		/// Smart train detector (Michael Smith)
+		/// </summary>
+		Cansmarttd = 86,
+		/// <summary>
 		/// All VLCB modules have the same ID
 		/// </summary>
 		Vlcb = 0xFC,
@@ -545,6 +569,10 @@ namespace Merg.Vlcb
 		/// USB interface
 		/// </summary>
 		Canusb = 0xFD,
+		/// <summary>
+		/// Module type for use by developers when developing something new
+		/// </summary>
+		Candev = 0xFC,
 	}
 
 	/// <summary>
@@ -1211,6 +1239,10 @@ namespace Merg.Vlcb
 		/// Module is in learn mode
 		/// </summary>
 		Lrn = 32,
+		/// <summary>
+		/// Module is VLCB compatible
+		/// </summary>
+		Vlcb = 64,
 		/// <summary>
 		/// Module supports Service Discovery
 		/// </summary>

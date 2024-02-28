@@ -17,7 +17,7 @@ MANU_MERG = const(165)    # https://www.merg.co.uk
 MANU_SPROG = const(44)    # https://www.sprog-dcc.co.uk/
 MANU_ROCRAIL = const(70)    # http://www.rocrail.net
 MANU_SPECTRUM = const(80)    # http://animatedmodeler.com  (Spectrum Engineering)
-MANU_VLCB = const(250)    # VLCB range of modules
+MANU_MERG_VLCB = const(250)    # range of MERG VLCB modules
 MANU_SYSPIXIE = const(249)    # Konrad Orlowski
 MANU_RME = const(248)    # http://rmeuk.com  (Railway Modelling Experts Limited)
 # 
@@ -92,7 +92,7 @@ MTYP_CANCOMPUTE = const(60)    # Compute Event processing engine
 MTYP_CANRC522 = const(61)    # Read/Write from/to RC522 RFID tags
 MTYP_CANINP = const(62)    # 8 inputs module (2g version of CANACE8c) (Pete Brownlow)
 MTYP_CANOUT = const(63)    # 8 outputs module (2g version of CANACC8) (Pete Brownlow)
-MTYP_CANEMIO = const(64)    # Extended CANMIO (24 I/O ports) (Pete Brownlow)
+MTYP_CANXIO = const(64)    # Extended CANMIO (24 I/O ports) (Pete Brownlow)
 MTYP_CANCABDC = const(65)    # DC cab
 MTYP_CANRCOM = const(66)    # DC Railcom detector/reader
 MTYP_CANMP3 = const(67)    # MP3 sound player in response to events (eg: station announcements) (Duncan Greenwood)
@@ -109,6 +109,12 @@ MTYP_CANSOUT = const(77)    # Q series PIC input module (Ian Hart)
 MTYP_CANSBIP = const(78)    # Q series PIC input module (Ian Hart)
 MTYP_CANBUFFER = const(79)    # Message buffer (Phil Silver)
 MTYP_CANLEVER = const(80)    # Lever frame module (Tim Coombs)
+MTYP_CANSHIELD = const(81)    # Kit 110 Arduino shield test firmware
+MTYP_CAN4IN4OUT = const(82)    # 4 inputs 4 outputs (Arduino module)
+MTYP_CANCMDB = const(83)    # CANCMD with built in booster (Simon West)
+MTYP_CANPIXEL = const(84)    # neopixel driver (Jon Denham)
+MTYP_CANCABPE = const(85)    # Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
+MTYP_CANSMARTTD = const(86)    # Smart train detector (Michael Smith)
 MTYP_VLCB = const(0xFC)    # All VLCB modules have the same ID
 # 
 # 
@@ -120,6 +126,7 @@ MTYP_VLCB = const(0xFC)    # All VLCB modules have the same ID
 MTYP_CAN_SW = const(0xFF)    # Software nodes
 MTYP_EMPTY = const(0xFE)    # Empty module, bootloader only
 MTYP_CANUSB = const(0xFD)    # USB interface
+MTYP_CANDEV = const(0xFC)    # Module type for use by developers when developing something new
 # 
 # Sprog Module types
 # 
@@ -473,6 +480,7 @@ PF_NORMAL = const(4)    # Module is in Normal mode (VLCB)
 PF_BOOT = const(8)    # Module supports the FCU bootloader protocol
 PF_COE = const(16)    # Module can consume its own events
 PF_LRN = const(32)    # Module is in learn mode
+PF_VLCB = const(64)    # Module is VLCB compatible
 PF_SD = const(64)    # Module supports Service Discovery
 # 
 # Parameters to the MODE op-code

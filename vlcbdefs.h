@@ -21,7 +21,7 @@ extern "C" {
 #define MANU_SPROG	44	// https://www.sprog-dcc.co.uk/
 #define MANU_ROCRAIL	70	// http://www.rocrail.net
 #define MANU_SPECTRUM	80	// http://animatedmodeler.com  (Spectrum Engineering)
-#define MANU_VLCB	250	// VLCB range of modules
+#define MANU_MERG_VLCB	250	// range of MERG VLCB modules
 #define MANU_SYSPIXIE	249	// Konrad Orlowski
 #define MANU_RME	248	// http://rmeuk.com  (Railway Modelling Experts Limited)
 // 
@@ -96,7 +96,7 @@ extern "C" {
 #define MTYP_CANRC522	61	// Read/Write from/to RC522 RFID tags
 #define MTYP_CANINP	62	// 8 inputs module (2g version of CANACE8c) (Pete Brownlow)
 #define MTYP_CANOUT	63	// 8 outputs module (2g version of CANACC8) (Pete Brownlow)
-#define MTYP_CANEMIO	64	// Extended CANMIO (24 I/O ports) (Pete Brownlow)
+#define MTYP_CANXIO	64	// Extended CANMIO (24 I/O ports) (Pete Brownlow)
 #define MTYP_CANCABDC	65	// DC cab
 #define MTYP_CANRCOM	66	// DC Railcom detector/reader
 #define MTYP_CANMP3	67	// MP3 sound player in response to events (eg: station announcements) (Duncan Greenwood)
@@ -113,6 +113,12 @@ extern "C" {
 #define MTYP_CANSBIP	78	// Q series PIC input module (Ian Hart)
 #define MTYP_CANBUFFER	79	// Message buffer (Phil Silver)
 #define MTYP_CANLEVER	80	// Lever frame module (Tim Coombs)
+#define MTYP_CANSHIELD	81	// Kit 110 Arduino shield test firmware
+#define MTYP_CAN4IN4OUT	82	// 4 inputs 4 outputs (Arduino module)
+#define MTYP_CANCMDB	83	// CANCMD with built in booster (Simon West)
+#define MTYP_CANPIXEL	84	// neopixel driver (Jon Denham)
+#define MTYP_CANCABPE	85	// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
+#define MTYP_CANSMARTTD	86	// Smart train detector (Michael Smith)
 #define MTYP_VLCB	0xFC	// All VLCB modules have the same ID
 // 
 // 
@@ -124,6 +130,7 @@ extern "C" {
 #define MTYP_CAN_SW	0xFF	// Software nodes
 #define MTYP_EMPTY	0xFE	// Empty module, bootloader only
 #define MTYP_CANUSB	0xFD	// USB interface
+#define MTYP_CANDEV	0xFC	// Module type for use by developers when developing something new
 // 
 // Sprog Module types
 // 
@@ -477,6 +484,7 @@ extern "C" {
 #define PF_BOOT	8	// Module supports the FCU bootloader protocol
 #define PF_COE	16	// Module can consume its own events
 #define PF_LRN	32	// Module is in learn mode
+#define PF_VLCB	64	// Module is VLCB compatible
 #define PF_SD	64	// Module supports Service Discovery
 // 
 // Parameters to the MODE op-code
