@@ -22,7 +22,8 @@ public enum CbusParamFlags {
 	PF_BOOT(8),	//Module supports the FCU bootloader protocol
 	PF_COE(16),	//Module can consume its own events
 	PF_LRN(32),	//Module is in learn mode
-	PF_SD(64);	//Module supports Service Discovery
+	PF_VLCB(64),	//Module is VLCB compatible
+	PF_SD(64);	//Module supports Service Discovery (Deprecated in favour of PF_VLCB.)
 
 	private final int v;
 

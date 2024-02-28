@@ -14,7 +14,8 @@ exports.VlcbDefs = {
     "MANU_SPROG": 44, // https://www.sprog-dcc.co.uk/
     "MANU_ROCRAIL": 70, // http://www.rocrail.net
     "MANU_SPECTRUM": 80, // http://animatedmodeler.com  (Spectrum Engineering)
-    "MANU_VLCB": 250, // VLCB range of modules
+    "MANU_MERG_VLCB": 250, // range of MERG VLCB modules
+    "MANU_VLCB": 250, // range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
     "MANU_SYSPIXIE": 249, // Konrad Orlowski
     "MANU_RME": 248 // http://rmeuk.com  (Railway Modelling Experts Limited)
   },
@@ -90,7 +91,7 @@ exports.VlcbDefs = {
     "MTYP_CANRC522": 61, // Read/Write from/to RC522 RFID tags
     "MTYP_CANINP": 62, // 8 inputs module (2g version of CANACE8c) (Pete Brownlow)
     "MTYP_CANOUT": 63, // 8 outputs module (2g version of CANACC8) (Pete Brownlow)
-    "MTYP_CANEMIO": 64, // Extended CANMIO (24 I/O ports) (Pete Brownlow)
+    "MTYP_CANXIO": 64, // Extended CANMIO (24 I/O ports) (Pete Brownlow)
     "MTYP_CANCABDC": 65, // DC cab
     "MTYP_CANRCOM": 66, // DC Railcom detector/reader
     "MTYP_CANMP3": 67, // MP3 sound player in response to events (eg: station announcements) (Duncan Greenwood)
@@ -107,6 +108,12 @@ exports.VlcbDefs = {
     "MTYP_CANSBIP": 78, // Q series PIC input module (Ian Hart)
     "MTYP_CANBUFFER": 79, // Message buffer (Phil Silver)
     "MTYP_CANLEVER": 80, // Lever frame module (Tim Coombs)
+    "MTYP_CANSHIELD": 81, // Kit 110 Arduino shield test firmware
+    "MTYP_CAN4IN4OUT": 82, // 4 inputs 4 outputs (Arduino module)
+    "MTYP_CANCMDB": 83, // CANCMD with built in booster (Simon West)
+    "MTYP_CANPIXEL": 84, // neopixel driver (Jon Denham)
+    "MTYP_CANCABPE": 85, // Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
+    "MTYP_CANSMARTTD": 86, // Smart train detector (Michael Smith)
     "MTYP_VLCB": 0xFC, // All VLCB modules have the same ID
     // 
     // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
@@ -115,7 +122,8 @@ exports.VlcbDefs = {
     // 
     "MTYP_CAN_SW": 0xFF, // Software nodes
     "MTYP_EMPTY": 0xFE, // Empty module, bootloader only
-    "MTYP_CANUSB": 0xFD // USB interface
+    "MTYP_CANUSB": 0xFD, // USB interface
+    "MTYP_CANDEV": 0xFC // Module type for use by developers when developing something new
   },
   "CbusSprogModuleTypes" : {
     // 
@@ -502,7 +510,8 @@ exports.VlcbDefs = {
     "PF_BOOT": 8, // Module supports the FCU bootloader protocol
     "PF_COE": 16, // Module can consume its own events
     "PF_LRN": 32, // Module is in learn mode
-    "PF_SD": 64 // Module supports Service Discovery
+    "PF_VLCB": 64, // Module is VLCB compatible
+    "PF_SD": 64 // Module supports Service Discovery (Deprecated in favour of PF_VLCB.)
   },
   "VlcbModeParams" : {
     // 

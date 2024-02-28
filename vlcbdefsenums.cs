@@ -193,6 +193,10 @@ namespace Merg.Vlcb
 		/// </summary>
 		MergVlcb = 250,
 		/// <summary>
+		/// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
+		/// </summary>
+		Vlcb = 250,
+		/// <summary>
 		/// Konrad Orlowski
 		/// </summary>
 		Syspixie = 249,
@@ -1244,7 +1248,7 @@ namespace Merg.Vlcb
 		/// </summary>
 		Vlcb = 64,
 		/// <summary>
-		/// Module supports Service Discovery
+		/// Module supports Service Discovery (Deprecated in favour of PF_VLCB.)
 		/// </summary>
 		Sd = 64,
 	}

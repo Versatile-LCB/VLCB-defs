@@ -22,6 +22,7 @@ extern "C" {
 #define MANU_ROCRAIL	70	// http://www.rocrail.net
 #define MANU_SPECTRUM	80	// http://animatedmodeler.com  (Spectrum Engineering)
 #define MANU_MERG_VLCB	250	// range of MERG VLCB modules
+#define MANU_VLCB	250	// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 #define MANU_SYSPIXIE	249	// Konrad Orlowski
 #define MANU_RME	248	// http://rmeuk.com  (Railway Modelling Experts Limited)
 // 
@@ -485,7 +486,7 @@ extern "C" {
 #define PF_COE	16	// Module can consume its own events
 #define PF_LRN	32	// Module is in learn mode
 #define PF_VLCB	64	// Module is VLCB compatible
-#define PF_SD	64	// Module supports Service Discovery
+#define PF_SD	64	// Module supports Service Discovery (Deprecated in favour of PF_VLCB.)
 // 
 // Parameters to the MODE op-code
 // 
