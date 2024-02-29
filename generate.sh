@@ -20,6 +20,11 @@ sh ./generate_asm.sh
 sh ./generate_c.sh
 
 ############################
+# vlcbdefs_enums.h
+############################
+sh ./generate_c_enums.sh
+
+############################
 # vlcbdefs.hpp
 ############################
 sh ./generate_cpp.sh
