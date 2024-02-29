@@ -9,15 +9,22 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusCabSigAspect0 {
+public enum VlcbErrs {
 // 
-// Sub opcodes for OPC_CABDAT
+// Error codes for OPC_ERR
 // 
-	CDAT_CABSIG(1);	//
+	ERR_LOCO_STACK_FULL(1),	//
+	ERR_LOCO_ADDR_TAKEN(2),	//
+	ERR_SESSION_NOT_PRESENT(3),	//
+	ERR_CONSIST_EMPTY(4),	//
+	ERR_LOCO_NOT_FOUND(5),	//
+	ERR_CMD_RX_BUF_OFLOW(6),	//
+	ERR_INVALID_REQUEST(7),	//
+	ERR_SESSION_CANCELLED(8);	//
 
 	private final int v;
 
-	private CbusCabSigAspect0(int v) {
+	private VlcbErrs(int v) {
 		this.v = v;
 	}
 

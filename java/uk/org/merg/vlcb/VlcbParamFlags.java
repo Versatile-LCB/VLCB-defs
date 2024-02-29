@@ -9,7 +9,7 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusParamFlags {
+public enum VlcbParamFlags {
 // 
 // Flags in PAR_FLAGS
 // 
@@ -27,7 +27,7 @@ public enum CbusParamFlags {
 
 	private final int v;
 
-	private CbusParamFlags(int v) {
+	private VlcbParamFlags(int v) {
 		this.v = v;
 	}
 

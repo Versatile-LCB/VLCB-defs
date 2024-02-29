@@ -9,7 +9,7 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusManufacturer {
+public enum VlcbManufacturer {
 // Manufacturer definitions
 // Where the manufacturer already has an NMRA code, this is used
 // 
@@ -25,7 +25,7 @@ public enum CbusManufacturer {
 
 	private final int v;
 
-	private CbusManufacturer(int v) {
+	private VlcbManufacturer(int v) {
 		this.v = v;
 	}
 

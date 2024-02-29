@@ -18,7 +18,7 @@ cat << EOF >> $OUTPUT
 
 EOF
 
-for class in $(cat vlcb-defs.csv|cut -f1 -d ,|grep -v comment|sort|uniq)
+for class in $(cat vlcb-defs.csv|cut -f1 -d ,|grep -v comment|sort|uniq | sed 's/^Cbus/Vlcb/')
 do
 	echo "           VlcbDefs.$class"
 
@@ -28,6 +28,7 @@ EOF
 
 	while IFS="," read type	name value comment 
 	do
+    type=${type/#Cbus/Vlcb}
 		if [ "$type" = $class ]; then
 			if [ "X$name" = "X" ]; then
 				if [ "X$comment" != "X" ]; then
@@ -50,6 +51,7 @@ EOF
 	# now output the actual contents
 	while IFS="," read type	name value comment 
 	do
+    type=${type/#Cbus/Vlcb}
 		if [ "$type" = $class ]; then
 #			if [ "X$name" = "X" ]; then
 #				if [ "X$comment" != "X" ]; then

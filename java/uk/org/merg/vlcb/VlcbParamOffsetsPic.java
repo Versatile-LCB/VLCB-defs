@@ -9,20 +9,19 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusStmodModes {
+public enum VlcbParamOffsetsPic {
 // 
+// Offsets to other values stored at the top of the parameter block.
+// These are not returned by opcode PARAN, but are present in the hex
+// file for FCU.
 // 
-// Modes for STMOD
-// 
-	TMOD_SPD_MASK(3),	//
-	TMOD_SPD_128(0),	//
-	TMOD_SPD_14(1),	//
-	TMOD_SPD_28I(2),	//
-	TMOD_SPD_28(3);	//
+	PAR_COUNT(0x18),	//Number of parameters implemented
+	PAR_NAME(0x1A),	//4 byte Address of Module type name, up to 8 characters null terminated
+	PAR_CKSUM(0x1E);	//Checksum word at end of parameters
 
 	private final int v;
 
-	private CbusStmodModes(int v) {
+	private VlcbParamOffsetsPic(int v) {
 		this.v = v;
 	}
 

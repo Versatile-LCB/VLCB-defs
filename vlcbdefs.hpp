@@ -12,7 +12,7 @@ extern "C" {
 // 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 // 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-enum CbusManufacturer : unsigned char
+enum VlcbManufacturer : unsigned char
 {
   // Manufacturer definitions
   // Where the manufacturer already has an NMRA code, this is used
@@ -28,7 +28,7 @@ enum CbusManufacturer : unsigned char
   MANU_RME = 248, // http://rmeuk.com  (Railway Modelling Experts Limited)
 };
 
-enum CbusMergModuleTypes : unsigned char
+enum VlcbMergModuleTypes : unsigned char
 {
   // 
   // MODULE TYPES
@@ -136,7 +136,7 @@ enum CbusMergModuleTypes : unsigned char
   MTYP_CANDEV = 0xFC, // Module type for use by developers when developing something new
 };
 
-enum CbusSprogModuleTypes : unsigned char
+enum VlcbSprogModuleTypes : unsigned char
 {
   // 
   // Sprog Module types
@@ -152,7 +152,7 @@ enum CbusSprogModuleTypes : unsigned char
   MTYP_CANSOLIO  = 101, // 8-channel (4-pairs) Solenoid I/O module
 };
 
-enum CbusRocRailModuleTypes : unsigned char
+enum VlcbRocRailModuleTypes : unsigned char
 {
   // 
   // Rocrail Module types
@@ -167,7 +167,7 @@ enum CbusRocRailModuleTypes : unsigned char
   MTYP_CANGC1e = 11, // CAN<->Ethernet interface
 };
 
-enum CbusSpectrumModuleTypes : unsigned char
+enum VlcbSpectrumModuleTypes : unsigned char
 {
   // 
   // Spectrum Engineering Animated Modeller module types
@@ -176,7 +176,7 @@ enum CbusSpectrumModuleTypes : unsigned char
   MTYP_DUALCAB = 2, // Dual cab based on cancab
 };
 
-enum CbusSysPixieModuleTypes : unsigned char
+enum VlcbSysPixieModuleTypes : unsigned char
 {
   // 
   // SysPixie Module types (Konrad Orlowski)
@@ -184,7 +184,7 @@ enum CbusSysPixieModuleTypes : unsigned char
   MTYP_CANPMSense = 1, // Motorised point motor driver with current sense
 };
 
-enum CbusOpCodes : unsigned char
+enum VlcbOpCodes : unsigned char
 {
   // 
   // 
@@ -370,7 +370,7 @@ enum CbusOpCodes : unsigned char
   OPC_VCVS = 0xA4, // Verify CV service mode - used for CV read hints
 };
 
-enum CbusStmodModes : unsigned char
+enum VlcbStmodModes : unsigned char
 {
   // 
   // 
@@ -383,7 +383,7 @@ enum CbusStmodModes : unsigned char
   TMOD_SPD_28 = 3,
 };
 
-enum CbusErrs : unsigned char
+enum VlcbErrs : unsigned char
 {
   // 
   // Error codes for OPC_ERR
@@ -398,7 +398,7 @@ enum CbusErrs : unsigned char
   ERR_SESSION_CANCELLED = 8,
 };
 
-enum CbusSStats : unsigned char
+enum VlcbSStats : unsigned char
 {
   // 
   // Status codes for OPC_SSTAT
@@ -410,7 +410,7 @@ enum CbusSStats : unsigned char
   SSTAT_CV_ERROR = 5,
 };
 
-enum CbusCmdErrs : unsigned char
+enum VlcbCmdErrs : unsigned char
 {
   // 
   // Error codes for OPC_CMDERR
@@ -447,7 +447,7 @@ enum VlcbGrspCodes : unsigned char
   GRSP_INVALID_MODE = 250, // Invalid Mode
 };
 
-enum CbusCabSigAspect0 : unsigned char
+enum VlcbCabSigAspect0 : unsigned char
 {
   // 
   // Sub opcodes for OPC_CABDAT
@@ -455,7 +455,7 @@ enum CbusCabSigAspect0 : unsigned char
   CDAT_CABSIG = 1,
 };
 
-enum CbusCabSigAspect1 : unsigned char
+enum VlcbCabSigAspect1 : unsigned char
 {
   // 
   // Aspect codes for CDAT_CABSIG
@@ -470,7 +470,7 @@ enum CbusCabSigAspect1 : unsigned char
   SASP_THEATRE = 8, // Set bit 3 to 0 for upper nibble is feather lcoation, set 1 for upper nibble is theatre code
 };
 
-enum CbusCabSigAspect2 : unsigned char
+enum VlcbCabSigAspect2 : unsigned char
 {
   // 
   // Aspect codes for CDAT_CABSIG
@@ -501,7 +501,7 @@ enum VlcbServiceTypes : unsigned char
   SERVICE_ID_STREAMING = 17, // Streaming (Long Messages) service.
 };
 
-enum CbusParams : unsigned char
+enum VlcbParams : unsigned char
 {
   // 
   // 
@@ -526,7 +526,7 @@ enum CbusParams : unsigned char
   PAR_BETA = 20, // Beta revision (numeric), or 0 if release
 };
 
-enum CbusParamOffsetsPic : unsigned char
+enum VlcbParamOffsetsPic : unsigned char
 {
   // 
   // Offsets to other values stored at the top of the parameter block.
@@ -538,7 +538,7 @@ enum CbusParamOffsetsPic : unsigned char
   PAR_CKSUM = 0x1E, // Checksum word at end of parameters
 };
 
-enum CbusParamFlags : unsigned char
+enum VlcbParamFlags : unsigned char
 {
   // 
   // Flags in PAR_FLAGS
@@ -578,7 +578,7 @@ enum VlcbModeParams : unsigned char
   MODE_BOOT = 0x0E, // PIC Boot loader mode
 };
 
-enum CbusBusTypes : unsigned char
+enum VlcbBusTypes : unsigned char
 {
   // 
   // BUS type that module is connected to
@@ -589,7 +589,7 @@ enum CbusBusTypes : unsigned char
   PB_USB = 4,
 };
 
-enum CbusProcessorManufacturers : unsigned char
+enum VlcbProcessorManufacturers : unsigned char
 {
   // 
   // Processor manufacturer codes
@@ -599,7 +599,7 @@ enum CbusProcessorManufacturers : unsigned char
   CPUM_ARM = 3,
 };
 
-enum CbusMicrochipProcessors : unsigned char
+enum VlcbMicrochipProcessors : unsigned char
 {
   // 
   // Microchip Processor type codes (identifies to FCU for bootload compatibility)
@@ -641,7 +641,7 @@ enum CbusMicrochipProcessors : unsigned char
   P32MX795F512 = 38,
 };
 
-enum CbusArmProcessors : unsigned char
+enum VlcbArmProcessors : unsigned char
 {
   // 
   // ARM Processor type codes (identifies to FCU for bootload compatibility)

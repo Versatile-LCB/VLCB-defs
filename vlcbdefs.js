@@ -5,7 +5,7 @@ exports.VlcbDefs = {
 // 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 // 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-  "CbusManufacturer" : {
+  "VlcbManufacturer" : {
     // Manufacturer definitions
     // Where the manufacturer already has an NMRA code, this is used
     // 
@@ -19,7 +19,7 @@ exports.VlcbDefs = {
     "MANU_SYSPIXIE": 249, // Konrad Orlowski
     "MANU_RME": 248 // http://rmeuk.com  (Railway Modelling Experts Limited)
   },
-  "CbusMergModuleTypes" : {
+  "VlcbMergModuleTypes" : {
     // 
     // MODULE TYPES
     // 
@@ -125,7 +125,7 @@ exports.VlcbDefs = {
     "MTYP_CANUSB": 0xFD, // USB interface
     "MTYP_CANDEV": 0xFC // Module type for use by developers when developing something new
   },
-  "CbusSprogModuleTypes" : {
+  "VlcbSprogModuleTypes" : {
     // 
     // Sprog Module types
     // 
@@ -139,7 +139,7 @@ exports.VlcbDefs = {
     "MTYP_CANISB": 100, // CAN ISB Isolated CAN USB Interface
     "MTYP_CANSOLIO ": 101 // 8-channel (4-pairs) Solenoid I/O module
   },
-  "CbusRocRailModuleTypes" : {
+  "VlcbRocRailModuleTypes" : {
     // 
     // Rocrail Module types
     // 
@@ -152,20 +152,20 @@ exports.VlcbDefs = {
     "MTYP_CANGC7": 7, // Fast clock module
     "MTYP_CANGC1e": 11 // CAN<->Ethernet interface
   },
-  "CbusSpectrumModuleTypes" : {
+  "VlcbSpectrumModuleTypes" : {
     // 
     // Spectrum Engineering Animated Modeller module types
     // 
     "MTYP_AMCTRLR": 1, // Animation controller (firmware derived from cancmd)
     "MTYP_DUALCAB": 2 // Dual cab based on cancab
   },
-  "CbusSysPixieModuleTypes" : {
+  "VlcbSysPixieModuleTypes" : {
     // 
     // SysPixie Module types (Konrad Orlowski)
     // 
     "MTYP_CANPMSense": 1 // Motorised point motor driver with current sense
   },
-  "CbusOpCodes" : {
+  "VlcbOpCodes" : {
     // 
     // 
     // VLCB opcodes list
@@ -349,7 +349,7 @@ exports.VlcbDefs = {
     // 
     "OPC_VCVS": 0xA4 // Verify CV service mode - used for CV read hints
   },
-  "CbusStmodModes" : {
+  "VlcbStmodModes" : {
     // 
     // 
     // Modes for STMOD
@@ -360,7 +360,7 @@ exports.VlcbDefs = {
     "TMOD_SPD_28I": 2,
     "TMOD_SPD_28": 3
   },
-  "CbusErrs" : {
+  "VlcbErrs" : {
     // 
     // Error codes for OPC_ERR
     // 
@@ -373,7 +373,7 @@ exports.VlcbDefs = {
     "ERR_INVALID_REQUEST": 7,
     "ERR_SESSION_CANCELLED": 8
   },
-  "CbusSStats" : {
+  "VlcbSStats" : {
     // 
     // Status codes for OPC_SSTAT
     // 
@@ -383,7 +383,7 @@ exports.VlcbDefs = {
     "SSTAT_BUSY": 4,
     "SSTAT_CV_ERROR": 5
   },
-  "CbusCmdErrs" : {
+  "VlcbCmdErrs" : {
     // 
     // Error codes for OPC_CMDERR
     // 
@@ -417,13 +417,13 @@ exports.VlcbDefs = {
     "GRSP_INVALID_COMMAND_PARAMETER": 251, // Invalid parameter in command
     "GRSP_INVALID_MODE": 250 // Invalid Mode
   },
-  "CbusCabSigAspect0" : {
+  "VlcbCabSigAspect0" : {
     // 
     // Sub opcodes for OPC_CABDAT
     // 
     "CDAT_CABSIG": 1
   },
-  "CbusCabSigAspect1" : {
+  "VlcbCabSigAspect1" : {
     // 
     // Aspect codes for CDAT_CABSIG
     // 
@@ -436,7 +436,7 @@ exports.VlcbDefs = {
     "SASP_CALLON": 4, // Set bit 2 for call-on - main aspect will usually be at danger
     "SASP_THEATRE": 8 // Set bit 3 to 0 for upper nibble is feather lcoation, set 1 for upper nibble is theatre code
   },
-  "CbusCabSigAspect2" : {
+  "VlcbCabSigAspect2" : {
     // 
     // Aspect codes for CDAT_CABSIG
     // 
@@ -464,7 +464,7 @@ exports.VlcbDefs = {
     "SERVICE_ID_BOOT": 10, // FCU/PIC bootloader service.
     "SERVICE_ID_STREAMING": 17 // Streaming (Long Messages) service.
   },
-  "CbusParams" : {
+  "VlcbParams" : {
     // 
     // 
     // Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
@@ -487,7 +487,7 @@ exports.VlcbDefs = {
     "PAR_CPUMAN": 19, // CPU manufacturer code
     "PAR_BETA": 20 // Beta revision (numeric), or 0 if release
   },
-  "CbusParamOffsetsPic" : {
+  "VlcbParamOffsetsPic" : {
     // 
     // Offsets to other values stored at the top of the parameter block.
     // These are not returned by opcode PARAN, but are present in the hex
@@ -497,7 +497,7 @@ exports.VlcbDefs = {
     "PAR_NAME": 0x1A, // 4 byte Address of Module type name, up to 8 characters null terminated
     "PAR_CKSUM": 0x1E // Checksum word at end of parameters
   },
-  "CbusParamFlags" : {
+  "VlcbParamFlags" : {
     // 
     // Flags in PAR_FLAGS
     // 
@@ -533,7 +533,7 @@ exports.VlcbDefs = {
     // Boot modes
     "MODE_BOOT": 0x0E // PIC Boot loader mode
   },
-  "CbusBusTypes" : {
+  "VlcbBusTypes" : {
     // 
     // BUS type that module is connected to
     // 
@@ -542,7 +542,7 @@ exports.VlcbDefs = {
     "PB_MIWI": 3,
     "PB_USB": 4
   },
-  "CbusProcessorManufacturers" : {
+  "VlcbProcessorManufacturers" : {
     // 
     // Processor manufacturer codes
     // 
@@ -550,7 +550,7 @@ exports.VlcbDefs = {
     "CPUM_ATMEL": 2,
     "CPUM_ARM": 3
   },
-  "CbusMicrochipProcessors" : {
+  "VlcbMicrochipProcessors" : {
     // 
     // Microchip Processor type codes (identifies to FCU for bootload compatibility)
     // 
@@ -590,7 +590,7 @@ exports.VlcbDefs = {
     "P32MX775F512": 37,
     "P32MX795F512": 38
   },
-  "CbusArmProcessors" : {
+  "VlcbArmProcessors" : {
     // 
     // ARM Processor type codes (identifies to FCU for bootload compatibility)
     // 

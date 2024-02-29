@@ -9,19 +9,16 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusParamOffsetsPic {
+public enum VlcbSpectrumModuleTypes {
 // 
-// Offsets to other values stored at the top of the parameter block.
-// These are not returned by opcode PARAN, but are present in the hex
-// file for FCU.
+// Spectrum Engineering Animated Modeller module types
 // 
-	PAR_COUNT(0x18),	//Number of parameters implemented
-	PAR_NAME(0x1A),	//4 byte Address of Module type name, up to 8 characters null terminated
-	PAR_CKSUM(0x1E);	//Checksum word at end of parameters
+	MTYP_AMCTRLR(1),	//Animation controller (firmware derived from cancmd)
+	MTYP_DUALCAB(2);	//Dual cab based on cancab
 
 	private final int v;
 
-	private CbusParamOffsetsPic(int v) {
+	private VlcbSpectrumModuleTypes(int v) {
 		this.v = v;
 	}
 

@@ -9,17 +9,22 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusProcessorManufacturers {
+public enum VlcbCabSigAspect1 {
 // 
-// Processor manufacturer codes
+// Aspect codes for CDAT_CABSIG
 // 
-	CPUM_MICROCHIP(1),	//
-	CPUM_ATMEL(2),	//
-	CPUM_ARM(3);	//
+// First aspect byte
+// 
+	SASP_DANGER(0),	//
+	SASP_CAUTION(1),	//
+	SASP_PRELIM_CAUTION(2),	//
+	SASP_PROCEED(3),	//
+	SASP_CALLON(4),	//Set bit 2 for call-on - main aspect will usually be at danger
+	SASP_THEATRE(8);	//Set bit 3 to 0 for upper nibble is feather lcoation, set 1 for upper nibble is theatre code
 
 	private final int v;
 
-	private CbusProcessorManufacturers(int v) {
+	private VlcbCabSigAspect1(int v) {
 		this.v = v;
 	}
 

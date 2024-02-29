@@ -23,6 +23,7 @@ do
 		if [ "X$name" = "X" ]; then
 			echo -e "// $value$comment"
 		else
+      type=${type/#Cbus/Vlcb}
 			echo -e "#define $name\t$value\t// $comment"
 		fi
 	fi

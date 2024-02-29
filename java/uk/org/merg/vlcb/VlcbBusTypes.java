@@ -9,16 +9,18 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusSpectrumModuleTypes {
+public enum VlcbBusTypes {
 // 
-// Spectrum Engineering Animated Modeller module types
+// BUS type that module is connected to
 // 
-	MTYP_AMCTRLR(1),	//Animation controller (firmware derived from cancmd)
-	MTYP_DUALCAB(2);	//Dual cab based on cancab
+	PB_CAN(1),	//
+	PB_ETH(2),	//
+	PB_MIWI(3),	//
+	PB_USB(4);	//
 
 	private final int v;
 
-	private CbusSpectrumModuleTypes(int v) {
+	private VlcbBusTypes(int v) {
 		this.v = v;
 	}
 

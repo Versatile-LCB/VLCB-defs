@@ -9,20 +9,20 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusCabSigAspect2 {
+public enum VlcbStmodModes {
 // 
-// Aspect codes for CDAT_CABSIG
 // 
-// Second Aspect byte
+// Modes for STMOD
 // 
-	SASP_LIT(0),	//Set bit 0 to indicate lit
-	SASP_LUNAR(1);	//Set bit 1 for lunar indication
-// 
-// Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
+	TMOD_SPD_MASK(3),	//
+	TMOD_SPD_128(0),	//
+	TMOD_SPD_14(1),	//
+	TMOD_SPD_28I(2),	//
+	TMOD_SPD_28(3);	//
 
 	private final int v;
 
-	private CbusCabSigAspect2(int v) {
+	private VlcbStmodModes(int v) {
 		this.v = v;
 	}
 

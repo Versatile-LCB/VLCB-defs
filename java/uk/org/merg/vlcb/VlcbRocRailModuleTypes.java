@@ -9,15 +9,22 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusSysPixieModuleTypes {
+public enum VlcbRocRailModuleTypes {
 // 
-// SysPixie Module types (Konrad Orlowski)
+// Rocrail Module types
 // 
-	MTYP_CANPMSense(1);	//Motorised point motor driver with current sense
+	MTYP_CANGC1(1),	//RS232 PC interface
+	MTYP_CANGC2(2),	//16 I/O
+	MTYP_CANGC3(3),	//Command station (derived from cancmd)
+	MTYP_CANGC4(4),	//8 channel RFID reader
+	MTYP_CANGC5(5),	//Cab for fixed panels (derived from cancab)
+	MTYP_CANGC6(6),	//4 channel servo controller
+	MTYP_CANGC7(7),	//Fast clock module
+	MTYP_CANGC1e(11);	//CAN<->Ethernet interface
 
 	private final int v;
 
-	private CbusSysPixieModuleTypes(int v) {
+	private VlcbRocRailModuleTypes(int v) {
 		this.v = v;
 	}
 

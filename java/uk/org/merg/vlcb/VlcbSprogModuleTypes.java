@@ -9,7 +9,7 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusSprogModuleTypes {
+public enum VlcbSprogModuleTypes {
 // 
 // Sprog Module types
 // 
@@ -25,7 +25,7 @@ public enum CbusSprogModuleTypes {
 
 	private final int v;
 
-	private CbusSprogModuleTypes(int v) {
+	private VlcbSprogModuleTypes(int v) {
 		this.v = v;
 	}
 

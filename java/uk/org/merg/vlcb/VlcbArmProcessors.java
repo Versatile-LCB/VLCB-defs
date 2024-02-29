@@ -9,7 +9,7 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusArmProcessors {
+public enum VlcbArmProcessors {
 // 
 // ARM Processor type codes (identifies to FCU for bootload compatibility)
 // 
@@ -19,7 +19,7 @@ public enum CbusArmProcessors {
 
 	private final int v;
 
-	private CbusArmProcessors(int v) {
+	private VlcbArmProcessors(int v) {
 		this.v = v;
 	}
 

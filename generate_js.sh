@@ -21,6 +21,7 @@ do
     then
         :
     else
+        type=${type/#Cbus/Vlcb}
         if [ "$type" = "$prevType" ]
         then
             if [ "$prevName" != "" ]

@@ -12,6 +12,7 @@ do
 	if [ "$type" = "comment" ]; then
 		echo -e "; $name\t$value\t$comment"
 	else
+    type=${type/#Cbus/Vlcb}
 		if [ "X$name" = "X" ]; then
 			echo -e "; $value$comment"
 		else

@@ -9,18 +9,20 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusBusTypes {
+public enum VlcbCabSigAspect2 {
 // 
-// BUS type that module is connected to
+// Aspect codes for CDAT_CABSIG
 // 
-	PB_CAN(1),	//
-	PB_ETH(2),	//
-	PB_MIWI(3),	//
-	PB_USB(4);	//
+// Second Aspect byte
+// 
+	SASP_LIT(0),	//Set bit 0 to indicate lit
+	SASP_LUNAR(1);	//Set bit 1 for lunar indication
+// 
+// Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 
 	private final int v;
 
-	private CbusBusTypes(int v) {
+	private VlcbCabSigAspect2(int v) {
 		this.v = v;
 	}
 

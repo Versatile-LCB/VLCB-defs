@@ -9,22 +9,19 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusErrs {
+public enum VlcbSStats {
 // 
-// Error codes for OPC_ERR
+// Status codes for OPC_SSTAT
 // 
-	ERR_LOCO_STACK_FULL(1),	//
-	ERR_LOCO_ADDR_TAKEN(2),	//
-	ERR_SESSION_NOT_PRESENT(3),	//
-	ERR_CONSIST_EMPTY(4),	//
-	ERR_LOCO_NOT_FOUND(5),	//
-	ERR_CMD_RX_BUF_OFLOW(6),	//
-	ERR_INVALID_REQUEST(7),	//
-	ERR_SESSION_CANCELLED(8);	//
+	SSTAT_NO_ACK(1),	//
+	SSTAT_OVLD(2),	//
+	SSTAT_WR_ACK(3),	//
+	SSTAT_BUSY(4),	//
+	SSTAT_CV_ERROR(5);	//
 
 	private final int v;
 
-	private CbusErrs(int v) {
+	private VlcbSStats(int v) {
 		this.v = v;
 	}
 

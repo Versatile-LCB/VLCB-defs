@@ -2,7 +2,7 @@ PACKAGE=uk.org.merg.vlcb
 JAVAPATH=`echo java/$PACKAGE|tr '.' '/'`
 mkdir -p $JAVAPATH
 # get the list of classes
-for class in $(cat vlcb-defs.csv|cut -f1 -d ,|grep -v comment|sort|uniq)
+for class in $(cat vlcb-defs.csv|cut -f1 -d ,|grep -v comment|sort|uniq | sed 's/^Cbus/Vlcb/')
 do
 	OUTPUT="$JAVAPATH/$class.java"
 	echo "Generating $OUTPUT"
@@ -25,6 +25,7 @@ EOF
 	# capture the name and values into a variable
 	BODY=`while IFS="," read type	name value comment
 	do
+    type=${type/#Cbus/Vlcb}
 		if [ "$type" = "$class" ]; then
 			if [ "X$name" = "X" ]; then
 				echo -e "// $value$comment"

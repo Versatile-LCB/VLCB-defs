@@ -9,19 +9,15 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusSStats {
+public enum VlcbCabSigAspect0 {
 // 
-// Status codes for OPC_SSTAT
+// Sub opcodes for OPC_CABDAT
 // 
-	SSTAT_NO_ACK(1),	//
-	SSTAT_OVLD(2),	//
-	SSTAT_WR_ACK(3),	//
-	SSTAT_BUSY(4),	//
-	SSTAT_CV_ERROR(5);	//
+	CDAT_CABSIG(1);	//
 
 	private final int v;
 
-	private CbusSStats(int v) {
+	private VlcbCabSigAspect0(int v) {
 		this.v = v;
 	}
 

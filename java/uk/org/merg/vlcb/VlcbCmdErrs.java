@@ -9,7 +9,7 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusCmdErrs {
+public enum VlcbCmdErrs {
 // 
 // Error codes for OPC_CMDERR
 // 
@@ -33,7 +33,7 @@ public enum CbusCmdErrs {
 
 	private final int v;
 
-	private CbusCmdErrs(int v) {
+	private VlcbCmdErrs(int v) {
 		this.v = v;
 	}
 

@@ -9,7 +9,7 @@ package uk.org.merg.vlcb;
 // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-public enum CbusParams {
+public enum VlcbParams {
 // 
 // 
 // Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
@@ -34,7 +34,7 @@ public enum CbusParams {
 
 	private final int v;
 
-	private CbusParams(int v) {
+	private VlcbParams(int v) {
 		this.v = v;
 	}
 

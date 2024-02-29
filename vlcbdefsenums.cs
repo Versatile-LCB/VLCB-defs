@@ -11,7 +11,7 @@ namespace Merg.Vlcb
     // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 	/// <summary>
-	/// class: CbusArmProcessors
+	/// class: VlcbArmProcessors
 	/// ARM Processor type codes (identifies to FCU for bootload compatibility)
 	/// </summary>
 	public enum ArmProcessors
@@ -31,7 +31,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusBusTypes
+	/// class: VlcbBusTypes
 	/// BUS type that module is connected to
 	/// </summary>
 	public enum BusTypes
@@ -43,7 +43,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusCabSigAspect0
+	/// class: VlcbCabSigAspect0
 	/// Sub opcodes for OPC_CABDAT
 	/// </summary>
 	public enum CabSigAspect0
@@ -52,7 +52,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusCabSigAspect1
+	/// class: VlcbCabSigAspect1
 	/// Aspect codes for CDAT_CABSIG
 	/// </summary>
 	public enum CabSigAspect1
@@ -72,7 +72,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusCabSigAspect2
+	/// class: VlcbCabSigAspect2
 	/// Aspect codes for CDAT_CABSIG
 	/// </summary>
 	public enum CabSigAspect2
@@ -88,7 +88,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusCmdErrs
+	/// class: VlcbCmdErrs
 	/// Error codes for OPC_CMDERR
 	/// </summary>
 	public enum CmdErrs
@@ -148,7 +148,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusErrs
+	/// class: VlcbErrs
 	/// Error codes for OPC_ERR
 	/// </summary>
 	public enum Errs
@@ -207,7 +207,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusMergModuleTypes
+	/// class: VlcbMergModuleTypes
 	/// MODULE TYPES
 	/// </summary>
 	public enum MergModuleTypes
@@ -580,7 +580,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusMicrochipProcessors
+	/// class: VlcbMicrochipProcessors
 	/// Microchip Processor type codes (identifies to FCU for bootload compatibility)
 	/// </summary>
 	public enum MicrochipProcessors
@@ -621,8 +621,8 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusOpCodes
-	/// class: CbusOpCodes
+	/// class: VlcbOpCodes
+	/// class: VlcbOpCodes
 	/// VLCB opcodes list
 	/// </summary>
 	public enum OpCodes
@@ -1202,7 +1202,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusParamFlags
+	/// class: VlcbParamFlags
 	/// Flags in PAR_FLAGS
 	/// </summary>
 	public enum ParamFlags
@@ -1254,7 +1254,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusParamOffsetsPic
+	/// class: VlcbParamOffsetsPic
 	/// Offsets to other values stored at the top of the parameter block.
 	/// </summary>
 	public enum ParamOffsetsPic
@@ -1274,8 +1274,8 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusParams
-	/// class: CbusParams
+	/// class: VlcbParams
+	/// class: VlcbParams
 	/// Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
 	/// </summary>
 	public enum Params
@@ -1343,7 +1343,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusProcessorManufacturers
+	/// class: VlcbProcessorManufacturers
 	/// Processor manufacturer codes
 	/// </summary>
 	public enum ProcessorManufacturers
@@ -1354,7 +1354,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusRocRailModuleTypes
+	/// class: VlcbRocRailModuleTypes
 	/// Rocrail Module types
 	/// </summary>
 	public enum RocRailModuleTypes
@@ -1394,7 +1394,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusSStats
+	/// class: VlcbSStats
 	/// Status codes for OPC_SSTAT
 	/// </summary>
 	public enum SStats
@@ -1407,7 +1407,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusSpectrumModuleTypes
+	/// class: VlcbSpectrumModuleTypes
 	/// Spectrum Engineering Animated Modeller module types
 	/// </summary>
 	public enum SpectrumModuleTypes
@@ -1423,7 +1423,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusSprogModuleTypes
+	/// class: VlcbSprogModuleTypes
 	/// Sprog Module types
 	/// </summary>
 	public enum SprogModuleTypes
@@ -1467,8 +1467,8 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusStmodModes
-	/// class: CbusStmodModes
+	/// class: VlcbStmodModes
+	/// class: VlcbStmodModes
 	/// Modes for STMOD
 	/// </summary>
 	public enum StmodModes
@@ -1481,7 +1481,7 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
-	/// class: CbusSysPixieModuleTypes
+	/// class: VlcbSysPixieModuleTypes
 	/// SysPixie Module types (Konrad Orlowski)
 	/// </summary>
 	public enum SysPixieModuleTypes
