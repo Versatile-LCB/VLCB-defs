@@ -638,6 +638,7 @@ namespace Merg.Vlcb
 			// 
 			// VLCB Service Types
 			// 
+			public const int SERVICE_ID_NONE	=  0;	// Not a real service. Will not be shown in list of services requested by RQSD.
 			public const int SERVICE_ID_MNS	=  1;	// The minimum node service. All modules must implement this.
 			public const int SERVICE_ID_NV	=  2;	// The NV service.
 			public const int SERVICE_ID_CAN	=  3;	// CAN service. Deals with CANID enumeration.
@@ -649,6 +650,7 @@ namespace Merg.Vlcb
 			public const int SERVICE_ID_EVENTACK	=  9;	// Event acknowledge service. Useful for debugging event configuration.
 			public const int SERVICE_ID_BOOT	=  10;	// FCU/PIC bootloader service.
 			public const int SERVICE_ID_STREAMING	=  17;	// Streaming (Long Messages) service.
+			// Use IDs 240 and higher for services in development that do not yet have a service specification.
 		}
 
 	}

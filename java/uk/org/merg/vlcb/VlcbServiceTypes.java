@@ -13,6 +13,7 @@ public enum VlcbServiceTypes {
 // 
 // VLCB Service Types
 // 
+	SERVICE_ID_NONE(0),	//Not a real service. Will not be shown in list of services requested by RQSD.
 	SERVICE_ID_MNS(1),	//The minimum node service. All modules must implement this.
 	SERVICE_ID_NV(2),	//The NV service.
 	SERVICE_ID_CAN(3),	//CAN service. Deals with CANID enumeration.
@@ -24,6 +25,7 @@ public enum VlcbServiceTypes {
 	SERVICE_ID_EVENTACK(9),	//Event acknowledge service. Useful for debugging event configuration.
 	SERVICE_ID_BOOT(10),	//FCU/PIC bootloader service.
 	SERVICE_ID_STREAMING(17);	//Streaming (Long Messages) service.
+// Use IDs 240 and higher for services in development that do not yet have a service specification.
 
 	private final int v;
 

@@ -423,6 +423,7 @@ CbusCabSigAspect2,,,Remaining bits in second aspect byte yet to be defined - can
 VlcbServiceTypes,,,
 VlcbServiceTypes,,,VLCB Service Types
 VlcbServiceTypes,,,
+VlcbServiceTypes,SERVICE_ID_NONE,0,Not a real service. Will not be shown in list of services requested by RQSD.
 VlcbServiceTypes,SERVICE_ID_MNS,1,The minimum node service. All modules must implement this.
 VlcbServiceTypes,SERVICE_ID_NV,2,The NV service.
 VlcbServiceTypes,SERVICE_ID_CAN,3,CAN service. Deals with CANID enumeration.
@@ -434,6 +435,7 @@ VlcbServiceTypes,SERVICE_ID_CONSUME_OWN_EVENTS,8,Consume own events service.
 VlcbServiceTypes,SERVICE_ID_EVENTACK,9,Event acknowledge service. Useful for debugging event configuration.
 VlcbServiceTypes,SERVICE_ID_BOOT,10,FCU/PIC bootloader service.
 VlcbServiceTypes,SERVICE_ID_STREAMING,17,Streaming (Long Messages) service.
+VlcbServiceTypes,,,Use IDs 240 and higher for services in development that do not yet have a service specification.
 CbusParams,,,
 CbusParams,,,
 CbusParams,,,Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)

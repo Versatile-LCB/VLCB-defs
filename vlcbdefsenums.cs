@@ -1579,6 +1579,10 @@ namespace Merg.Vlcb
 	public enum ServiceTypes
 	{
 		/// <summary>
+		/// Not a real service. Will not be shown in list of services requested by RQSD.
+		/// </summary>
+		ServiceIdNone = 0,
+		/// <summary>
 		/// The minimum node service. All modules must implement this.
 		/// </summary>
 		ServiceIdMns = 1,

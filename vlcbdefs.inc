@@ -426,6 +426,7 @@ SASP_LUNAR	equ .1	; Set bit 1 for lunar indication
 ; 
 ; VLCB Service Types
 ; 
+SERVICE_ID_NONE	equ .0	; Not a real service. Will not be shown in list of services requested by RQSD.
 SERVICE_ID_MNS	equ .1	; The minimum node service. All modules must implement this.
 SERVICE_ID_NV	equ .2	; The NV service.
 SERVICE_ID_CAN	equ .3	; CAN service. Deals with CANID enumeration.
@@ -437,6 +438,7 @@ SERVICE_ID_CONSUME_OWN_EVENTS	equ .8	; Consume own events service.
 SERVICE_ID_EVENTACK	equ .9	; Event acknowledge service. Useful for debugging event configuration.
 SERVICE_ID_BOOT	equ .10	; FCU/PIC bootloader service.
 SERVICE_ID_STREAMING	equ .17	; Streaming (Long Messages) service.
+; Use IDs 240 and higher for services in development that do not yet have a service specification.
 ; 
 ; 
 ; Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
