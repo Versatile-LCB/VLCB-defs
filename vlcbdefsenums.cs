@@ -10,12 +10,12 @@ namespace Merg.Vlcb
     // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
     // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbArmProcessors
 	/// ARM Processor type codes (identifies to FCU for bootload compatibility)
-	/// </summary>
-	public enum ArmProcessors
-	{
+    /// </summary>
+    public enum ArmProcessors
+    {
 		/// <summary>
 		/// As used in Raspberry Pi
 		/// </summary>
@@ -28,35 +28,35 @@ namespace Merg.Vlcb
 		/// As used in Raspberry Pi 3
 		/// </summary>
 		ArmcortexA53 = 3,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbBusTypes
 	/// BUS type that module is connected to
-	/// </summary>
-	public enum BusTypes
-	{
+    /// </summary>
+    public enum BusTypes
+    {
 		PbCan = 1,
 		PbEth = 2,
 		PbMiwi = 3,
 		PbUsb = 4,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbCabSigAspect0
 	/// Sub opcodes for OPC_CABDAT
-	/// </summary>
-	public enum CabSigAspect0
-	{
+    /// </summary>
+    public enum CabSigAspect0
+    {
 		CdatCabsig = 1,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbCabSigAspect1
 	/// Aspect codes for CDAT_CABSIG
-	/// </summary>
-	public enum CabSigAspect1
-	{
+    /// </summary>
+    public enum CabSigAspect1
+    {
 		Danger = 0,
 		Caution = 1,
 		PrelimCaution = 2,
@@ -69,14 +69,14 @@ namespace Merg.Vlcb
 		/// Set bit 3 to 0 for upper nibble is feather lcoation, set 1 for upper nibble is theatre code
 		/// </summary>
 		Theatre = 8,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbCabSigAspect2
 	/// Aspect codes for CDAT_CABSIG
-	/// </summary>
-	public enum CabSigAspect2
-	{
+    /// </summary>
+    public enum CabSigAspect2
+    {
 		/// <summary>
 		/// Set bit 0 to indicate lit
 		/// </summary>
@@ -85,14 +85,14 @@ namespace Merg.Vlcb
 		/// Set bit 1 for lunar indication
 		/// </summary>
 		Lunar = 1,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbCmdErrs
 	/// Error codes for OPC_CMDERR
-	/// </summary>
-	public enum CmdErrs
-	{
+    /// </summary>
+    public enum CmdErrs
+    {
 		/// <summary>
 		/// Invalid command
 		/// </summary>
@@ -145,14 +145,14 @@ namespace Merg.Vlcb
 		/// Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
 		/// </summary>
 		LrnOther = 13,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbErrs
 	/// Error codes for OPC_ERR
-	/// </summary>
-	public enum Errs
-	{
+    /// </summary>
+    public enum Errs
+    {
 		LocoStackFull = 1,
 		LocoAddrTaken = 2,
 		SessionNotPresent = 3,
@@ -161,13 +161,13 @@ namespace Merg.Vlcb
 		CmdRxBufOflow = 6,
 		InvalidRequest = 7,
 		SessionCancelled = 8,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// Manufacturer definitions
-	/// </summary>
-	public enum Manufacturer
-	{
+    /// </summary>
+    public enum Manufacturer
+    {
 		/// <summary>
 		/// For new manufacturer development - who don't have a manufacturer id yet
 		/// </summary>
@@ -204,14 +204,14 @@ namespace Merg.Vlcb
 		/// http://rmeuk.com  (Railway Modelling Experts Limited)
 		/// </summary>
 		Rme = 248,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbMergModuleTypes
 	/// MODULE TYPES
-	/// </summary>
-	public enum MergModuleTypes
-	{
+    /// </summary>
+    public enum MergModuleTypes
+    {
 		/// <summary>
 		/// default for SLiM nodes
 		/// </summary>
@@ -577,14 +577,14 @@ namespace Merg.Vlcb
 		/// Module type for use by developers when developing something new
 		/// </summary>
 		Candev = 0xFC,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbMicrochipProcessors
 	/// Microchip Processor type codes (identifies to FCU for bootload compatibility)
-	/// </summary>
-	public enum MicrochipProcessors
-	{
+    /// </summary>
+    public enum MicrochipProcessors
+    {
 		P18F2480 = 1,
 		P18F4480 = 2,
 		P18F2580 = 3,
@@ -618,15 +618,15 @@ namespace Merg.Vlcb
 		P32MX775F256 = 36,
 		P32MX775F512 = 37,
 		P32MX795F512 = 38,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbOpCodes
 	/// class: VlcbOpCodes
 	/// VLCB opcodes list
-	/// </summary>
-	public enum OpCodes
-	{
+    /// </summary>
+    public enum OpCodes
+    {
 		/// <summary>
 		/// General ack
 		/// </summary>
@@ -1199,14 +1199,14 @@ namespace Merg.Vlcb
 		/// Verify CV service mode - used for CV read hints
 		/// </summary>
 		Vcvs = 0xA4,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbParamFlags
 	/// Flags in PAR_FLAGS
-	/// </summary>
-	public enum ParamFlags
-	{
+    /// </summary>
+    public enum ParamFlags
+    {
 		/// <summary>
 		/// Module doesn't support events
 		/// </summary>
@@ -1251,14 +1251,14 @@ namespace Merg.Vlcb
 		/// Module supports Service Discovery (Deprecated in favour of PF_VLCB.)
 		/// </summary>
 		Sd = 64,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbParamOffsetsPic
 	/// Offsets to other values stored at the top of the parameter block.
-	/// </summary>
-	public enum ParamOffsetsPic
-	{
+    /// </summary>
+    public enum ParamOffsetsPic
+    {
 		/// <summary>
 		/// Number of parameters implemented
 		/// </summary>
@@ -1271,15 +1271,15 @@ namespace Merg.Vlcb
 		/// Checksum word at end of parameters
 		/// </summary>
 		Cksum = 0x1E,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbParams
 	/// class: VlcbParams
 	/// Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
-	/// </summary>
-	public enum Params
-	{
+    /// </summary>
+    public enum Params
+    {
 		/// <summary>
 		/// Number of parameters
 		/// </summary>
@@ -1340,25 +1340,25 @@ namespace Merg.Vlcb
 		/// Beta revision (numeric), or 0 if release
 		/// </summary>
 		Beta = 20,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbProcessorManufacturers
 	/// Processor manufacturer codes
-	/// </summary>
-	public enum ProcessorManufacturers
-	{
+    /// </summary>
+    public enum ProcessorManufacturers
+    {
 		Microchip = 1,
 		Atmel = 2,
 		Arm = 3,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbRocRailModuleTypes
 	/// Rocrail Module types
-	/// </summary>
-	public enum RocRailModuleTypes
-	{
+    /// </summary>
+    public enum RocRailModuleTypes
+    {
 		/// <summary>
 		/// RS232 PC interface
 		/// </summary>
@@ -1391,27 +1391,27 @@ namespace Merg.Vlcb
 		/// CAN<->Ethernet interface
 		/// </summary>
 		Cangc1e = 11,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbSStats
 	/// Status codes for OPC_SSTAT
-	/// </summary>
-	public enum SStats
-	{
+    /// </summary>
+    public enum SStats
+    {
 		NoAck = 1,
 		Ovld = 2,
 		WrAck = 3,
 		Busy = 4,
 		CvError = 5,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbSpectrumModuleTypes
 	/// Spectrum Engineering Animated Modeller module types
-	/// </summary>
-	public enum SpectrumModuleTypes
-	{
+    /// </summary>
+    public enum SpectrumModuleTypes
+    {
 		/// <summary>
 		/// Animation controller (firmware derived from cancmd)
 		/// </summary>
@@ -1420,14 +1420,14 @@ namespace Merg.Vlcb
 		/// Dual cab based on cancab
 		/// </summary>
 		Dualcab = 2,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbSprogModuleTypes
 	/// Sprog Module types
-	/// </summary>
-	public enum SprogModuleTypes
-	{
+    /// </summary>
+    public enum SprogModuleTypes
+    {
 		/// <summary>
 		/// Pi-SPROG 3 programmer/command station
 		/// </summary>
@@ -1464,35 +1464,35 @@ namespace Merg.Vlcb
 		/// 8-channel (4-pairs) Solenoid I/O module
 		/// </summary>
 		Cansolio  = 101,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbStmodModes
 	/// class: VlcbStmodModes
 	/// Modes for STMOD
-	/// </summary>
-	public enum StmodModes
-	{
+    /// </summary>
+    public enum StmodModes
+    {
 		SpdMask = 3,
 		Spd128 = 0,
 		Spd14 = 1,
 		Spd28i = 2,
 		Spd28 = 3,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbSysPixieModuleTypes
 	/// SysPixie Module types (Konrad Orlowski)
-	/// </summary>
-	public enum SysPixieModuleTypes
-	{
+    /// </summary>
+    public enum SysPixieModuleTypes
+    {
 		/// <summary>
 		/// Motorised point motor driver with current sense
 		/// </summary>
 		Canpmsense = 1,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbCanHardware
 	/// CAN engine type codes
 	/// </summary>
@@ -1559,9 +1559,9 @@ namespace Merg.Vlcb
 	/// <summary>
 	/// class: VlcbGrspCodes
 	/// GRSP codes
-	/// </summary>
-	public enum GrspCodes
-	{
+    /// </summary>
+    public enum GrspCodes
+    {
 		/// <summary>
 		/// Success
 		/// </summary>
@@ -1586,14 +1586,14 @@ namespace Merg.Vlcb
 		/// Invalid Mode
 		/// </summary>
 		GrspInvalidMode = 250,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbModeParams
 	/// Parameters to the MODE op-code
-	/// </summary>
-	public enum ModeParams
-	{
+    /// </summary>
+    public enum ModeParams
+    {
 		/// <summary>
 		/// Uninitialised / factory settings
 		/// </summary>
@@ -1634,9 +1634,9 @@ namespace Merg.Vlcb
 		/// PIC Boot loader mode
 		/// </summary>
 		ModeBoot = 0x0E,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbProducerEvUsage
 	/// Producer service EV usage
 	/// </summary>
@@ -1659,9 +1659,9 @@ namespace Merg.Vlcb
 	/// <summary>
 	/// class: VlcbServiceTypes
 	/// VLCB Service Types
-	/// </summary>
-	public enum ServiceTypes
-	{
+    /// </summary>
+    public enum ServiceTypes
+    {
 		/// <summary>
 		/// Not a real service. Will not be shown in list of services requested by RQSD.
 		/// </summary>
@@ -1710,6 +1710,6 @@ namespace Merg.Vlcb
 		/// Streaming (Long Messages) service.
 		/// </summary>
 		ServiceIdStreaming = 17,
-	}
+    }
 
 }

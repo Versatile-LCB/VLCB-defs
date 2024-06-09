@@ -8,31 +8,31 @@ cat << EOF > $OUTPUT
 #ifndef __VLCBDEFS
 #define __VLCBDEFS
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
 EOF
 
 # now output the actual contents
-while IFS="," read type	name value comment
+while IFS="," read type name value comment
 do
-	if [ "$type" = "comment" ]; then
-		echo -e "// $name\t$value\t$comment"
-	else
-		if [ "X$name" = "X" ]; then
-			echo -e "// $value$comment"
-		else
-      type=${type/#Cbus/Vlcb}
-			echo -e "#define $name\t$value\t// $comment"
-		fi
-	fi
+    if [ "$type" = "comment" ]; then
+        echo -e "// $name\t$value\t$comment"
+    else
+        if [ "X$name" = "X" ]; then
+            echo -e "// $value$comment"
+        else
+            type=${type/#Cbus/Vlcb}
+            echo -e "#define $name\t$value\t// $comment"
+        fi
+    fi
 done < vlcb-defs.csv >>$OUTPUT
 
 # finally output the trailer stuff
 cat << EOF >> $OUTPUT
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 }
 #endif
 

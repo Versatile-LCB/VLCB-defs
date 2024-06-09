@@ -19,41 +19,41 @@ grep '^comment' vlcb-defs.csv | cut -f2- -d , | sed 's!^!    // !' |sed 's!,!!' 
 
 cat << EOF >> $OUTPUT
 
-	public static class VlcbDefs
-	{
+    public static class VlcbDefs
+    {
 EOF
 
 # Each type is a static nested class.
 for class in $(cat vlcb-defs.csv|cut -f1 -d ,|grep -v comment|sort|uniq | sed 's/^Cbus/Vlcb/')
 do
-	echo "           VlcbDefs.$class"
+    echo "           VlcbDefs.$class"
 
-	cat << EOF >> $OUTPUT
-		public static class $class
-		{
+    cat << EOF >> $OUTPUT
+        public static class $class
+        {
 EOF
 
-	# now output the actual contents
-	while IFS="," read type	name value comment 
-	do
+    # now output the actual contents
+    while IFS="," read type name value comment
+    do
     type=${type/#Cbus/Vlcb}
-		if [ "$type" = $class ]; then
-			if [ "X$name" = "X" ]; then
-				echo -e "\t\t\t// $value$comment" 
-			else
-				echo -e "\t\t\tpublic const int $name\t=  $value;\t// $comment" 
-			fi
-		fi
-	done < vlcb-defs.csv >> $OUTPUT
+        if [ "$type" = $class ]; then
+            if [ "X$name" = "X" ]; then
+                echo -e "\t\t\t// $value$comment"
+            else
+                echo -e "\t\t\tpublic const int $name\t=  $value;\t// $comment"
+            fi
+        fi
+    done < vlcb-defs.csv >> $OUTPUT
 
-	cat << EOF >> $OUTPUT
-		}
+    cat << EOF >> $OUTPUT
+        }
 
 EOF
 done
 
 # finally output the trailer stuff
 cat << EOF >> $OUTPUT
-	}
+    }
 }
 EOF

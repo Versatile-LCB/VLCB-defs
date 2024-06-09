@@ -22,13 +22,13 @@ public enum VlcbRocRailModuleTypes {
 	MTYP_CANGC7(7),	//Fast clock module
 	MTYP_CANGC1e(11);	//CAN<->Ethernet interface
 
-	private final int v;
+    private final int v;
 
-	private VlcbRocRailModuleTypes(int v) {
-		this.v = v;
-	}
+    private VlcbRocRailModuleTypes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

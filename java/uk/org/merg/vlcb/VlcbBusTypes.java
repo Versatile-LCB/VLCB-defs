@@ -18,13 +18,13 @@ public enum VlcbBusTypes {
 	PB_MIWI(3),	//
 	PB_USB(4);	//
 
-	private final int v;
+    private final int v;
 
-	private VlcbBusTypes(int v) {
-		this.v = v;
-	}
+    private VlcbBusTypes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

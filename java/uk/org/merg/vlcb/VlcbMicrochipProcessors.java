@@ -49,13 +49,13 @@ public enum VlcbMicrochipProcessors {
 	P32MX775F512(37),	//
 	P32MX795F512(38);	//
 
-	private final int v;
+    private final int v;
 
-	private VlcbMicrochipProcessors(int v) {
-		this.v = v;
-	}
+    private VlcbMicrochipProcessors(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

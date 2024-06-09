@@ -32,13 +32,13 @@ public enum VlcbParams {
 	PAR_CPUMAN(19),	//CPU manufacturer code
 	PAR_BETA(20);	//Beta revision (numeric), or 0 if release
 
-	private final int v;
+    private final int v;
 
-	private VlcbParams(int v) {
-		this.v = v;
-	}
+    private VlcbParams(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

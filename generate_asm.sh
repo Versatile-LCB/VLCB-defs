@@ -7,23 +7,23 @@ cat << EOF > $OUTPUT
 
 EOF
 # now output the actual contents
-while IFS="," read type	name value comment
+while IFS="," read type name value comment
 do
-	if [ "$type" = "comment" ]; then
-		echo -e "; $name\t$value\t$comment"
-	else
-    type=${type/#Cbus/Vlcb}
-		if [ "X$name" = "X" ]; then
-			echo -e "; $value$comment"
-		else
-			start=`echo -e $value | cut -c1-2 | tr "x" "X"`
-			if [ "x$start" = "x0X" ]; then
-				echo -e "$name\tequ $value\t; $comment"
-			else
-				echo -e "$name\tequ .$value\t; $comment"
-			fi
-		fi
-	fi
+    if [ "$type" = "comment" ]; then
+        echo -e "; $name\t$value\t$comment"
+    else
+        type=${type/#Cbus/Vlcb}
+        if [ "X$name" = "X" ]; then
+            echo -e "; $value$comment"
+        else
+            start=`echo -e $value | cut -c1-2 | tr "x" "X"`
+            if [ "x$start" = "x0X" ]; then
+                echo -e "$name\tequ $value\t; $comment"
+            else
+                echo -e "$name\tequ .$value\t; $comment"
+            fi
+        fi
+    fi
 done < vlcb-defs.csv >>$OUTPUT
 
 # finally output the trailer stuff

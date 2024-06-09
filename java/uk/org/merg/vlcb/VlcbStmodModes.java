@@ -20,13 +20,13 @@ public enum VlcbStmodModes {
 	TMOD_SPD_28I(2),	//
 	TMOD_SPD_28(3);	//
 
-	private final int v;
+    private final int v;
 
-	private VlcbStmodModes(int v) {
-		this.v = v;
-	}
+    private VlcbStmodModes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

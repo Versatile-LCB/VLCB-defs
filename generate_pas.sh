@@ -14,17 +14,17 @@ const
 EOF
 # now output the actual contents
 # Set input field separator (IFS) to comma and carriage return for running on Windows.
-while IFS=$',\r' read type	name value comment
+while IFS=$',\r' read type name value comment
 do
-	if [ "$type" = "comment" ]; then
-		echo -e "{ $name\t$value\t$comment }"
-	else
-		if [ "X$name" = "X" ]; then
-			echo -e "// $value$comment"
-		else
-			echo -e " $name\t=  $value;\t// $comment"
-		fi
-	fi
+    if [ "$type" = "comment" ]; then
+        echo -e "{ $name\t$value\t$comment }"
+    else
+        if [ "X$name" = "X" ]; then
+            echo -e "// $value$comment"
+        else
+            echo -e " $name\t=  $value;\t// $comment"
+        fi
+    fi
 done < vlcb-defs.csv >>$OUTPUT
 
 # finally output the trailer stuff

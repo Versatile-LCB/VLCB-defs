@@ -27,13 +27,13 @@ public enum VlcbServiceTypes {
 	SERVICE_ID_STREAMING(17);	//Streaming (Long Messages) service.
 // Use IDs 240 and higher for services in development that do not yet have a service specification.
 
-	private final int v;
+    private final int v;
 
-	private VlcbServiceTypes(int v) {
-		this.v = v;
-	}
+    private VlcbServiceTypes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

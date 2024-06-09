@@ -4,7 +4,7 @@
 #ifndef __VLCBDEFS
 #define __VLCBDEFS
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -589,7 +589,7 @@ extern "C" {
 #define CONSUMER_EV_ACTIONS	0x01	// Actions
 #define CONSUMER_EV_SLOTS	0x02	// Slots
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 }
 #endif
 

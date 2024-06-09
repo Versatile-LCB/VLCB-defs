@@ -25,13 +25,13 @@ public enum VlcbParamFlags {
 	PF_VLCB(64),	//Module is VLCB compatible
 	PF_SD(64);	//Module supports Service Discovery (Deprecated in favour of PF_VLCB.)
 
-	private final int v;
+    private final int v;
 
-	private VlcbParamFlags(int v) {
-		this.v = v;
-	}
+    private VlcbParamFlags(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

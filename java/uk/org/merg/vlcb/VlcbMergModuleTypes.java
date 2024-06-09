@@ -115,13 +115,13 @@ public enum VlcbMergModuleTypes {
 	MTYP_CANUSB(0xFD),	//USB interface
 	MTYP_CANDEV(0xFC);	//Module type for use by developers when developing something new
 
-	private final int v;
+    private final int v;
 
-	private VlcbMergModuleTypes(int v) {
-		this.v = v;
-	}
+    private VlcbMergModuleTypes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

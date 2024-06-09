@@ -22,13 +22,13 @@ public enum VlcbErrs {
 	ERR_INVALID_REQUEST(7),	//
 	ERR_SESSION_CANCELLED(8);	//
 
-	private final int v;
+    private final int v;
 
-	private VlcbErrs(int v) {
-		this.v = v;
-	}
+    private VlcbErrs(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

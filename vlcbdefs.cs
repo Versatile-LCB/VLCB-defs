@@ -10,20 +10,20 @@ namespace Merg.Vlcb
     // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
     // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
-	public static class VlcbDefs
-	{
-		public static class VlcbArmProcessors
-		{
+    public static class VlcbDefs
+    {
+        public static class VlcbArmProcessors
+        {
 			// 
 			// ARM Processor type codes (identifies to FCU for bootload compatibility)
 			// 
 			public const int ARM1176JZF_S	=  1;	// As used in Raspberry Pi
 			public const int ARMCortex_A7	=  2;	// As Used in Raspberry Pi 2
 			public const int ARMCortex_A53	=  3;	// As used in Raspberry Pi 3
-		}
+        }
 
-		public static class VlcbBusTypes
-		{
+        public static class VlcbBusTypes
+        {
 			// 
 			// BUS type that module is connected to
 			// 
@@ -31,18 +31,18 @@ namespace Merg.Vlcb
 			public const int PB_ETH	=  2;	// 
 			public const int PB_MIWI	=  3;	// 
 			public const int PB_USB	=  4;	// 
-		}
+        }
 
-		public static class VlcbCabSigAspect0
-		{
+        public static class VlcbCabSigAspect0
+        {
 			// 
 			// Sub opcodes for OPC_CABDAT
 			// 
 			public const int CDAT_CABSIG	=  1;	// 
-		}
+        }
 
-		public static class VlcbCabSigAspect1
-		{
+        public static class VlcbCabSigAspect1
+        {
 			// 
 			// Aspect codes for CDAT_CABSIG
 			// 
@@ -54,10 +54,10 @@ namespace Merg.Vlcb
 			public const int SASP_PROCEED	=  3;	// 
 			public const int SASP_CALLON	=  4;	// Set bit 2 for call-on - main aspect will usually be at danger
 			public const int SASP_THEATRE	=  8;	// Set bit 3 to 0 for upper nibble is feather lcoation, set 1 for upper nibble is theatre code
-		}
+        }
 
-		public static class VlcbCabSigAspect2
-		{
+        public static class VlcbCabSigAspect2
+        {
 			// 
 			// Aspect codes for CDAT_CABSIG
 			// 
@@ -67,10 +67,10 @@ namespace Merg.Vlcb
 			public const int SASP_LUNAR	=  1;	// Set bit 1 for lunar indication
 			// 
 			// Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
-		}
+        }
 
-		public static class VlcbCmdErrs
-		{
+        public static class VlcbCmdErrs
+        {
 			// 
 			// Error codes for OPC_CMDERR
 			// 
@@ -91,10 +91,10 @@ namespace Merg.Vlcb
 			// 
 			public const int CMDERR_LRN_OTHER	=  13;	// Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
 			// 
-		}
+        }
 
-		public static class VlcbErrs
-		{
+        public static class VlcbErrs
+        {
 			// 
 			// Error codes for OPC_ERR
 			// 
@@ -106,10 +106,10 @@ namespace Merg.Vlcb
 			public const int ERR_CMD_RX_BUF_OFLOW	=  6;	// 
 			public const int ERR_INVALID_REQUEST	=  7;	// 
 			public const int ERR_SESSION_CANCELLED	=  8;	// 
-		}
+        }
 
-		public static class VlcbManufacturer
-		{
+        public static class VlcbManufacturer
+        {
 			// Manufacturer definitions
 			// Where the manufacturer already has an NMRA code, this is used
 			// 
@@ -122,10 +122,10 @@ namespace Merg.Vlcb
 			public const int MANU_VLCB	=  250;	// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 			public const int MANU_SYSPIXIE	=  249;	// Konrad Orlowski
 			public const int MANU_RME	=  248;	// http://rmeuk.com  (Railway Modelling Experts Limited)
-		}
+        }
 
-		public static class VlcbMergModuleTypes
-		{
+        public static class VlcbMergModuleTypes
+        {
 			// 
 			// MODULE TYPES
 			// 
@@ -230,10 +230,10 @@ namespace Merg.Vlcb
 			public const int MTYP_EMPTY	=  0xFE;	// Empty module, bootloader only
 			public const int MTYP_CANUSB	=  0xFD;	// USB interface
 			public const int MTYP_CANDEV	=  0xFC;	// Module type for use by developers when developing something new
-		}
+        }
 
-		public static class VlcbMicrochipProcessors
-		{
+        public static class VlcbMicrochipProcessors
+        {
 			// 
 			// Microchip Processor type codes (identifies to FCU for bootload compatibility)
 			// 
@@ -272,10 +272,10 @@ namespace Merg.Vlcb
 			public const int P32MX775F256	=  36;	// 
 			public const int P32MX775F512	=  37;	// 
 			public const int P32MX795F512	=  38;	// 
-		}
+        }
 
-		public static class VlcbOpCodes
-		{
+        public static class VlcbOpCodes
+        {
 			// 
 			// 
 			// VLCB opcodes list
@@ -458,10 +458,10 @@ namespace Merg.Vlcb
 			// Opcodes that are proposed and/or agreed but not yet in the current published specification
 			// 
 			public const int OPC_VCVS	=  0xA4;	// Verify CV service mode - used for CV read hints
-		}
+        }
 
-		public static class VlcbParamFlags
-		{
+        public static class VlcbParamFlags
+        {
 			// 
 			// Flags in PAR_FLAGS
 			// 
@@ -476,10 +476,10 @@ namespace Merg.Vlcb
 			public const int PF_LRN	=  32;	// Module is in learn mode
 			public const int PF_VLCB	=  64;	// Module is VLCB compatible
 			public const int PF_SD	=  64;	// Module supports Service Discovery (Deprecated in favour of PF_VLCB.)
-		}
+        }
 
-		public static class VlcbParamOffsetsPic
-		{
+        public static class VlcbParamOffsetsPic
+        {
 			// 
 			// Offsets to other values stored at the top of the parameter block.
 			// These are not returned by opcode PARAN, but are present in the hex
@@ -488,10 +488,10 @@ namespace Merg.Vlcb
 			public const int PAR_COUNT	=  0x18;	// Number of parameters implemented
 			public const int PAR_NAME	=  0x1A;	// 4 byte Address of Module type name, up to 8 characters null terminated
 			public const int PAR_CKSUM	=  0x1E;	// Checksum word at end of parameters
-		}
+        }
 
-		public static class VlcbParams
-		{
+        public static class VlcbParams
+        {
 			// 
 			// 
 			// Parameter index numbers (readable by OPC_RQNPN, returned in OPC_PARAN)
@@ -513,20 +513,20 @@ namespace Merg.Vlcb
 			public const int PAR_CPUMID	=  15;	// CPU manufacturer's id as read from the chip config space, 4 bytes (note - read from cpu at runtime, so not included in checksum)
 			public const int PAR_CPUMAN	=  19;	// CPU manufacturer code
 			public const int PAR_BETA	=  20;	// Beta revision (numeric), or 0 if release
-		}
+        }
 
-		public static class VlcbProcessorManufacturers
-		{
+        public static class VlcbProcessorManufacturers
+        {
 			// 
 			// Processor manufacturer codes
 			// 
 			public const int CPUM_MICROCHIP	=  1;	// 
 			public const int CPUM_ATMEL	=  2;	// 
 			public const int CPUM_ARM	=  3;	// 
-		}
+        }
 
-		public static class VlcbRocRailModuleTypes
-		{
+        public static class VlcbRocRailModuleTypes
+        {
 			// 
 			// Rocrail Module types
 			// 
@@ -538,10 +538,10 @@ namespace Merg.Vlcb
 			public const int MTYP_CANGC6	=  6;	// 4 channel servo controller
 			public const int MTYP_CANGC7	=  7;	// Fast clock module
 			public const int MTYP_CANGC1e	=  11;	// CAN<->Ethernet interface
-		}
+        }
 
-		public static class VlcbSStats
-		{
+        public static class VlcbSStats
+        {
 			// 
 			// Status codes for OPC_SSTAT
 			// 
@@ -550,19 +550,19 @@ namespace Merg.Vlcb
 			public const int SSTAT_WR_ACK	=  3;	// 
 			public const int SSTAT_BUSY	=  4;	// 
 			public const int SSTAT_CV_ERROR	=  5;	// 
-		}
+        }
 
-		public static class VlcbSpectrumModuleTypes
-		{
+        public static class VlcbSpectrumModuleTypes
+        {
 			// 
 			// Spectrum Engineering Animated Modeller module types
 			// 
 			public const int MTYP_AMCTRLR	=  1;	// Animation controller (firmware derived from cancmd)
 			public const int MTYP_DUALCAB	=  2;	// Dual cab based on cancab
-		}
+        }
 
-		public static class VlcbSprogModuleTypes
-		{
+        public static class VlcbSprogModuleTypes
+        {
 			// 
 			// Sprog Module types
 			// 
@@ -575,10 +575,10 @@ namespace Merg.Vlcb
 			public const int MTYP_CANSERVOIO	=  50;	// 8-channel Servo I/O module
 			public const int MTYP_CANISB	=  100;	// CAN ISB Isolated CAN USB Interface
 			public const int MTYP_CANSOLIO 	=  101;	// 8-channel (4-pairs) Solenoid I/O module
-		}
+        }
 
-		public static class VlcbStmodModes
-		{
+        public static class VlcbStmodModes
+        {
 			// 
 			// 
 			// Modes for STMOD
@@ -588,17 +588,17 @@ namespace Merg.Vlcb
 			public const int TMOD_SPD_14	=  1;	// 
 			public const int TMOD_SPD_28I	=  2;	// 
 			public const int TMOD_SPD_28	=  3;	// 
-		}
+        }
 
-		public static class VlcbSysPixieModuleTypes
-		{
+        public static class VlcbSysPixieModuleTypes
+        {
 			// 
 			// SysPixie Module types (Konrad Orlowski)
 			// 
 			public const int MTYP_CANPMSense	=  1;	// Motorised point motor driver with current sense
-		}
+        }
 
-		public static class VlcbCanHardware
+        public static class VlcbCanHardware
 		{
 			// 
 			// CAN engine type codes
@@ -622,10 +622,8 @@ namespace Merg.Vlcb
 			public const int CONSUMER_EV_NOT_SPECIFIED	=  0x00;	// Not specified
 			public const int CONSUMER_EV_ACTIONS	=  0x01;	// Actions
 			public const int CONSUMER_EV_SLOTS	=  0x02;	// Slots
-		}
-
-		public static class VlcbGrspCodes
-		{
+		}public static class VlcbGrspCodes
+        {
 			// 
 			// GRSP codes
 			// 
@@ -635,10 +633,10 @@ namespace Merg.Vlcb
 			public const int GRSP_INVALID_SERVICE	=  252;	// Invalid service
 			public const int GRSP_INVALID_COMMAND_PARAMETER	=  251;	// Invalid parameter in command
 			public const int GRSP_INVALID_MODE	=  250;	// Invalid Mode
-		}
+        }
 
-		public static class VlcbModeParams
-		{
+        public static class VlcbModeParams
+        {
 			// 
 			// Parameters to the MODE op-code
 			// 
@@ -657,9 +655,9 @@ namespace Merg.Vlcb
 			public const int MODE_HEARTBEAT_OFF	=  0x0D;	// Turn off heartbeat
 			// Boot modes
 			public const int MODE_BOOT	=  0x0E;	// PIC Boot loader mode
-		}
+        }
 
-		public static class VlcbProducerEvUsage
+        public static class VlcbProducerEvUsage
 		{
 			// 
 			// Producer service EV usage
@@ -667,10 +665,8 @@ namespace Merg.Vlcb
 			public const int PRODUCER_EV_NOT_SPECIFIED	=  0x00;	// Not specified
 			public const int PRODUCER_EV_HAPPENING	=  0x01;	// Happenings
 			public const int PRODUCER_EV_SLOTS	=  0x02;	// Slots
-		}
-
-		public static class VlcbServiceTypes
-		{
+		}public static class VlcbServiceTypes
+        {
 			// 
 			// VLCB Service Types
 			// 
@@ -687,7 +683,7 @@ namespace Merg.Vlcb
 			public const int SERVICE_ID_BOOT	=  10;	// FCU/PIC bootloader service.
 			public const int SERVICE_ID_STREAMING	=  17;	// Streaming (Long Messages) service.
 			// Use IDs 240 and higher for services in development that do not yet have a service specification.
-		}
+        }
 
-	}
+    }
 }
