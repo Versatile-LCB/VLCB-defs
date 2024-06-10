@@ -12,7 +12,7 @@ extern "C" {
 // 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 // 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-// 		
+// 
 // Manufacturer definitions
 // Where the manufacturer already has an NMRA code, this is used
 // 
@@ -25,7 +25,7 @@ extern "C" {
 #define MANU_VLCB	250	// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 #define MANU_SYSPIXIE	249	// Konrad Orlowski
 #define MANU_RME	248	// http://rmeuk.com  (Railway Modelling Experts Limited)
-// 		
+// 
 // 
 // MODULE TYPES
 // 
@@ -121,7 +121,8 @@ extern "C" {
 #define MTYP_CANCABPE	85	// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 #define MTYP_CANSMARTTD	86	// Smart train detector (Michael Smith)
 #define MTYP_VLCB	0xFC	// All VLCB modules have the same ID
-// 		
+// 
+// 
 // 
 // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 // Please liaise with Pete before adding new module types, 
@@ -143,7 +144,7 @@ extern "C" {
 #define MTYP_CANSERVOIO	50	// 8-channel Servo I/O module
 #define MTYP_CANISB	100	// CAN ISB Isolated CAN USB Interface
 #define MTYP_CANSOLIO 	101	// 8-channel (4-pairs) Solenoid I/O module
-// 		
+// 
 // 
 // Rocrail Module types
 // 
@@ -160,12 +161,12 @@ extern "C" {
 // 
 #define MTYP_AMCTRLR	1	// Animation controller (firmware derived from cancmd)
 #define MTYP_DUALCAB	2	// Dual cab based on cancab
-// 		
+// 
 // 
 // SysPixie Module types (Konrad Orlowski)
 // 
 #define MTYP_CANPMSense	1	// Motorised point motor driver with current sense
-// 		
+// 
 // 
 // 
 // VLCB opcodes list

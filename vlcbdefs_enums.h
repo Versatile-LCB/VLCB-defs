@@ -12,7 +12,6 @@ extern "C" {
 // 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 // 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-// 		
 typedef enum VlcbManufacturer
 {
   // Manufacturer definitions
@@ -27,7 +26,6 @@ typedef enum VlcbManufacturer
   MANU_VLCB = 250, // range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
   MANU_SYSPIXIE = 249, // Konrad Orlowski
   MANU_RME = 248, // http://rmeuk.com  (Railway Modelling Experts Limited)
-// 		
 } VlcbManufacturer;
 
 typedef enum VlcbMergModuleTypes
@@ -127,7 +125,6 @@ typedef enum VlcbMergModuleTypes
   MTYP_CANCABPE = 85, // Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
   MTYP_CANSMARTTD = 86, // Smart train detector (Michael Smith)
   MTYP_VLCB = 0xFC, // All VLCB modules have the same ID
-// 		
   // 
   // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
   // Please liaise with Pete before adding new module types, 
@@ -153,7 +150,6 @@ typedef enum VlcbSprogModuleTypes
   MTYP_CANSERVOIO = 50, // 8-channel Servo I/O module
   MTYP_CANISB = 100, // CAN ISB Isolated CAN USB Interface
   MTYP_CANSOLIO  = 101, // 8-channel (4-pairs) Solenoid I/O module
-// 		
 } VlcbSprogModuleTypes;
 
 typedef enum VlcbRocRailModuleTypes
@@ -178,7 +174,6 @@ typedef enum VlcbSpectrumModuleTypes
   // 
   MTYP_AMCTRLR = 1, // Animation controller (firmware derived from cancmd)
   MTYP_DUALCAB = 2, // Dual cab based on cancab
-// 		
 } VlcbSpectrumModuleTypes;
 
 typedef enum VlcbSysPixieModuleTypes
@@ -187,7 +182,6 @@ typedef enum VlcbSysPixieModuleTypes
   // SysPixie Module types (Konrad Orlowski)
   // 
   MTYP_CANPMSense = 1, // Motorised point motor driver with current sense
-// 		
 } VlcbSysPixieModuleTypes;
 
 typedef enum VlcbOpCodes

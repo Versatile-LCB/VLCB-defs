@@ -5,7 +5,6 @@ exports.VlcbDefs = {
 // 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 // 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-// 		
   "VlcbManufacturer" : {
     // Manufacturer definitions
     // Where the manufacturer already has an NMRA code, this is used
@@ -18,8 +17,7 @@ exports.VlcbDefs = {
     "MANU_MERG_VLCB": 250, // range of MERG VLCB modules
     "MANU_VLCB": 250, // range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
     "MANU_SYSPIXIE": 249, // Konrad Orlowski
-    "MANU_RME": 248// 		
- // http://rmeuk.com  (Railway Modelling Experts Limited)
+    "MANU_RME": 248 // http://rmeuk.com  (Railway Modelling Experts Limited)
   },
   "VlcbMergModuleTypes" : {
     // 
@@ -116,8 +114,7 @@ exports.VlcbDefs = {
     "MTYP_CANPIXEL": 84, // neopixel driver (Jon Denham)
     "MTYP_CANCABPE": 85, // Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
     "MTYP_CANSMARTTD": 86, // Smart train detector (Michael Smith)
-    "MTYP_VLCB": 0xFC// 		
-, // All VLCB modules have the same ID
+    "MTYP_VLCB": 0xFC, // All VLCB modules have the same ID
     // 
     // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
     // Please liaise with Pete before adding new module types, 
@@ -140,8 +137,7 @@ exports.VlcbDefs = {
     "MTYP_CANSOLNOID ": 8, // 8-channel (4-pairs) Solenoid I/O module
     "MTYP_CANSERVOIO": 50, // 8-channel Servo I/O module
     "MTYP_CANISB": 100, // CAN ISB Isolated CAN USB Interface
-    "MTYP_CANSOLIO ": 101// 		
- // 8-channel (4-pairs) Solenoid I/O module
+    "MTYP_CANSOLIO ": 101 // 8-channel (4-pairs) Solenoid I/O module
   },
   "VlcbRocRailModuleTypes" : {
     // 
@@ -161,15 +157,13 @@ exports.VlcbDefs = {
     // Spectrum Engineering Animated Modeller module types
     // 
     "MTYP_AMCTRLR": 1, // Animation controller (firmware derived from cancmd)
-    "MTYP_DUALCAB": 2// 		
- // Dual cab based on cancab
+    "MTYP_DUALCAB": 2 // Dual cab based on cancab
   },
   "VlcbSysPixieModuleTypes" : {
     // 
     // SysPixie Module types (Konrad Orlowski)
     // 
-    "MTYP_CANPMSense": 1// 		
- // Motorised point motor driver with current sense
+    "MTYP_CANPMSense": 1 // Motorised point motor driver with current sense
   },
   "VlcbOpCodes" : {
     // 

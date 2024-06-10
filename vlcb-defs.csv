@@ -2,7 +2,7 @@ comment,,,Copyright (C) Sven Rosvall (sven@rosvall.ie)
 comment,,,This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 comment,,,Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 comment,,,The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-comment,,,
+
 CbusManufacturer,,,Manufacturer definitions
 CbusManufacturer,,,Where the manufacturer already has an NMRA code, this is used
 CbusManufacturer,,,
@@ -15,7 +15,7 @@ CbusManufacturer,MANU_MERG_VLCB,250,range of MERG VLCB modules
 CbusManufacturer,MANU_VLCB,250,range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 CbusManufacturer,MANU_SYSPIXIE,249,Konrad Orlowski
 CbusManufacturer,MANU_RME,248,http://rmeuk.com  (Railway Modelling Experts Limited)
-comment,,,
+
 CbusMergModuleTypes,,,
 CbusMergModuleTypes,,,MODULE TYPES
 CbusMergModuleTypes,,,
@@ -111,7 +111,8 @@ CbusMergModuleTypes,MTYP_CANPIXEL,84,neopixel driver (Jon Denham)
 CbusMergModuleTypes,MTYP_CANCABPE,85,Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 CbusMergModuleTypes,MTYP_CANSMARTTD,86,Smart train detector (Michael Smith)
 CbusMergModuleTypes,MTYP_VLCB,0xFC,All VLCB modules have the same ID
-comment,,,
+
+
 CbusMergModuleTypes,,,
 CbusMergModuleTypes,,,At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 CbusMergModuleTypes,,,Please liaise with Pete before adding new module types, 
@@ -133,7 +134,7 @@ CbusSprogModuleTypes,MTYP_CANSOLNOID ,8,8-channel (4-pairs) Solenoid I/O module
 CbusSprogModuleTypes,MTYP_CANSERVOIO,50,8-channel Servo I/O module
 CbusSprogModuleTypes,MTYP_CANISB,100,CAN ISB Isolated CAN USB Interface
 CbusSprogModuleTypes,MTYP_CANSOLIO ,101,8-channel (4-pairs) Solenoid I/O module
-comment,,,
+
 CbusRocRailModuleTypes,,,
 CbusRocRailModuleTypes,,,Rocrail Module types
 CbusRocRailModuleTypes,,,
@@ -150,12 +151,12 @@ CbusSpectrumModuleTypes,,,Spectrum Engineering Animated Modeller module types
 CbusSpectrumModuleTypes,,,
 CbusSpectrumModuleTypes,MTYP_AMCTRLR,1,Animation controller (firmware derived from cancmd)
 CbusSpectrumModuleTypes,MTYP_DUALCAB,2,Dual cab based on cancab
-comment,,,
+
 CbusSysPixieModuleTypes,,,
 CbusSysPixieModuleTypes,,,SysPixie Module types (Konrad Orlowski)
 CbusSysPixieModuleTypes,,,
 CbusSysPixieModuleTypes,MTYP_CANPMSense,1,Motorised point motor driver with current sense
-comment,,,
+
 CbusOpCodes,,,
 CbusOpCodes,,,
 CbusOpCodes,,,VLCB opcodes list
