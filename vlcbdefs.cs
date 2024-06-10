@@ -598,6 +598,32 @@ namespace Merg.Vlcb
 			public const int MTYP_CANPMSense	=  1;	// Motorised point motor driver with current sense
 		}
 
+		public static class VlcbCanHardware
+		{
+			// 
+			// CAN engine type codes
+			// 
+			public const int CAN_HW_NOT_SPECIFIED	=  0x00;	// Not set
+			public const int CAN_HW_PIC_ECAN	=  0x01;	// MICROCHIP PIC ECAN
+			public const int CAN_HW_PIC_CAN_2_0	=  0x02;	// MICROCHIP PIC CAN 2.0
+			public const int CAN_HW_PIC_CAN_FD	=  0x03;	// MICROCHIP PIC CAN FD
+			public const int CAN_HW_MCP2515	=  0x04;	// MICROCHIP 2515
+			public const int CAN_HW_MCP2518	=  0x05;	// MICROCHIP 2518
+			public const int CAN_HW_ESP32_TWAI	=  0x06;	// ESP32 Two Wire Automotive Interface
+			public const int CAN_HW_SAM3X8E	=  0x07;	// Atmel Cortex M3
+			public const int CAN_HW_PICO_PIO	=  0x08;	// Raspberry Pico based on RP2040 using PIO
+		}
+
+		public static class VlcbConsumerEvUsage
+		{
+			// 
+			// Consumer service EV usage
+			// 
+			public const int CONSUMER_EV_NOT_SPECIFIED	=  0x00;	// Not specified
+			public const int CONSUMER_EV_ACTIONS	=  0x01;	// Actions
+			public const int CONSUMER_EV_SLOTS	=  0x02;	// Slots
+		}
+
 		public static class VlcbGrspCodes
 		{
 			// 
@@ -631,6 +657,16 @@ namespace Merg.Vlcb
 			public const int MODE_HEARTBEAT_OFF	=  0x0D;	// Turn off heartbeat
 			// Boot modes
 			public const int MODE_BOOT	=  0x0E;	// PIC Boot loader mode
+		}
+
+		public static class VlcbProducerEvUsage
+		{
+			// 
+			// Producer service EV usage
+			// 
+			public const int PRODUCER_EV_NOT_SPECIFIED	=  0x00;	// Not specified
+			public const int PRODUCER_EV_HAPPENING	=  0x01;	// Happenings
+			public const int PRODUCER_EV_SLOTS	=  0x02;	// Slots
 		}
 
 		public static class VlcbServiceTypes

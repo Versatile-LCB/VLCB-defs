@@ -564,6 +564,30 @@ extern "C" {
 #define ARM1176JZF_S	1	// As used in Raspberry Pi
 #define ARMCortex_A7	2	// As Used in Raspberry Pi 2
 #define ARMCortex_A53	3	// As used in Raspberry Pi 3
+// 
+// CAN engine type codes
+// 
+#define CAN_HW_NOT_SPECIFIED	0x00	// Not set
+#define CAN_HW_PIC_ECAN	0x01	// MICROCHIP PIC ECAN
+#define CAN_HW_PIC_CAN_2_0	0x02	// MICROCHIP PIC CAN 2.0
+#define CAN_HW_PIC_CAN_FD	0x03	// MICROCHIP PIC CAN FD
+#define CAN_HW_MCP2515	0x04	// MICROCHIP 2515
+#define CAN_HW_MCP2518	0x05	// MICROCHIP 2518
+#define CAN_HW_ESP32_TWAI	0x06	// ESP32 Two Wire Automotive Interface
+#define CAN_HW_SAM3X8E	0x07	// Atmel Cortex M3
+#define CAN_HW_PICO_PIO	0x08	// Raspberry Pico based on RP2040 using PIO
+// 
+// Producer service EV usage
+// 
+#define PRODUCER_EV_NOT_SPECIFIED	0x00	// Not specified
+#define PRODUCER_EV_HAPPENING	0x01	// Happenings
+#define PRODUCER_EV_SLOTS	0x02	// Slots
+// 
+// Consumer service EV usage
+// 
+#define CONSUMER_EV_NOT_SPECIFIED	0x00	// Not specified
+#define CONSUMER_EV_ACTIONS	0x01	// Actions
+#define CONSUMER_EV_SLOTS	0x02	// Slots
 
 #ifdef	__cplusplus
 }
