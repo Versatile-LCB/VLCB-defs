@@ -15,15 +15,17 @@ package uk.org.merg.vlcb;
 // 
 // 
 
-public enum VlcbCabSigAspect0 {
+public enum VlcbProducerEvUsage {
 // 
-// Sub opcodes for OPC_CABDAT
+// Producer service EV usage
 // 
-	CDAT_CABSIG(1);	//
+	PRODUCER_EV_NOT_SPECIFIED(0x00),	//Not specified
+	PRODUCER_EV_HAPPENING(0x01),	//Happenings
+	PRODUCER_EV_SLOTS(0x02);	//Slots
 
 	private final int v;
 
-	private VlcbCabSigAspect0(int v) {
+	private VlcbProducerEvUsage(int v) {
 		this.v = v;
 	}
 

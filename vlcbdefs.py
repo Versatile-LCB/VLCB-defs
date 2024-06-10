@@ -8,7 +8,7 @@ from micropython import const
 #         This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 #         Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 #         The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-# 
+#         
 # Manufacturer definitions
 # Where the manufacturer already has an NMRA code, this is used
 # 
@@ -21,7 +21,7 @@ MANU_MERG_VLCB = const(250)    # range of MERG VLCB modules
 MANU_VLCB = const(250)    # range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 MANU_SYSPIXIE = const(249)    # Konrad Orlowski
 MANU_RME = const(248)    # http://rmeuk.com  (Railway Modelling Experts Limited)
-# 
+#         
 # 
 # MODULE TYPES
 # 
@@ -117,8 +117,7 @@ MTYP_CANPIXEL = const(84)    # neopixel driver (Jon Denham)
 MTYP_CANCABPE = const(85)    # Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 MTYP_CANSMARTTD = const(86)    # Smart train detector (Michael Smith)
 MTYP_VLCB = const(0xFC)    # All VLCB modules have the same ID
-# 
-# 
+#         
 # 
 # At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 # Please liaise with Pete before adding new module types, 
@@ -140,7 +139,7 @@ MTYP_CANSOLNOID  = const(8)    # 8-channel (4-pairs) Solenoid I/O module
 MTYP_CANSERVOIO = const(50)    # 8-channel Servo I/O module
 MTYP_CANISB = const(100)    # CAN ISB Isolated CAN USB Interface
 MTYP_CANSOLIO  = const(101)    # 8-channel (4-pairs) Solenoid I/O module
-# 
+#         
 # 
 # Rocrail Module types
 # 
@@ -157,12 +156,12 @@ MTYP_CANGC1e = const(11)    # CAN<->Ethernet interface
 # 
 MTYP_AMCTRLR = const(1)    # Animation controller (firmware derived from cancmd)
 MTYP_DUALCAB = const(2)    # Dual cab based on cancab
-# 
+#         
 # 
 # SysPixie Module types (Konrad Orlowski)
 # 
 MTYP_CANPMSense = const(1)    # Motorised point motor driver with current sense
-# 
+#         
 # 
 # 
 # VLCB opcodes list
@@ -560,3 +559,27 @@ P32MX795F512 = const(38)    #
 ARM1176JZF_S = const(1)    # As used in Raspberry Pi
 ARMCortex_A7 = const(2)    # As Used in Raspberry Pi 2
 ARMCortex_A53 = const(3)    # As used in Raspberry Pi 3
+# 
+# CAN engine type codes
+# 
+CAN_HW_NOT_SPECIFIED = const(0x00)    # Not set
+CAN_HW_PIC_ECAN = const(0x01)    # MICROCHIP PIC ECAN
+CAN_HW_PIC_CAN_2_0 = const(0x02)    # MICROCHIP PIC CAN 2.0
+CAN_HW_PIC_CAN_FD = const(0x03)    # MICROCHIP PIC CAN FD
+CAN_HW_MCP2515 = const(0x04)    # MICROCHIP 2515
+CAN_HW_MCP2518 = const(0x05)    # MICROCHIP 2518
+CAN_HW_ESP32_TWAI = const(0x06)    # ESP32 Two Wire Automotive Interface
+CAN_HW_SAM3X8E = const(0x07)    # Atmel Cortex M3
+CAN_HW_PICO_PIO = const(0x08)    # Raspberry Pico based on RP2040 using PIO
+# 
+# Producer service EV usage
+# 
+PRODUCER_EV_NOT_SPECIFIED = const(0x00)    # Not specified
+PRODUCER_EV_HAPPENING = const(0x01)    # Happenings
+PRODUCER_EV_SLOTS = const(0x02)    # Slots
+# 
+# Consumer service EV usage
+# 
+CONSUMER_EV_NOT_SPECIFIED = const(0x00)    # Not specified
+CONSUMER_EV_ACTIONS = const(0x01)    # Actions
+CONSUMER_EV_SLOTS = const(0x02)    # Slots

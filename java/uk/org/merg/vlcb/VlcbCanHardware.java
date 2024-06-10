@@ -15,15 +15,23 @@ package uk.org.merg.vlcb;
 // 
 // 
 
-public enum VlcbCabSigAspect0 {
+public enum VlcbCanHardware {
 // 
-// Sub opcodes for OPC_CABDAT
+// CAN engine type codes
 // 
-	CDAT_CABSIG(1);	//
+	CAN_HW_NOT_SPECIFIED(0x00),	//Not set
+	CAN_HW_PIC_ECAN(0x01),	//MICROCHIP PIC ECAN
+	CAN_HW_PIC_CAN_2_0(0x02),	//MICROCHIP PIC CAN 2.0
+	CAN_HW_PIC_CAN_FD(0x03),	//MICROCHIP PIC CAN FD
+	CAN_HW_MCP2515(0x04),	//MICROCHIP 2515
+	CAN_HW_MCP2518(0x05),	//MICROCHIP 2518
+	CAN_HW_ESP32_TWAI(0x06),	//ESP32 Two Wire Automotive Interface
+	CAN_HW_SAM3X8E(0x07),	//Atmel Cortex M3
+	CAN_HW_PICO_PIO(0x08);	//Raspberry Pico based on RP2040 using PIO
 
 	private final int v;
 
-	private VlcbCabSigAspect0(int v) {
+	private VlcbCanHardware(int v) {
 		this.v = v;
 	}
 

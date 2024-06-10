@@ -9,6 +9,12 @@ namespace Merg.Vlcb
     // This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
     // Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
     // The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
+    // 
+    // 
+    // 
+    // 
+    // 
+    // 
 
 	/// <summary>
 	/// class: VlcbArmProcessors
@@ -1493,6 +1499,70 @@ namespace Merg.Vlcb
 	}
 
 	/// <summary>
+	/// class: VlcbCanHardware
+	/// CAN engine type codes
+	/// </summary>
+	public enum CanHardware
+	{
+		/// <summary>
+		/// Not set
+		/// </summary>
+		CanHwNotSpecified = 0x00,
+		/// <summary>
+		/// MICROCHIP PIC ECAN
+		/// </summary>
+		CanHwPicEcan = 0x01,
+		/// <summary>
+		/// MICROCHIP PIC CAN 2.0
+		/// </summary>
+		CanHwPicCan20 = 0x02,
+		/// <summary>
+		/// MICROCHIP PIC CAN FD
+		/// </summary>
+		CanHwPicCanFd = 0x03,
+		/// <summary>
+		/// MICROCHIP 2515
+		/// </summary>
+		CanHwMcp2515 = 0x04,
+		/// <summary>
+		/// MICROCHIP 2518
+		/// </summary>
+		CanHwMcp2518 = 0x05,
+		/// <summary>
+		/// ESP32 Two Wire Automotive Interface
+		/// </summary>
+		CanHwEsp32Twai = 0x06,
+		/// <summary>
+		/// Atmel Cortex M3
+		/// </summary>
+		CanHwSam3x8e = 0x07,
+		/// <summary>
+		/// Raspberry Pico based on RP2040 using PIO
+		/// </summary>
+		CanHwPicoPio = 0x08,
+	}
+
+	/// <summary>
+	/// class: VlcbConsumerEvUsage
+	/// Consumer service EV usage
+	/// </summary>
+	public enum ConsumerEvUsage
+	{
+		/// <summary>
+		/// Not specified
+		/// </summary>
+		ConsumerEvNotSpecified = 0x00,
+		/// <summary>
+		/// Actions
+		/// </summary>
+		ConsumerEvActions = 0x01,
+		/// <summary>
+		/// Slots
+		/// </summary>
+		ConsumerEvSlots = 0x02,
+	}
+
+	/// <summary>
 	/// class: VlcbGrspCodes
 	/// GRSP codes
 	/// </summary>
@@ -1570,6 +1640,26 @@ namespace Merg.Vlcb
 		/// PIC Boot loader mode
 		/// </summary>
 		ModeBoot = 0x0E,
+	}
+
+	/// <summary>
+	/// class: VlcbProducerEvUsage
+	/// Producer service EV usage
+	/// </summary>
+	public enum ProducerEvUsage
+	{
+		/// <summary>
+		/// Not specified
+		/// </summary>
+		ProducerEvNotSpecified = 0x00,
+		/// <summary>
+		/// Happenings
+		/// </summary>
+		ProducerEvHappening = 0x01,
+		/// <summary>
+		/// Slots
+		/// </summary>
+		ProducerEvSlots = 0x02,
 	}
 
 	/// <summary>

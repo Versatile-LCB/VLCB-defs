@@ -12,7 +12,7 @@ extern "C" {
 // 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino
 // 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 // 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/
-// 
+// 		
 // Manufacturer definitions
 // Where the manufacturer already has an NMRA code, this is used
 // 
@@ -25,7 +25,7 @@ extern "C" {
 #define MANU_VLCB	250	// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 #define MANU_SYSPIXIE	249	// Konrad Orlowski
 #define MANU_RME	248	// http://rmeuk.com  (Railway Modelling Experts Limited)
-// 
+// 		
 // 
 // MODULE TYPES
 // 
@@ -121,8 +121,7 @@ extern "C" {
 #define MTYP_CANCABPE	85	// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 #define MTYP_CANSMARTTD	86	// Smart train detector (Michael Smith)
 #define MTYP_VLCB	0xFC	// All VLCB modules have the same ID
-// 
-// 
+// 		
 // 
 // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 // Please liaise with Pete before adding new module types, 
@@ -144,7 +143,7 @@ extern "C" {
 #define MTYP_CANSERVOIO	50	// 8-channel Servo I/O module
 #define MTYP_CANISB	100	// CAN ISB Isolated CAN USB Interface
 #define MTYP_CANSOLIO 	101	// 8-channel (4-pairs) Solenoid I/O module
-// 
+// 		
 // 
 // Rocrail Module types
 // 
@@ -161,12 +160,12 @@ extern "C" {
 // 
 #define MTYP_AMCTRLR	1	// Animation controller (firmware derived from cancmd)
 #define MTYP_DUALCAB	2	// Dual cab based on cancab
-// 
+// 		
 // 
 // SysPixie Module types (Konrad Orlowski)
 // 
 #define MTYP_CANPMSense	1	// Motorised point motor driver with current sense
-// 
+// 		
 // 
 // 
 // VLCB opcodes list
@@ -564,6 +563,30 @@ extern "C" {
 #define ARM1176JZF_S	1	// As used in Raspberry Pi
 #define ARMCortex_A7	2	// As Used in Raspberry Pi 2
 #define ARMCortex_A53	3	// As used in Raspberry Pi 3
+// 
+// CAN engine type codes
+// 
+#define CAN_HW_NOT_SPECIFIED	0x00	// Not set
+#define CAN_HW_PIC_ECAN	0x01	// MICROCHIP PIC ECAN
+#define CAN_HW_PIC_CAN_2_0	0x02	// MICROCHIP PIC CAN 2.0
+#define CAN_HW_PIC_CAN_FD	0x03	// MICROCHIP PIC CAN FD
+#define CAN_HW_MCP2515	0x04	// MICROCHIP 2515
+#define CAN_HW_MCP2518	0x05	// MICROCHIP 2518
+#define CAN_HW_ESP32_TWAI	0x06	// ESP32 Two Wire Automotive Interface
+#define CAN_HW_SAM3X8E	0x07	// Atmel Cortex M3
+#define CAN_HW_PICO_PIO	0x08	// Raspberry Pico based on RP2040 using PIO
+// 
+// Producer service EV usage
+// 
+#define PRODUCER_EV_NOT_SPECIFIED	0x00	// Not specified
+#define PRODUCER_EV_HAPPENING	0x01	// Happenings
+#define PRODUCER_EV_SLOTS	0x02	// Slots
+// 
+// Consumer service EV usage
+// 
+#define CONSUMER_EV_NOT_SPECIFIED	0x00	// Not specified
+#define CONSUMER_EV_ACTIONS	0x01	// Actions
+#define CONSUMER_EV_SLOTS	0x02	// Slots
 
 #ifdef	__cplusplus
 }
