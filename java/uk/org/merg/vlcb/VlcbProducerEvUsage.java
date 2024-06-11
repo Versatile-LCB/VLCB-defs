@@ -17,13 +17,13 @@ public enum VlcbProducerEvUsage {
 	PRODUCER_EV_HAPPENING(0x01),	//Happenings
 	PRODUCER_EV_SLOTS(0x02);	//Slots
 
-	private final int v;
+    private final int v;
 
-	private VlcbProducerEvUsage(int v) {
-		this.v = v;
-	}
+    private VlcbProducerEvUsage(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

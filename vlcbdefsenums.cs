@@ -1495,9 +1495,9 @@ namespace Merg.Vlcb
     /// <summary>
 	/// class: VlcbCanHardware
 	/// CAN engine type codes
-	/// </summary>
-	public enum CanHardware
-	{
+    /// </summary>
+    public enum CanHardware
+    {
 		/// <summary>
 		/// Not set
 		/// </summary>
@@ -1534,14 +1534,14 @@ namespace Merg.Vlcb
 		/// Raspberry Pico based on RP2040 using PIO
 		/// </summary>
 		CanHwPicoPio = 0x08,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbConsumerEvUsage
 	/// Consumer service EV usage
-	/// </summary>
-	public enum ConsumerEvUsage
-	{
+    /// </summary>
+    public enum ConsumerEvUsage
+    {
 		/// <summary>
 		/// Not specified
 		/// </summary>
@@ -1554,9 +1554,9 @@ namespace Merg.Vlcb
 		/// Slots
 		/// </summary>
 		ConsumerEvSlots = 0x02,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbGrspCodes
 	/// GRSP codes
     /// </summary>
@@ -1639,9 +1639,9 @@ namespace Merg.Vlcb
     /// <summary>
 	/// class: VlcbProducerEvUsage
 	/// Producer service EV usage
-	/// </summary>
-	public enum ProducerEvUsage
-	{
+    /// </summary>
+    public enum ProducerEvUsage
+    {
 		/// <summary>
 		/// Not specified
 		/// </summary>
@@ -1654,9 +1654,9 @@ namespace Merg.Vlcb
 		/// Slots
 		/// </summary>
 		ProducerEvSlots = 0x02,
-	}
+    }
 
-	/// <summary>
+    /// <summary>
 	/// class: VlcbServiceTypes
 	/// VLCB Service Types
     /// </summary>

@@ -23,13 +23,13 @@ public enum VlcbCanHardware {
 	CAN_HW_SAM3X8E(0x07),	//Atmel Cortex M3
 	CAN_HW_PICO_PIO(0x08);	//Raspberry Pico based on RP2040 using PIO
 
-	private final int v;
+    private final int v;
 
-	private VlcbCanHardware(int v) {
-		this.v = v;
-	}
+    private VlcbCanHardware(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

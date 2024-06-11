@@ -599,7 +599,7 @@ namespace Merg.Vlcb
         }
 
         public static class VlcbCanHardware
-		{
+        {
 			// 
 			// CAN engine type codes
 			// 
@@ -612,17 +612,19 @@ namespace Merg.Vlcb
 			public const int CAN_HW_ESP32_TWAI	=  0x06;	// ESP32 Two Wire Automotive Interface
 			public const int CAN_HW_SAM3X8E	=  0x07;	// Atmel Cortex M3
 			public const int CAN_HW_PICO_PIO	=  0x08;	// Raspberry Pico based on RP2040 using PIO
-		}
+        }
 
-		public static class VlcbConsumerEvUsage
-		{
+        public static class VlcbConsumerEvUsage
+        {
 			// 
 			// Consumer service EV usage
 			// 
 			public const int CONSUMER_EV_NOT_SPECIFIED	=  0x00;	// Not specified
 			public const int CONSUMER_EV_ACTIONS	=  0x01;	// Actions
 			public const int CONSUMER_EV_SLOTS	=  0x02;	// Slots
-		}public static class VlcbGrspCodes
+        }
+
+        public static class VlcbGrspCodes
         {
 			// 
 			// GRSP codes
@@ -658,14 +660,16 @@ namespace Merg.Vlcb
         }
 
         public static class VlcbProducerEvUsage
-		{
+        {
 			// 
 			// Producer service EV usage
 			// 
 			public const int PRODUCER_EV_NOT_SPECIFIED	=  0x00;	// Not specified
 			public const int PRODUCER_EV_HAPPENING	=  0x01;	// Happenings
 			public const int PRODUCER_EV_SLOTS	=  0x02;	// Slots
-		}public static class VlcbServiceTypes
+        }
+
+        public static class VlcbServiceTypes
         {
 			// 
 			// VLCB Service Types
