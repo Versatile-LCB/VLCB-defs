@@ -23,13 +23,13 @@ public enum VlcbManufacturer {
 	MANU_SYSPIXIE(249),	//Konrad Orlowski
 	MANU_RME(248);	//http://rmeuk.com  (Railway Modelling Experts Limited)
 
-	private final int v;
+    private final int v;
 
-	private VlcbManufacturer(int v) {
-		this.v = v;
-	}
+    private VlcbManufacturer(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

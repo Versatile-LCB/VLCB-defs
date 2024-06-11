@@ -193,13 +193,13 @@ public enum VlcbOpCodes {
 // 
 	OPC_VCVS(0xA4);	//Verify CV service mode - used for CV read hints
 
-	private final int v;
+    private final int v;
 
-	private VlcbOpCodes(int v) {
-		this.v = v;
-	}
+    private VlcbOpCodes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

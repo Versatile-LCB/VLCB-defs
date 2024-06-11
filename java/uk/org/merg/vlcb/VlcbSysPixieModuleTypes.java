@@ -15,13 +15,13 @@ public enum VlcbSysPixieModuleTypes {
 // 
 	MTYP_CANPMSense(1);	//Motorised point motor driver with current sense
 
-	private final int v;
+    private final int v;
 
-	private VlcbSysPixieModuleTypes(int v) {
-		this.v = v;
-	}
+    private VlcbSysPixieModuleTypes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

@@ -22,13 +22,13 @@ public enum VlcbCabSigAspect1 {
 	SASP_CALLON(4),	//Set bit 2 for call-on - main aspect will usually be at danger
 	SASP_THEATRE(8);	//Set bit 3 to 0 for upper nibble is feather lcoation, set 1 for upper nibble is theatre code
 
-	private final int v;
+    private final int v;
 
-	private VlcbCabSigAspect1(int v) {
-		this.v = v;
-	}
+    private VlcbCabSigAspect1(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

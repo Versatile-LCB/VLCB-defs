@@ -20,13 +20,13 @@ public enum VlcbCabSigAspect2 {
 // 
 // Remaining bits in second aspect byte yet to be defined - can be used for other signalling systems
 
-	private final int v;
+    private final int v;
 
-	private VlcbCabSigAspect2(int v) {
-		this.v = v;
-	}
+    private VlcbCabSigAspect2(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

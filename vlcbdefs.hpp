@@ -4,7 +4,7 @@
 #ifndef __VLCBDEFS
 #define __VLCBDEFS
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -689,7 +689,7 @@ enum VlcbConsumerEvUsage : unsigned char
   CONSUMER_EV_SLOTS = 0x02, // Slots
 };
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 }
 #endif
 

@@ -4,7 +4,7 @@
 #ifndef __VLCBDEFS
 #define __VLCBDEFS
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 

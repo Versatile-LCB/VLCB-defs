@@ -20,13 +20,13 @@ public enum VlcbGrspCodes {
 	GRSP_INVALID_COMMAND_PARAMETER(251),	//Invalid parameter in command
 	GRSP_INVALID_MODE(250);	//Invalid Mode
 
-	private final int v;
+    private final int v;
 
-	private VlcbGrspCodes(int v) {
-		this.v = v;
-	}
+    private VlcbGrspCodes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

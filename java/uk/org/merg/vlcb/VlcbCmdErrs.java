@@ -31,13 +31,13 @@ public enum VlcbCmdErrs {
 	CMDERR_LRN_OTHER(13);	//Sent when module in learn mode sees NNLRN for different module (also exits learn mode) 
 // 
 
-	private final int v;
+    private final int v;
 
-	private VlcbCmdErrs(int v) {
-		this.v = v;
-	}
+    private VlcbCmdErrs(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

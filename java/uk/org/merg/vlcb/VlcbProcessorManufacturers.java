@@ -17,13 +17,13 @@ public enum VlcbProcessorManufacturers {
 	CPUM_ATMEL(2),	//
 	CPUM_ARM(3);	//
 
-	private final int v;
+    private final int v;
 
-	private VlcbProcessorManufacturers(int v) {
-		this.v = v;
-	}
+    private VlcbProcessorManufacturers(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

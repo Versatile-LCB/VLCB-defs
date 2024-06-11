@@ -19,13 +19,13 @@ public enum VlcbParamOffsetsPic {
 	PAR_NAME(0x1A),	//4 byte Address of Module type name, up to 8 characters null terminated
 	PAR_CKSUM(0x1E);	//Checksum word at end of parameters
 
-	private final int v;
+    private final int v;
 
-	private VlcbParamOffsetsPic(int v) {
-		this.v = v;
-	}
+    private VlcbParamOffsetsPic(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

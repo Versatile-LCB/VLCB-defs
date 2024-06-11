@@ -10,17 +10,17 @@ from micropython import const
 
 EOF
 # now output the actual contents
-while IFS="," read type	name value comment
+while IFS="," read type name value comment
 do
-	if [ "$type" = "comment" ]; then
-		echo -e "# $name    $value    $comment"
-	else
-		if [ "X$name" = "X" ]; then
-			echo -e "# $value$comment"
-		else
-			echo -e "$name = const($value)    # $comment"
-		fi
-	fi
+    if [ "$type" = "comment" ]; then
+        echo -e "# $name    $value    $comment"
+    else
+        if [ "X$name" = "X" ]; then
+            echo -e "# $value$comment"
+        else
+            echo -e "$name = const($value)    # $comment"
+        fi
+    fi
 done < vlcb-defs.csv >>$OUTPUT
 
 # finally output the trailer stuff

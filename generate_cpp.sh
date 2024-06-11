@@ -11,7 +11,7 @@ cat << EOF > $OUTPUT
 #ifndef __VLCBDEFS
 #define __VLCBDEFS
 
-#ifdef	__cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -19,7 +19,7 @@ EOF
 
 # now output the actual contents
 # Set input field separator (IFS) to comma and carriage return for running on Windows.
-while IFS=$',\r' read type	name value comment 
+while IFS=$',\r' read type name value comment 
 do
     if [ "$type" = "comment" ]
     then
@@ -42,14 +42,14 @@ do
         fi
         if [ "X$name" = "X" ]
         then
-	    echo -e "  // $value$comment" 
-	else
+            echo -e "  // $value$comment" 
+        else
             if [ -n "$comment" ]
             then
                 comment=" // $comment"
             fi
-	    echo -e "  $name = $value,$comment"
-	fi
+            echo -e "  $name = $value,$comment"
+        fi
     fi
 done < vlcb-defs.csv >>$OUTPUT
 
@@ -61,7 +61,7 @@ fi
 
 # finally output the trailer stuff
 cat << EOF >> $OUTPUT
-#ifdef	__cplusplus
+#ifdef __cplusplus
 }
 #endif
 

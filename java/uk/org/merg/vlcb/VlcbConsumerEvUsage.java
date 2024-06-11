@@ -17,13 +17,13 @@ public enum VlcbConsumerEvUsage {
 	CONSUMER_EV_ACTIONS(0x01),	//Actions
 	CONSUMER_EV_SLOTS(0x02);	//Slots
 
-	private final int v;
+    private final int v;
 
-	private VlcbConsumerEvUsage(int v) {
-		this.v = v;
-	}
+    private VlcbConsumerEvUsage(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

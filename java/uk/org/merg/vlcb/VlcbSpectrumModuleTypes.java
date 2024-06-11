@@ -16,13 +16,13 @@ public enum VlcbSpectrumModuleTypes {
 	MTYP_AMCTRLR(1),	//Animation controller (firmware derived from cancmd)
 	MTYP_DUALCAB(2);	//Dual cab based on cancab
 
-	private final int v;
+    private final int v;
 
-	private VlcbSpectrumModuleTypes(int v) {
-		this.v = v;
-	}
+    private VlcbSpectrumModuleTypes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

@@ -15,13 +15,13 @@ public enum VlcbCabSigAspect0 {
 // 
 	CDAT_CABSIG(1);	//
 
-	private final int v;
+    private final int v;
 
-	private VlcbCabSigAspect0(int v) {
-		this.v = v;
-	}
+    private VlcbCabSigAspect0(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

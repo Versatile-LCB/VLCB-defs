@@ -19,13 +19,13 @@ public enum VlcbSStats {
 	SSTAT_BUSY(4),	//
 	SSTAT_CV_ERROR(5);	//
 
-	private final int v;
+    private final int v;
 
-	private VlcbSStats(int v) {
-		this.v = v;
-	}
+    private VlcbSStats(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

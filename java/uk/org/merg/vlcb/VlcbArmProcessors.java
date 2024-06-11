@@ -17,13 +17,13 @@ public enum VlcbArmProcessors {
 	ARMCortex_A7(2),	//As Used in Raspberry Pi 2
 	ARMCortex_A53(3);	//As used in Raspberry Pi 3
 
-	private final int v;
+    private final int v;
 
-	private VlcbArmProcessors(int v) {
-		this.v = v;
-	}
+    private VlcbArmProcessors(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

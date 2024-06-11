@@ -23,13 +23,13 @@ public enum VlcbSprogModuleTypes {
 	MTYP_CANISB(100),	//CAN ISB Isolated CAN USB Interface
 	MTYP_CANSOLIO (101);	//8-channel (4-pairs) Solenoid I/O module
 
-	private final int v;
+    private final int v;
 
-	private VlcbSprogModuleTypes(int v) {
-		this.v = v;
-	}
+    private VlcbSprogModuleTypes(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

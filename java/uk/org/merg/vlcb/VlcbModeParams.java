@@ -29,13 +29,13 @@ public enum VlcbModeParams {
 // Boot modes
 	MODE_BOOT(0x0E);	//PIC Boot loader mode
 
-	private final int v;
+    private final int v;
 
-	private VlcbModeParams(int v) {
-		this.v = v;
-	}
+    private VlcbModeParams(int v) {
+        this.v = v;
+    }
 
-	public int value() {
-		return v;
-	}
+    public int value() {
+        return v;
+    }
 }

@@ -12,7 +12,7 @@ EOF
 
 # now output the actual contents
 # Set input field separator (IFS) to comma and carriage return for running on Windows.
-while IFS=$',\r' read type	name value comment 
+while IFS=$',\r' read type name value comment 
 do
     : "line=$type,$name,$value,$comment"
     if [ "$type" = "comment" ]
@@ -54,7 +54,7 @@ do
             fi
             echo -n "    \"$name\": $value"
             prevName=$name
-      	fi
+        fi
     fi
 done < vlcb-defs.csv >>$OUTPUT
 
