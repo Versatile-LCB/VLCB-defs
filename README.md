@@ -23,14 +23,15 @@ _generate.sh_ is a "master" script that runs all the generator scripts.
 The language specific scripts can be run individually to only generate file(s) for that language.
 
 The current generator script produces the following output files from the vlcb-defs.csv:
-1.	vlcbdefs.h   - C and C++
+1.	vlcbdefs.h   - C and C++ using #define
+2.  vlcbdefs_enum.h - C using enum constants
 1.	vlcbdefs.hpp - C++ using enum constants
 2.	vlcbdefs.inc - Assembler
 3.	vlcbdefs.pas - Object Pascal (Delphi)
-4.  vlcbDefs.cs	 - C#.NET 5.0 (Core) solution that contains T4 templates to generate files for C#.
-					The generated files should be suitable for .NET Framework projects.
+4.  vlcbcefs.cs	 - C#.NET 5.0 (Core)
 5.	java/\*      - Java
 6.  vlcbdefs.py  - Python
+7.  vlcbdefs.js  - JavaScript
 
 # New versions of VLCB-defs
 VLCB-defs will be updated from time to time, in line with changes to the VLCB spec or addition of new module types and/or manufacturer codes.
@@ -60,3 +61,18 @@ Co-ordination of changes to VLCB-defs is currently being managed by Sven Rosvall
 Version 8x released 12/11/23  Added some module type ids and manufacturer id
 Version 8y WIP as of Jan 24, not yet released.
 
+# How to use VLCB-Defs in Your Project
+The best way to use these definitions in your project is to copy the `vlcbdefs.xxx` file
+for the language you are using into the source code of your project. 
+
+Whenever there is an update to VLCB-Defs, copy the updated `vlcbdefs.xxx` file to your
+project and make sure that it still compiles. 
+At this point you can change your code to make use of new definitions from VLCB-Defs.
+
+It is not recommended to use VLCB-Defs as a separate resource that must be copied or cloned
+separately. 
+Any such copies/clones may be updated and if such updates are not compatible with
+your project it will not work properly. 
+Managing change control this way is difficult.
+Having a copy of `vlcbdefs.xxx` in your project ensures that all code is updated
+in a controlled way.
