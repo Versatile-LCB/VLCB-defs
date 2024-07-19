@@ -61,18 +61,36 @@ Co-ordination of changes to VLCB-defs is currently being managed by Sven Rosvall
 Version 8x released 12/11/23  Added some module type ids and manufacturer id
 Version 8y WIP as of Jan 24, not yet released.
 
-# How to use VLCB-Defs in Your Project
-The best way to use these definitions in your project is to copy the `vlcbdefs.xxx` file
-for the language you are using into the source code of your project. 
+# How to use VLCB-defs in Your Project
+Your project will use one of the `vlcbdefs.xxx` files listed above.
+Use the file that works best with the programming language you use in your project.
 
-Whenever there is an update to VLCB-Defs, copy the updated `vlcbdefs.xxx` file to your
-project and make sure that it still compiles. 
-At this point you can change your code to make use of new definitions from VLCB-Defs.
+It is important to ensure that your project uses an up-to-date version of the `vlcbdefs.xxx`
+file and that it is in sync with your project code.
 
-It is not recommended to use VLCB-Defs as a separate resource that must be copied or cloned
-separately. 
-Any such copies/clones may be updated and if such updates are not compatible with
-your project it will not work properly. 
-Managing change control this way is difficult.
+There are two ways to manage the `vlcbdefs.xxx` file in your project.
+
+## 1) Use a copy of the `vlcbdefs.xxx` file
+
+Copy the `vlcbdefs.xxx` file from the latest VLCB-defs repository into the source code of your project. 
+
+Whenever there is an update to the VLCB-defs repository, copy the updated `vlcbdefs.xxx` 
+file to your project and make sure that it still compiles. 
+At this point you can change your code to make use of new definitions from VLCB-defs.
+
 Having a copy of `vlcbdefs.xxx` in your project ensures that all code is updated
-in a controlled way.
+in a controlled way and your project is consistent.
+This makes it easier for other users of your project as they do not need a copy of VLCB-defs.
+
+## 2) Use the VLCB-defs repository
+
+Clone the VLCB-defs repository and reference the required files from your own project. 
+Whenever there is an update to VLCB-defs, pull the changes and make sure your project 
+still compiles. 
+
+Care must be taken to ensure version compatibility between the VLCB-defs project and 
+your own project. 
+Any users of your project must ensure they have the correct version of VLCB-defs.
+
+This makes your project smaller as it does not need to include the 'vlcbdefs.xxx' file.
+
