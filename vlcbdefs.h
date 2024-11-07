@@ -588,6 +588,13 @@ extern "C" {
 #define CONSUMER_EV_NOT_SPECIFIED	0x00	// Not specified
 #define CONSUMER_EV_ACTIONS	0x01	// Actions
 #define CONSUMER_EV_SLOTS	0x02	// Slots
+// 
+// Boot service reports of the module bootloader type
+// 
+#define BL_TYPE_Unknown	0	// Unknown or not specified
+#define BL_TYPE_MikeBolton	1	// Original bootloader from Mike Bolton, Roger Healey, Pete Brownlow and others written in PIC assembler
+#define BL_TYPE_KonradOrlowski	2	//  Konrad (syspixie) bootloader written in XC8
+#define BL_TYPE_IanHogg	3	//  Ian Hogg bootloader written in XC8
 
 #ifdef __cplusplus
 }

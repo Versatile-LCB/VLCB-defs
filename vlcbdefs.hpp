@@ -689,6 +689,17 @@ enum VlcbConsumerEvUsage : unsigned char
   CONSUMER_EV_SLOTS = 0x02, // Slots
 };
 
+enum VlcbBootloaderType : unsigned char
+{
+  // 
+  // Boot service reports of the module bootloader type
+  // 
+  BL_TYPE_Unknown = 0, // Unknown or not specified
+  BL_TYPE_MikeBolton = 1, // Original bootloader from Mike Bolton, Roger Healey, Pete Brownlow and others written in PIC assembler
+  BL_TYPE_KonradOrlowski = 2, //  Konrad (syspixie) bootloader written in XC8
+  BL_TYPE_IanHogg = 3, //  Ian Hogg bootloader written in XC8
+};
+
 #ifdef __cplusplus
 }
 #endif

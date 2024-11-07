@@ -581,3 +581,10 @@ PRODUCER_EV_SLOTS	equ 0x02	; Slots
 CONSUMER_EV_NOT_SPECIFIED	equ 0x00	; Not specified
 CONSUMER_EV_ACTIONS	equ 0x01	; Actions
 CONSUMER_EV_SLOTS	equ 0x02	; Slots
+; 
+; Boot service reports of the module bootloader type
+; 
+BL_TYPE_Unknown	equ .0	; Unknown or not specified
+BL_TYPE_MikeBolton	equ .1	; Original bootloader from Mike Bolton, Roger Healey, Pete Brownlow and others written in PIC assembler
+BL_TYPE_KonradOrlowski	equ .2	;  Konrad (syspixie) bootloader written in XC8
+BL_TYPE_IanHogg	equ .3	;  Ian Hogg bootloader written in XC8

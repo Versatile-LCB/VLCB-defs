@@ -584,3 +584,10 @@ PRODUCER_EV_SLOTS = const(0x02)    # Slots
 CONSUMER_EV_NOT_SPECIFIED = const(0x00)    # Not specified
 CONSUMER_EV_ACTIONS = const(0x01)    # Actions
 CONSUMER_EV_SLOTS = const(0x02)    # Slots
+# 
+# Boot service reports of the module bootloader type
+# 
+BL_TYPE_Unknown = const(0)    # Unknown or not specified
+BL_TYPE_MikeBolton = const(1)    # Original bootloader from Mike Bolton, Roger Healey, Pete Brownlow and others written in PIC assembler
+BL_TYPE_KonradOrlowski = const(2)    #  Konrad (syspixie) bootloader written in XC8
+BL_TYPE_IanHogg = const(3)    #  Ian Hogg bootloader written in XC8

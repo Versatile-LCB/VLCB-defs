@@ -1493,6 +1493,30 @@ namespace Merg.Vlcb
     }
 
     /// <summary>
+	/// class: VlcbBootloaderType
+	/// Boot service reports of the module bootloader type
+    /// </summary>
+    public enum BootloaderType
+    {
+		/// <summary>
+		/// Unknown or not specified
+		/// </summary>
+		BlTypeUnknown = 0,
+		/// <summary>
+		/// Original bootloader from Mike Bolton, Roger Healey, Pete Brownlow and others written in PIC assembler
+		/// </summary>
+		BlTypeMikebolton = 1,
+		/// <summary>
+		///  Konrad (syspixie) bootloader written in XC8
+		/// </summary>
+		BlTypeKonradorlowski = 2,
+		/// <summary>
+		///  Ian Hogg bootloader written in XC8
+		/// </summary>
+		BlTypeIanhogg = 3,
+    }
+
+    /// <summary>
 	/// class: VlcbCanHardware
 	/// CAN engine type codes
     /// </summary>
