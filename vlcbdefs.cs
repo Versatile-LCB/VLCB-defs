@@ -598,6 +598,17 @@ namespace Merg.Vlcb
 			public const int MTYP_CANPMSense	=  1;	// Motorised point motor driver with current sense
         }
 
+        public static class VlcbBootloaderType
+        {
+			// 
+			// Boot service reports of the module bootloader type
+			// 
+			public const int BL_TYPE_Unknown	=  0;	// Unknown or not specified
+			public const int BL_TYPE_MikeBolton	=  1;	// Original bootloader from Mike Bolton, Roger Healey, Pete Brownlow and others written in PIC assembler
+			public const int BL_TYPE_KonradOrlowski	=  2;	//  Konrad (syspixie) bootloader written in XC8
+			public const int BL_TYPE_IanHogg	=  3;	//  Ian Hogg bootloader written in XC8
+        }
+
         public static class VlcbCanHardware
         {
 			// 
