@@ -205,6 +205,7 @@ MTYP_CANCMDB	equ .83	; CANCMD with built in booster (Simon West)
 MTYP_CANPIXEL	equ .84	; neopixel driver (Jon Denham)
 MTYP_CANCABPE	equ .85	; Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 MTYP_CANSMARTTD	equ .86	; Smart train detector (Michael Smith)
+MTYP_CANCDU_U	equ .87	; CANCDU (universal) 
 ; 
 ; 
 ; 

@@ -312,6 +312,7 @@ namespace merg.cbus
 			public const int MTYP_CANPIXEL	=  84;	// neopixel driver (Jon Denham)
 			public const int MTYP_CANCABPE	=  85;	// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 			public const int MTYP_CANSMARTTD	=  86;	// Smart train detector (Michael Smith)
+			public const int MTYP_CANCDU_U	=  87;	// CANCDU (universal) 
 			// 
 			// At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 			// Please liaise with Pete before adding new module types, 

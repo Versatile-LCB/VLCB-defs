@@ -208,6 +208,7 @@ MTYP_CANCMDB = const(83)    # CANCMD with built in booster (Simon West)
 MTYP_CANPIXEL = const(84)    # neopixel driver (Jon Denham)
 MTYP_CANCABPE = const(85)    # Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 MTYP_CANSMARTTD = const(86)    # Smart train detector (Michael Smith)
+MTYP_CANCDU_U = const(87)    # CANCDU (universal) 
 # 
 # 
 # 

@@ -693,6 +693,10 @@ namespace Merg.Cbus
 		/// </summary>
 		Cansmarttd = 86,
 		/// <summary>
+		/// CANCDU (universal) 
+		/// </summary>
+		CancduU = 87,
+		/// <summary>
 		/// Software nodes
 		/// </summary>
 		CanSw = 0xFF,

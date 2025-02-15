@@ -212,6 +212,7 @@ extern "C" {
 #define MTYP_CANPIXEL	84	// neopixel driver (Jon Denham)
 #define MTYP_CANCABPE	85	// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 #define MTYP_CANSMARTTD	86	// Smart train detector (Michael Smith)
+#define MTYP_CANCDU_U	87	// CANCDU (universal) 
 // 
 // 
 // 
