@@ -21,7 +21,6 @@ extern "C" {
 #define MANU_SPROG	44	// https://www.sprog-dcc.co.uk/
 #define MANU_ROCRAIL	70	// http://www.rocrail.net
 #define MANU_SPECTRUM	80	// http://animatedmodeler.com  (Spectrum Engineering)
-#define MANU_MERG_VLCB	250	// range of MERG VLCB modules
 #define MANU_VLCB	250	// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 #define MANU_SYSPIXIE	249	// Konrad Orlowski
 #define MANU_RME	248	// http://rmeuk.com  (Railway Modelling Experts Limited)
@@ -507,6 +506,8 @@ extern "C" {
 #define MODE_HEARTBEAT_OFF	0x0D	// Turn off heartbeat
 // Boot modes
 #define MODE_BOOT	0x0E	// PIC Boot loader mode
+#define MODE_FCUCOMPAT_ON	0x10	// Turn on FCU compatibility
+#define MODE_FCUCOMPAT_OFF	0x11	// Turn off FCU compatibility
 // 
 // BUS type that module is connected to
 // 

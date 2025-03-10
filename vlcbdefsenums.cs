@@ -189,10 +189,6 @@ namespace Merg.Vlcb
 		/// </summary>
 		Spectrum = 80,
 		/// <summary>
-		/// range of MERG VLCB modules
-		/// </summary>
-		MergVlcb = 250,
-		/// <summary>
 		/// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 		/// </summary>
 		Vlcb = 250,
@@ -1658,6 +1654,14 @@ namespace Merg.Vlcb
 		/// PIC Boot loader mode
 		/// </summary>
 		ModeBoot = 0x0E,
+		/// <summary>
+		/// Turn on FCU compatibility
+		/// </summary>
+		ModeFcucompatOn = 0x10,
+		/// <summary>
+		/// Turn off FCU compatibility
+		/// </summary>
+		ModeFcucompatOff = 0x11,
     }
 
     /// <summary>

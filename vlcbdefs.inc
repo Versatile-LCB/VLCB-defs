@@ -14,7 +14,6 @@ MANU_MERG	equ .165	; https://www.merg.co.uk
 MANU_SPROG	equ .44	; https://www.sprog-dcc.co.uk/
 MANU_ROCRAIL	equ .70	; http://www.rocrail.net
 MANU_SPECTRUM	equ .80	; http://animatedmodeler.com  (Spectrum Engineering)
-MANU_MERG_VLCB	equ .250	; range of MERG VLCB modules
 MANU_VLCB	equ .250	; range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 MANU_SYSPIXIE	equ .249	; Konrad Orlowski
 MANU_RME	equ .248	; http://rmeuk.com  (Railway Modelling Experts Limited)
@@ -500,6 +499,8 @@ MODE_HEARTBEAT_ON	equ 0x0C	; Turn on heartbeat
 MODE_HEARTBEAT_OFF	equ 0x0D	; Turn off heartbeat
 ; Boot modes
 MODE_BOOT	equ 0x0E	; PIC Boot loader mode
+MODE_FCUCOMPAT_ON	equ 0x10	; Turn on FCU compatibility
+MODE_FCUCOMPAT_OFF	equ 0x11	; Turn off FCU compatibility
 ; 
 ; BUS type that module is connected to
 ; 
