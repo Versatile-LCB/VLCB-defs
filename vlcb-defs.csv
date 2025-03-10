@@ -11,7 +11,6 @@ CbusManufacturer,MANU_MERG,165,https://www.merg.co.uk
 CbusManufacturer,MANU_SPROG,44,https://www.sprog-dcc.co.uk/
 CbusManufacturer,MANU_ROCRAIL,70,http://www.rocrail.net
 CbusManufacturer,MANU_SPECTRUM,80,http://animatedmodeler.com  (Spectrum Engineering)
-CbusManufacturer,MANU_MERG_VLCB,250,range of MERG VLCB modules
 CbusManufacturer,MANU_VLCB,250,range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 CbusManufacturer,MANU_SYSPIXIE,249,Konrad Orlowski
 CbusManufacturer,MANU_RME,248,http://rmeuk.com  (Railway Modelling Experts Limited)
@@ -497,6 +496,8 @@ VlcbModeParams,MODE_HEARTBEAT_ON,0x0C,Turn on heartbeat
 VlcbModeParams,MODE_HEARTBEAT_OFF,0x0D,Turn off heartbeat
 VlcbModeParams,,,Boot modes
 VlcbModeParams,MODE_BOOT,0x0E,PIC Boot loader mode
+VlcbModeParams,MODE_FCUCOMPAT_ON,0x10,Turn on FCU compatibility
+VlcbModeParams,MODE_FCUCOMPAT_OFF,0x11,Turn off FCU compatibility
 CbusBusTypes,,,
 CbusBusTypes,,,BUS type that module is connected to
 CbusBusTypes,,,

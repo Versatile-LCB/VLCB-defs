@@ -17,7 +17,6 @@ MANU_MERG = const(165)    # https://www.merg.co.uk
 MANU_SPROG = const(44)    # https://www.sprog-dcc.co.uk/
 MANU_ROCRAIL = const(70)    # http://www.rocrail.net
 MANU_SPECTRUM = const(80)    # http://animatedmodeler.com  (Spectrum Engineering)
-MANU_MERG_VLCB = const(250)    # range of MERG VLCB modules
 MANU_VLCB = const(250)    # range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 MANU_SYSPIXIE = const(249)    # Konrad Orlowski
 MANU_RME = const(248)    # http://rmeuk.com  (Railway Modelling Experts Limited)
@@ -503,6 +502,8 @@ MODE_HEARTBEAT_ON = const(0x0C)    # Turn on heartbeat
 MODE_HEARTBEAT_OFF = const(0x0D)    # Turn off heartbeat
 # Boot modes
 MODE_BOOT = const(0x0E)    # PIC Boot loader mode
+MODE_FCUCOMPAT_ON = const(0x10)    # Turn on FCU compatibility
+MODE_FCUCOMPAT_OFF = const(0x11)    # Turn off FCU compatibility
 # 
 # BUS type that module is connected to
 # 

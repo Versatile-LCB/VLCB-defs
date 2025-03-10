@@ -14,7 +14,6 @@ exports.VlcbDefs = {
     "MANU_SPROG": 44, // https://www.sprog-dcc.co.uk/
     "MANU_ROCRAIL": 70, // http://www.rocrail.net
     "MANU_SPECTRUM": 80, // http://animatedmodeler.com  (Spectrum Engineering)
-    "MANU_MERG_VLCB": 250, // range of MERG VLCB modules
     "MANU_VLCB": 250, // range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
     "MANU_SYSPIXIE": 249, // Konrad Orlowski
     "MANU_RME": 248 // http://rmeuk.com  (Railway Modelling Experts Limited)
@@ -534,7 +533,9 @@ exports.VlcbDefs = {
     "MODE_HEARTBEAT_ON": 0x0C, // Turn on heartbeat
     "MODE_HEARTBEAT_OFF": 0x0D, // Turn off heartbeat
     // Boot modes
-    "MODE_BOOT": 0x0E // PIC Boot loader mode
+    "MODE_BOOT": 0x0E, // PIC Boot loader mode
+    "MODE_FCUCOMPAT_ON": 0x10, // Turn on FCU compatibility
+    "MODE_FCUCOMPAT_OFF": 0x11 // Turn off FCU compatibility
   },
   "VlcbBusTypes" : {
     // 
