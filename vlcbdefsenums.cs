@@ -189,10 +189,6 @@ namespace Merg.Vlcb
 		/// </summary>
 		Spectrum = 80,
 		/// <summary>
-		/// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
-		/// </summary>
-		Vlcb = 250,
-		/// <summary>
 		/// Konrad Orlowski
 		/// </summary>
 		Syspixie = 249,
@@ -553,6 +549,10 @@ namespace Merg.Vlcb
 		/// Smart train detector (Michael Smith)
 		/// </summary>
 		Cansmarttd = 86,
+		/// <summary>
+		/// Addressable LEDs (Ian Hogg)
+		/// </summary>
+		Canargb = 87,
 		/// <summary>
 		/// All VLCB modules have the same ID
 		/// </summary>

@@ -21,7 +21,6 @@ extern "C" {
 #define MANU_SPROG	44	// https://www.sprog-dcc.co.uk/
 #define MANU_ROCRAIL	70	// http://www.rocrail.net
 #define MANU_SPECTRUM	80	// http://animatedmodeler.com  (Spectrum Engineering)
-#define MANU_VLCB	250	// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 #define MANU_SYSPIXIE	249	// Konrad Orlowski
 #define MANU_RME	248	// http://rmeuk.com  (Railway Modelling Experts Limited)
 // 
@@ -119,7 +118,9 @@ extern "C" {
 #define MTYP_CANPIXEL	84	// neopixel driver (Jon Denham)
 #define MTYP_CANCABPE	85	// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 #define MTYP_CANSMARTTD	86	// Smart train detector (Michael Smith)
+#define MTYP_CANARGB	87	// Addressable LEDs (Ian Hogg)
 #define MTYP_VLCB	0xFC	// All VLCB modules have the same ID
+// 
 // 
 // 
 // 

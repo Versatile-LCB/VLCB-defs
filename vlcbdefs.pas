@@ -11,6 +11,8 @@ const
 { 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino }
 { 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. }
 { 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/ }
+{ 		Ian Hogg, 10/3/25, Remove the VLCB manufacturer code as this is no longer required. Add CANARGB.
+ }
 // 
 // Manufacturer definitions
 // Where the manufacturer already has an NMRA code, this is used
@@ -20,7 +22,6 @@ const
  MANU_SPROG	=  44;	// https://www.sprog-dcc.co.uk/
  MANU_ROCRAIL	=  70;	// http://www.rocrail.net
  MANU_SPECTRUM	=  80;	// http://animatedmodeler.com  (Spectrum Engineering)
- MANU_VLCB	=  250;	// range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
  MANU_SYSPIXIE	=  249;	// Konrad Orlowski
  MANU_RME	=  248;	// http://rmeuk.com  (Railway Modelling Experts Limited)
 // 
@@ -118,7 +119,9 @@ const
  MTYP_CANPIXEL	=  84;	// neopixel driver (Jon Denham)
  MTYP_CANCABPE	=  85;	// Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
  MTYP_CANSMARTTD	=  86;	// Smart train detector (Michael Smith)
+ MTYP_CANARGB	=  87;	// Addressable LEDs (Ian Hogg)
  MTYP_VLCB	=  0xFC;	// All VLCB modules have the same ID
+// 
 // 
 // 
 // 
