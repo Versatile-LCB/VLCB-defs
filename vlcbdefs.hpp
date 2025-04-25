@@ -22,7 +22,6 @@ enum VlcbManufacturer : unsigned char
   MANU_SPROG = 44, // https://www.sprog-dcc.co.uk/
   MANU_ROCRAIL = 70, // http://www.rocrail.net
   MANU_SPECTRUM = 80, // http://animatedmodeler.com  (Spectrum Engineering)
-  MANU_VLCB = 250, // range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
   MANU_SYSPIXIE = 249, // Konrad Orlowski
   MANU_RME = 248, // http://rmeuk.com  (Railway Modelling Experts Limited)
 };
@@ -123,6 +122,7 @@ enum VlcbMergModuleTypes : unsigned char
   MTYP_CANPIXEL = 84, // neopixel driver (Jon Denham)
   MTYP_CANCABPE = 85, // Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
   MTYP_CANSMARTTD = 86, // Smart train detector (Michael Smith)
+  MTYP_CANARGB = 87, // Addressable LEDs (Ian Hogg)
   MTYP_VLCB = 0xFC, // All VLCB modules have the same ID
   // 
   // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk

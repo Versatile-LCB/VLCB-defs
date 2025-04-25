@@ -11,8 +11,6 @@ const
 { 		This file is part of VLCB-Arduino project on https://github.com/SvenRosvall/VLCB-Arduino }
 { 		Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. }
 { 		The full licence can be found at: http://creativecommons.org/licenses/by-nc-sa/4.0/ }
-{ 		Ian Hogg, 10/3/25, Remove the VLCB manufacturer code as this is no longer required. Add CANARGB.
- }
 // 
 // Manufacturer definitions
 // Where the manufacturer already has an NMRA code, this is used
