@@ -17,7 +17,6 @@ MANU_MERG = const(165)    # https://www.merg.co.uk
 MANU_SPROG = const(44)    # https://www.sprog-dcc.co.uk/
 MANU_ROCRAIL = const(70)    # http://www.rocrail.net
 MANU_SPECTRUM = const(80)    # http://animatedmodeler.com  (Spectrum Engineering)
-MANU_VLCB = const(250)    # range of MERG VLCB modules (Deprecated in favour of MANU_MERG_VLCB)
 MANU_SYSPIXIE = const(249)    # Konrad Orlowski
 MANU_RME = const(248)    # http://rmeuk.com  (Railway Modelling Experts Limited)
 # 
@@ -115,6 +114,7 @@ MTYP_CANCMDB = const(83)    # CANCMD with built in booster (Simon West)
 MTYP_CANPIXEL = const(84)    # neopixel driver (Jon Denham)
 MTYP_CANCABPE = const(85)    # Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 MTYP_CANSMARTTD = const(86)    # Smart train detector (Michael Smith)
+MTYP_CANARGB = const(87)    # Addressable LEDs (Ian Hogg)
 MTYP_VLCB = const(0xFC)    # All VLCB modules have the same ID
 # 
 # 
