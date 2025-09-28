@@ -43,6 +43,34 @@ namespace Merg.Vlcb
     }
 
     /// <summary>
+	/// class: VlcbCANID
+	/// CANIDs allocated as fixed values
+    /// </summary>
+    public enum CANID
+    {
+		/// <summary>
+		/// (114) Fixed CANID for CANCMD or CANCSB
+		/// </summary>
+		CanidCancmd = 0x72,
+		/// <summary>
+		/// (124) Fixed CANID for CANUSB, although in current firmware it may just use the CANID from the sending software
+		/// </summary>
+		CanidCanusb = 0x7C,
+		/// <summary>
+		/// (125) Default CANID used by FCU. Can be changed in settings. Note some interface modules may substitute their own CANID.
+		/// </summary>
+		CanidFcu = 0x7D,
+		/// <summary>
+		/// (126) Default CANID used by JMRI. Can be changed in connection preferences. Note some interface modules may substitute their own CANID.
+		/// </summary>
+		CanidJmri = 0x7E,
+		/// <summary>
+		/// (127) Default fixed CANID for CANEther (can be changed by modifying NV2). Note CANEther inserts its own CANID on all packets transmitted on CAN
+		/// </summary>
+		CanidCanether = 0x7F,
+    }
+
+    /// <summary>
 	/// class: VlcbCabSigAspect0
 	/// Sub opcodes for OPC_CABDAT
     /// </summary>
@@ -554,7 +582,11 @@ namespace Merg.Vlcb
 		/// </summary>
 		Canargb = 87,
 		/// <summary>
-		/// All VLCB modules have the same ID
+		/// CANCDU (universal) 
+		/// </summary>
+		CancduU = 88,
+		/// <summary>
+		/// VLCB modules use the same manufacturer IDs as CBUS modules.
 		/// </summary>
 		Vlcb = 0xFC,
 		/// <summary>
