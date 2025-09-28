@@ -112,9 +112,8 @@ MTYP_CANPIXEL	equ .84	; neopixel driver (Jon Denham)
 MTYP_CANCABPE	equ .85	; Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 MTYP_CANSMARTTD	equ .86	; Smart train detector (Michael Smith)
 MTYP_CANARGB	equ .87	; Addressable LEDs (Ian Hogg)
-MTYP_VLCB	equ 0xFC	; All VLCB modules have the same ID
-; 
-; 
+MTYP_CANCDU_U	equ .88	; CANCDU (universal) 
+MTYP_VLCB	equ 0xFC	; VLCB modules use the same manufacturer IDs as CBUS modules.
 ; 
 ; 
 ; At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
@@ -590,3 +589,15 @@ BL_TYPE_Unknown	equ .0	; Unknown or not specified
 BL_TYPE_MikeBolton	equ .1	; Original bootloader from Mike Bolton, Roger Healey, Pete Brownlow and others written in PIC assembler
 BL_TYPE_KonradOrlowski	equ .2	;  Konrad (syspixie) bootloader written in XC8
 BL_TYPE_IanHogg	equ .3	;  Ian Hogg bootloader written in XC8
+; 
+; 
+; CANIDs allocated as fixed values
+; Note that all new modules, or new firmware for existing modules, should obtain a CANID using self enumeration and implement
+; automatic CANID conflict resolution, so that eventually we can remove the need for fixed CANIDs
+; 
+; 
+CANID_CANCMD	equ 0x72	; (114) Fixed CANID for CANCMD or CANCSB
+CANID_CANUSB	equ 0x7C	; (124) Fixed CANID for CANUSB, although in current firmware it may just use the CANID from the sending software
+CANID_FCU	equ 0x7D	; (125) Default CANID used by FCU. Can be changed in settings. Note some interface modules may substitute their own CANID.
+CANID_JMRI	equ 0x7E	; (126) Default CANID used by JMRI. Can be changed in connection preferences. Note some interface modules may substitute their own CANID.
+CANID_CANEther	equ 0x7F	; (127) Default fixed CANID for CANEther (can be changed by modifying NV2). Note CANEther inserts its own CANID on all packets transmitted on CAN

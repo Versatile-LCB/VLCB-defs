@@ -105,7 +105,8 @@ public enum VlcbMergModuleTypes {
 	MTYP_CANCABPE(85),	//Cab2 with pot or encoder (Simon West hardware, Jon Denham new C firmware)
 	MTYP_CANSMARTTD(86),	//Smart train detector (Michael Smith)
 	MTYP_CANARGB(87),	//Addressable LEDs (Ian Hogg)
-	MTYP_VLCB(0xFC),	//All VLCB modules have the same ID
+	MTYP_CANCDU_U(88),	//CANCDU (universal) 
+	MTYP_VLCB(0xFC),	//VLCB modules use the same manufacturer IDs as CBUS modules.
 // 
 // At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
 // Please liaise with Pete before adding new module types, 
