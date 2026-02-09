@@ -21,7 +21,8 @@ public enum VlcbCanHardware {
 	CAN_HW_MCP2518(0x05),	//MICROCHIP 2518
 	CAN_HW_ESP32_TWAI(0x06),	//ESP32 Two Wire Automotive Interface
 	CAN_HW_SAM3X8E(0x07),	//Atmel Cortex M3
-	CAN_HW_PICO_PIO(0x08);	//Raspberry Pico based on RP2040 using PIO
+	CAN_HW_PICO_PIO(0x08),	//RP2040 using PIO
+	CAN_HW_SERIAL(0x09);	//Serial using GridConnect
 
     private final int v;
 

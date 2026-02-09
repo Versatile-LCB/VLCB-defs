@@ -636,7 +636,8 @@ namespace Merg.Vlcb
 			public const int CAN_HW_MCP2518	=  0x05;	// MICROCHIP 2518
 			public const int CAN_HW_ESP32_TWAI	=  0x06;	// ESP32 Two Wire Automotive Interface
 			public const int CAN_HW_SAM3X8E	=  0x07;	// Atmel Cortex M3
-			public const int CAN_HW_PICO_PIO	=  0x08;	// Raspberry Pico based on RP2040 using PIO
+			public const int CAN_HW_PICO_PIO	=  0x08;	// RP2040 using PIO
+			public const int CAN_HW_SERIAL	=  0x09;	// Serial using GridConnect
         }
 
         public static class VlcbConsumerEvUsage
@@ -682,6 +683,7 @@ namespace Merg.Vlcb
 			public const int MODE_HEARTBEAT_OFF	=  0x0D;	// Turn off heartbeat
 			// Boot modes
 			public const int MODE_BOOT	=  0x0E;	// PIC Boot loader mode
+			// FCU Compatability
 			public const int MODE_FCUCOMPAT_ON	=  0x10;	// Turn on FCU compatibility
 			public const int MODE_FCUCOMPAT_OFF	=  0x11;	// Turn off FCU compatibility
         }

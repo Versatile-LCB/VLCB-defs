@@ -506,6 +506,7 @@ extern "C" {
 #define MODE_HEARTBEAT_OFF	0x0D	// Turn off heartbeat
 // Boot modes
 #define MODE_BOOT	0x0E	// PIC Boot loader mode
+// FCU Compatability
 #define MODE_FCUCOMPAT_ON	0x10	// Turn on FCU compatibility
 #define MODE_FCUCOMPAT_OFF	0x11	// Turn off FCU compatibility
 // 
@@ -576,7 +577,8 @@ extern "C" {
 #define CAN_HW_MCP2518	0x05	// MICROCHIP 2518
 #define CAN_HW_ESP32_TWAI	0x06	// ESP32 Two Wire Automotive Interface
 #define CAN_HW_SAM3X8E	0x07	// Atmel Cortex M3
-#define CAN_HW_PICO_PIO	0x08	// Raspberry Pico based on RP2040 using PIO
+#define CAN_HW_PICO_PIO	0x08	// RP2040 using PIO
+#define CAN_HW_SERIAL	0x09	// Serial using GridConnect
 // 
 // Producer service EV usage
 // 
