@@ -573,7 +573,7 @@ CAN_HW_MCP2515 = const(0x04)    # MICROCHIP 2515
 CAN_HW_MCP2518 = const(0x05)    # MICROCHIP 2518
 CAN_HW_ESP32_TWAI = const(0x06)    # ESP32 Two Wire Automotive Interface
 CAN_HW_SAM3X8E = const(0x07)    # Atmel Cortex M3
-CAN_HW_PICO_PIO = const(0x08)    # RP2040 using PIO
+CAN_HW_RP2040_PIO = const(0x08)    # RP2040 using PIO
 CAN_HW_SERIAL = const(0x09)    # Serial using GridConnect
 # 
 # Producer service EV usage

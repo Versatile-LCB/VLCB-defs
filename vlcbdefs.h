@@ -577,7 +577,7 @@ extern "C" {
 #define CAN_HW_MCP2518	0x05	// MICROCHIP 2518
 #define CAN_HW_ESP32_TWAI	0x06	// ESP32 Two Wire Automotive Interface
 #define CAN_HW_SAM3X8E	0x07	// Atmel Cortex M3
-#define CAN_HW_PICO_PIO	0x08	// RP2040 using PIO
+#define CAN_HW_RP2040_PIO	0x08	// RP2040 using PIO
 #define CAN_HW_SERIAL	0x09	// Serial using GridConnect
 // 
 // Producer service EV usage
