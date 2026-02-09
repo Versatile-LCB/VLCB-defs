@@ -1583,9 +1583,13 @@ namespace Merg.Vlcb
 		/// </summary>
 		CanHwSam3x8e = 0x07,
 		/// <summary>
-		/// Raspberry Pico based on RP2040 using PIO
+		/// RP2040 using PIO
 		/// </summary>
 		CanHwPicoPio = 0x08,
+		/// <summary>
+		/// Serial using GridConnect
+		/// </summary>
+		CanHwSerial = 0x09,
     }
 
     /// <summary>

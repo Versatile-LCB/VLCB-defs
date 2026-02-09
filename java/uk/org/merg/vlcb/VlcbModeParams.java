@@ -28,6 +28,7 @@ public enum VlcbModeParams {
 	MODE_HEARTBEAT_OFF(0x0D),	//Turn off heartbeat
 // Boot modes
 	MODE_BOOT(0x0E),	//PIC Boot loader mode
+// FCU Compatability
 	MODE_FCUCOMPAT_ON(0x10),	//Turn on FCU compatibility
 	MODE_FCUCOMPAT_OFF(0x11);	//Turn off FCU compatibility
 
