@@ -1585,7 +1585,7 @@ namespace Merg.Vlcb
 		/// <summary>
 		/// RP2040 using PIO
 		/// </summary>
-		CanHwPicoPio = 0x08,
+		CanHwRp2040Pio = 0x08,
 		/// <summary>
 		/// Serial using GridConnect
 		/// </summary>
