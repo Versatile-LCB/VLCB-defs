@@ -315,7 +315,8 @@ CbusOpCodes,OPC_NAME,0xE2,Module name response
 CbusOpCodes,OPC_STAT,0xE3,Command station status report
 CbusOpCodes,OPC_ENACK,0xE6,Event Acknowledge
 CbusOpCodes,OPC_ESD,0xE7,Extended service discovery
-CbusOpCodes,OPC_DTXC,0xE9,Long message packet
+CbusOpCodes,OPC_DTXC,0xE9,RFC0005 Long message packet
+CbusOpCodes,OPC_LM,0xEA,VLCB Long message packet
 CbusOpCodes,OPC_PARAMS,0xEF,Node parameters response
 CbusOpCodes,,,
 CbusOpCodes,OPC_ACON3,0xF0,On event with 3 data bytes
