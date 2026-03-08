@@ -169,7 +169,8 @@ public enum VlcbOpCodes {
 	OPC_STAT(0xE3),	//Command station status report
 	OPC_ENACK(0xE6),	//Event Acknowledge
 	OPC_ESD(0xE7),	//Extended service discovery
-	OPC_DTXC(0xE9),	//Long message packet
+	OPC_DTXC(0xE9),	//RFC0005 Long message packet
+	OPC_LM(0xEA),	//VLCB Long message packet
 	OPC_PARAMS(0xEF),	//Node parameters response
 // 
 	OPC_ACON3(0xF0),	//On event with 3 data bytes

@@ -53,6 +53,10 @@ namespace Merg.Vlcb
 		/// </summary>
 		CanidCancmd = 0x72,
 		/// <summary>
+		/// (123) Default CANID used by MMC. 
+		/// </summary>
+		CanidMmc = 0x7B,
+		/// <summary>
 		/// (124) Fixed CANID for CANUSB, although in current firmware it may just use the CANID from the sending software
 		/// </summary>
 		CanidCanusb = 0x7C,
@@ -1152,9 +1156,13 @@ namespace Merg.Vlcb
 		/// </summary>
 		Esd = 0xE7,
 		/// <summary>
-		/// Long message packet
+		/// RFC0005 Long message packet
 		/// </summary>
 		Dtxc = 0xE9,
+		/// <summary>
+		/// VLCB Long message packet
+		/// </summary>
+		Lm = 0xEA,
 		/// <summary>
 		/// Node parameters response
 		/// </summary>
