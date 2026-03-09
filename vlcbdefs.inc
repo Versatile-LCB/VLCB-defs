@@ -318,7 +318,8 @@ OPC_NAME	equ 0xE2	; Module name response
 OPC_STAT	equ 0xE3	; Command station status report
 OPC_ENACK	equ 0xE6	; Event Acknowledge
 OPC_ESD	equ 0xE7	; Extended service discovery
-OPC_DTXC	equ 0xE9	; Long message packet
+OPC_DTXC	equ 0xE9	; RFC0005 Long message packet
+OPC_LM	equ 0xEA	; VLCB Long message packet
 OPC_PARAMS	equ 0xEF	; Node parameters response
 ; 
 OPC_ACON3	equ 0xF0	; On event with 3 data bytes
@@ -599,6 +600,7 @@ BL_TYPE_IanHogg	equ .3	;  Ian Hogg bootloader written in XC8
 ; 
 ; 
 CANID_CANCMD	equ 0x72	; (114) Fixed CANID for CANCMD or CANCSB
+CANID_MMC	equ 0x7B	; (123) Default CANID used by MMC. 
 CANID_CANUSB	equ 0x7C	; (124) Fixed CANID for CANUSB, although in current firmware it may just use the CANID from the sending software
 CANID_FCU	equ 0x7D	; (125) Default CANID used by FCU. Can be changed in settings. Note some interface modules may substitute their own CANID.
 CANID_JMRI	equ 0x7E	; (126) Default CANID used by JMRI. Can be changed in connection preferences. Note some interface modules may substitute their own CANID.

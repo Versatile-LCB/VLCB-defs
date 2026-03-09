@@ -325,7 +325,8 @@ extern "C" {
 #define OPC_STAT	0xE3	// Command station status report
 #define OPC_ENACK	0xE6	// Event Acknowledge
 #define OPC_ESD	0xE7	// Extended service discovery
-#define OPC_DTXC	0xE9	// Long message packet
+#define OPC_DTXC	0xE9	// RFC0005 Long message packet
+#define OPC_LM	0xEA	// VLCB Long message packet
 #define OPC_PARAMS	0xEF	// Node parameters response
 // 
 #define OPC_ACON3	0xF0	// On event with 3 data bytes
@@ -606,6 +607,7 @@ extern "C" {
 // 
 // 
 #define CANID_CANCMD	0x72	// (114) Fixed CANID for CANCMD or CANCSB
+#define CANID_MMC	0x7B	// (123) Default CANID used by MMC. 
 #define CANID_CANUSB	0x7C	// (124) Fixed CANID for CANUSB, although in current firmware it may just use the CANID from the sending software
 #define CANID_FCU	0x7D	// (125) Default CANID used by FCU. Can be changed in settings. Note some interface modules may substitute their own CANID.
 #define CANID_JMRI	0x7E	// (126) Default CANID used by JMRI. Can be changed in connection preferences. Note some interface modules may substitute their own CANID.
