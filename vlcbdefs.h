@@ -120,6 +120,8 @@ extern "C" {
 #define MTYP_CANSMARTTD	86	// Smart train detector (Michael Smith)
 #define MTYP_CANARGB	87	// Addressable LEDs (Ian Hogg)
 #define MTYP_CANCDU_U	88	// CANCDU (universal) 
+#define MTYP_CANGATEX	89	// Logic module using boolean logic gates (Duncan Greenwood)
+#define MTYP_CANGATEXL	90	// Extended version of CANGATEX (Duncan Greenwood)
 #define MTYP_VLCB	0xFC	// VLCB modules use the same manufacturer IDs as CBUS modules.
 // 
 // 
