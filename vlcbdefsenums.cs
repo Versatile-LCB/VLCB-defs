@@ -590,6 +590,14 @@ namespace Merg.Vlcb
 		/// </summary>
 		CancduU = 88,
 		/// <summary>
+		/// Logic module using boolean logic gates (Duncan Greenwood)
+		/// </summary>
+		Cangatex = 89,
+		/// <summary>
+		/// Extended version of CANGATEX (Duncan Greenwood)
+		/// </summary>
+		Cangatexl = 90,
+		/// <summary>
 		/// VLCB modules use the same manufacturer IDs as CBUS modules.
 		/// </summary>
 		Vlcb = 0xFC,

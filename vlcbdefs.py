@@ -116,6 +116,8 @@ MTYP_CANCABPE = const(85)    # Cab2 with pot or encoder (Simon West hardware, Jo
 MTYP_CANSMARTTD = const(86)    # Smart train detector (Michael Smith)
 MTYP_CANARGB = const(87)    # Addressable LEDs (Ian Hogg)
 MTYP_CANCDU_U = const(88)    # CANCDU (universal) 
+MTYP_CANGATEX = const(89)    # Logic module using boolean logic gates (Duncan Greenwood)
+MTYP_CANGATEXL = const(90)    # Extended version of CANGATEX (Duncan Greenwood)
 MTYP_VLCB = const(0xFC)    # VLCB modules use the same manufacturer IDs as CBUS modules.
 # 
 # 

@@ -113,6 +113,8 @@ MTYP_CANCABPE	equ .85	; Cab2 with pot or encoder (Simon West hardware, Jon Denha
 MTYP_CANSMARTTD	equ .86	; Smart train detector (Michael Smith)
 MTYP_CANARGB	equ .87	; Addressable LEDs (Ian Hogg)
 MTYP_CANCDU_U	equ .88	; CANCDU (universal) 
+MTYP_CANGATEX	equ .89	; Logic module using boolean logic gates (Duncan Greenwood)
+MTYP_CANGATEXL	equ .90	; Extended version of CANGATEX (Duncan Greenwood)
 MTYP_VLCB	equ 0xFC	; VLCB modules use the same manufacturer IDs as CBUS modules.
 ; 
 ; 

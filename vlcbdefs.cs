@@ -235,6 +235,8 @@ namespace Merg.Vlcb
 			public const int MTYP_CANSMARTTD	=  86;	// Smart train detector (Michael Smith)
 			public const int MTYP_CANARGB	=  87;	// Addressable LEDs (Ian Hogg)
 			public const int MTYP_CANCDU_U	=  88;	// CANCDU (universal) 
+			public const int MTYP_CANGATEX	=  89;	// Logic module using boolean logic gates (Duncan Greenwood)
+			public const int MTYP_CANGATEXL	=  90;	// Extended version of CANGATEX (Duncan Greenwood)
 			public const int MTYP_VLCB	=  0xFC;	// VLCB modules use the same manufacturer IDs as CBUS modules.
 			// 
 			// At the time of writing the list of defined MERG module types is maintained by Pete Brownlow software@upsys.co.uk
