@@ -53,6 +53,10 @@ namespace Merg.Vlcb
 		/// </summary>
 		CanidCancmd = 0x72,
 		/// <summary>
+		/// (122) Default CANID used by Traintastic. 
+		/// </summary>
+		CanidTraintastic = 0x7A,
+		/// <summary>
 		/// (123) Default CANID used by MMC. 
 		/// </summary>
 		CanidMmc = 0x7B,
