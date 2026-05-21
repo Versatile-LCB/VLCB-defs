@@ -654,6 +654,7 @@ exports.VlcbDefs = {
     // automatic CANID conflict resolution, so that eventually we can remove the need for fixed CANIDs
     // 
     "CANID_CANCMD": 0x72, // (114) Fixed CANID for CANCMD or CANCSB
+    "CANID_TRAINTASTIC": 0x7A, // (122) Default CANID used by Traintastic. 
     "CANID_MMC": 0x7B, // (123) Default CANID used by MMC. 
     "CANID_CANUSB": 0x7C, // (124) Fixed CANID for CANUSB, although in current firmware it may just use the CANID from the sending software
     "CANID_FCU": 0x7D, // (125) Default CANID used by FCU. Can be changed in settings. Note some interface modules may substitute their own CANID.

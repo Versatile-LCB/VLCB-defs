@@ -605,6 +605,7 @@ BL_TYPE_IanHogg = const(3)    #  Ian Hogg bootloader written in XC8
 # 
 # 
 CANID_CANCMD = const(0x72)    # (114) Fixed CANID for CANCMD or CANCSB
+CANID_TRAINTASTIC = const(0x7A)    # (122) Default CANID used by Traintastic. 
 CANID_MMC = const(0x7B)    # (123) Default CANID used by MMC. 
 CANID_CANUSB = const(0x7C)    # (124) Fixed CANID for CANUSB, although in current firmware it may just use the CANID from the sending software
 CANID_FCU = const(0x7D)    # (125) Default CANID used by FCU. Can be changed in settings. Note some interface modules may substitute their own CANID.
